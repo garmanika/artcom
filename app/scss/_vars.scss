@@ -1,0 +1,51 @@
+// $activeColor: #71d37d; //green
+// $darkenColor: darken($activeColor, 20%);
+
+
+// @mixin mon6 {
+//     font-family: "Montserrat", sans-serif;
+//     font-weight: 600;
+// }
+
+// @mixin mon7 {
+//     font-family: "Montserrat", sans-serif;
+//     font-weight: 700;
+// }
+
+// @mixin Rubik300 {
+//     font-family: "Rubik", sans-serif;
+//     text-transform: uppercase;
+//     font-weight: 300;
+// }
+
+// @mixin Rubik500 {
+//     font-family: "Rubik", sans-serif;
+//     text-transform: uppercase;
+//     font-weight: 500;
+// }
+
+// @mixin Rubik700 {
+//     font-family: "Rubik", sans-serif;
+//     text-transform: uppercase;
+//     font-weight: 700;
+// }
+
+@mixin bgi {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin container-img {
+    position: relative;
+    height: 0;
+}
+
+@mixin img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

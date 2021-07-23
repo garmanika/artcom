@@ -1,0 +1,87 @@
+@import "_vars";
+@import "_global";
+@import "_fonts";
+.header{
+    background: #fff;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-box {
+    display: flex;
+    align-items: center;
+}
+.header {
+    padding: 16px 0;
+}
+.menu-list-link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #333333;
+}
+.menu-list {
+    li + li {
+        margin-left: 32px;
+    }
+}
+.header-logo {
+    display: block;
+    img {
+        width: 199px;
+        height: 48px;
+        object-fit: cover;
+    }
+}
+.header-icons {
+    display: block;
+    position: relative;
+    border: 1px solid #eeeeee;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & + &{
+        margin-left: 8px;
+    }
+    img,
+    svg {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+    }
+    &.header-icons-search {
+        img,
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+.header-icons-count {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    background: #fe000c;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+}
+.header-logo{
+    margin-right: 35px;
+}
+@import "_media";
