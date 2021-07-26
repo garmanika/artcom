@@ -14,11 +14,9 @@ body {
     font-family: 'Raleway', sans-serif;
     // font-weight: 400;
     // font-size: 16px;
+    color: #333;
+    background: #E5E5E5;
 }
-
-
-
-
 
 .title {
     // @include Rubik500;
@@ -29,13 +27,6 @@ body {
     // display: inline-block;
     // margin-bottom: 42px;
 }
-
-
-
-
-
-
-
 
 .wrapper-page {
     display: flex;
@@ -53,6 +44,7 @@ body {
     }
     a {
         text-decoration: none;
+        color: #333;
     }
     ul,
     li {
@@ -69,8 +61,3 @@ body {
 .footer {
     flex: 0 0 auto;
 }
-
-
-
-
-
