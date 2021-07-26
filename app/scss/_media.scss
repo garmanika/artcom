@@ -1,4 +1,15 @@
 @media (max-width: 1199px) {
+    ul.header-desktop-menu {
+        display: none;
+    }
+    .header-logo {
+        margin-right: 0;
+        margin-left: 6px;
+    }
+    .header-menu-box {
+        display: flex;
+        align-items: center;
+    }
     .menu-btn {
         display: block;
         width: 40px;
@@ -48,5 +59,11 @@
 @media (min-width: 1200px) {
     .mobile-navigation-trigger {
         display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #mobile-navigation {
+        padding: 96px 0 0 0;
     }
 }

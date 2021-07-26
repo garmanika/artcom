@@ -30,12 +30,7 @@ function menuToggle() {
     $('.mobile-navigation-trigger').on('click', function() {
         $(this).toggleClass('active');
         $('body').toggleClass('hide-overflow-mobile');
-        if ($(this).hasClass('active')) {
-            $('.header-main-wrapper').addClass('sticky');
-        } else {
-            $(window).scroll();
-        }
-        $('.mobile-navigation-wrapper').toggleClass('active');
+        $('.header-desktop-menu').toggleClass('active');
         $('.header-sub-menu-position').removeClass('mobile-navigation-sub-position');
     });
 
