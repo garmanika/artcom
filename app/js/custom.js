@@ -30,17 +30,18 @@ function menuToggle() {
     $('.mobile-navigation-trigger').on('click', function() {
         $(this).toggleClass('active');
         $('body').toggleClass('hide-overflow-mobile');
+        $('ul.header-desktop-menu').fadeToggle();
         $('.header-desktop-menu').toggleClass('active');
         $('.header-sub-menu-position').removeClass('mobile-navigation-sub-position');
     });
 
-    $('#mobile-navigation .is-parent > a').on('click', function(e) {
+    $('.header-desktop-menu .is-parent > a').on('click', function(e) {
         e.preventDefault();
         var subMenu = $(this).next('.mobile-navigation-sub-position');
         subMenu.addClass('sub-opened');
     });
 
-    $('.mobile-navigation-sub-menu-heading > a').on('click', function(e) {
+    $('.header-desktop-sub-menu-heading').on('click', function(e) {
         e.preventDefault();
         var subMenu = $(this).closest('.mobile-navigation-sub-position');
         subMenu.removeClass('sub-opened');
@@ -48,7 +49,7 @@ function menuToggle() {
 
     $(document).on('click', function(event) {
 
-        if (!$(event.target).closest('#mobile-navigation .is-parent').length) {
+        if (!$(event.target).closest('.header-desktop-menu .is-parent').length) {
             $('.mobile-navigation-sub-position').removeClass('sub-opened');
         }
 
