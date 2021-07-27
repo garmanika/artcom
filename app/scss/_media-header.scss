@@ -11,6 +11,7 @@
         padding: 8px 0;
         width: 100vw;
         left: 0;
+        z-index: 99;
         li {
             display: block;
             &.is-parent a {
@@ -165,7 +166,7 @@
         line-height: 24px;
         color: #333333;
     }
-    a.header-desktop-sub-menu-heading-link {
+    .header-desktop-sub-menu-heading-link {
         color: #A29999;
         font-size: 14px;
         line-height: 24px;
@@ -188,6 +189,10 @@
                 }
             }
         }
+    }
+    .header-desktop-sub-menu>li>a {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
 
