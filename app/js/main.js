@@ -15,4 +15,25 @@ $(function() {
         clearIncomplete: true,
         showMaskOnHover: false,
     });
+    const swiper = new Swiper('.swiper-container', {
+        // Default parameters
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            319: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+
+            },
+            768: {
+                slidesPerView: 2,
+            }
+        }
+    })
 });

@@ -353,6 +353,7 @@ li.is-parent {
     position: absolute;
     width: 100%;
     padding: 16px 0;
+    z-index: 2;
     .panel-search-box {
         position: relative;
         input {
@@ -377,4 +378,28 @@ li.is-parent {
     }
 }
 
-@import "_media";
+@import "_media-header";
+//banner-slider-inner
+.banner-slider-wrapper {
+    padding: 50px 0;
+    .swiper-pagination {
+        display: none;
+    }
+}
+
+.banner-slider {
+    img {
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+.banner-slider-innner {
+    @include container-img;
+    padding-bottom: 60.3%;
+    img {
+        @include img;
+    }
+}
+
+@import "_media-banner-slider";

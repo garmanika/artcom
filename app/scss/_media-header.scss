@@ -243,6 +243,7 @@
         opacity: 1;
         overflow: visible;
         border-top: 3px solid #fe000c;
+        z-index: 3;
     }
     .header-desktop-sub-menu>li.is-parent:hover .header-desktop-sub-sub {
         height: calc(100% + 3px);
