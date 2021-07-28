@@ -7,7 +7,7 @@
         height: 100vh;
         position: fixed;
         top: 64px;
-        background: #F7F7F7;
+        background: #f7f7f7;
         padding: 8px 0;
         width: 100vw;
         left: 0;
@@ -26,29 +26,29 @@
             }
         }
     }
-    .header-desktop-menu>li.is-parent>a>span:after {
+    .header-desktop-menu > li.is-parent > a > span:after {
         transform: rotate(-135deg);
     }
-    .header-desktop-menu>li>a {
+    .header-desktop-menu > li > a {
         font-size: 14px;
         line-height: 24px;
         color: #333333;
         font-weight: 400;
     }
     .header-desktop-menu li a.menu-item:hover {
-        color: #FE000C;
-        background: #EEEEEE;
+        color: #fe000c;
+        background: #eeeeee;
         font-weight: 600;
         font-size: 14px;
         line-height: 24px;
     }
-    .header-desktop-menu>li+li {
+    .header-desktop-menu > li + li {
         margin-left: 0;
     }
     li.is-parent a {
         padding-right: 0;
     }
-    .header-desktop-menu>li>a {
+    .header-desktop-menu > li > a {
         text-align: left;
         padding: 12px 0;
     }
@@ -111,7 +111,7 @@
         left: -100%;
         width: 100%;
         height: calc(100vh);
-        background: #F7F7F7;
+        background: #f7f7f7;
         overflow: hidden;
         transition: all 0.5s ease;
         &.sub-opened {
@@ -146,17 +146,17 @@
             margin: -4px 0 0 8px;
             border: 2px solid #c0c4c7;
             border-width: 2px 2px 0 0;
-            transform: rotate( 225deg);
+            transform: rotate(225deg);
         }
     }
-    .header-desktop-menu>li.is-parent>a>span:after {
+    .header-desktop-menu > li.is-parent > a > span:after {
         top: 11px;
         left: calc(100% - 35px);
     }
-    .header-desktop-sub-menu>li.is-parent>a span {
+    .header-desktop-sub-menu > li.is-parent > a span {
         position: relative;
     }
-    .header-desktop-sub-menu>li.is-parent>a span:after {
+    .header-desktop-sub-menu > li.is-parent > a span:after {
         right: auto;
         left: calc(100% - 35px);
     }
@@ -167,7 +167,7 @@
         color: #333333;
     }
     .header-desktop-sub-menu-heading-link {
-        color: #A29999;
+        color: #a29999;
         font-size: 14px;
         line-height: 24px;
         font-weight: 400;
@@ -190,7 +190,7 @@
             }
         }
     }
-    .header-desktop-sub-menu>li>a {
+    .header-desktop-sub-menu > li > a {
         font-size: 14px;
         line-height: 24px;
     }
@@ -250,7 +250,7 @@
         border-top: 3px solid #fe000c;
         z-index: 3;
     }
-    .header-desktop-sub-menu>li.is-parent:hover .header-desktop-sub-sub {
+    .header-desktop-sub-menu > li.is-parent:hover .header-desktop-sub-sub {
         height: calc(100% + 3px);
         padding: 30px 0;
         opacity: 1;
@@ -263,7 +263,7 @@
         height: 0;
         width: 100%;
         padding: 0;
-        background: #F7F7F7;
+        background: #f7f7f7;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
         transition: all 0.35s ease;
         overflow: hidden;
@@ -275,7 +275,7 @@
         width: 290px;
         max-height: 0;
         padding: 0;
-        background: #F7F7F7;
+        background: #f7f7f7;
         /*opacity: 0;*/
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
         transition: all 0.35s ease;
@@ -293,8 +293,8 @@
             display: block;
         }
     }
-    .header-desktop-menu>li.is-parent:hover {
-        &>a>span:after {
+    .header-desktop-menu > li.is-parent:hover {
+        & > a > span:after {
             content: "";
             position: absolute;
             top: 7px;
@@ -303,13 +303,13 @@
             width: 8px;
             height: 8px;
             margin: -4px 0 0 8px;
-            border: 2px solid #A29999;
+            border: 2px solid #a29999;
             border-width: 0 0 2px 2px;
             transform: rotate(-45deg);
             transition: all 0.25s ease;
         }
     }
-    .header-desktop-sub-menu>li.is-parent:hover>a span:after {
+    .header-desktop-sub-menu > li.is-parent:hover > a span:after {
         border-color: #393a3a;
     }
 }

@@ -4,7 +4,8 @@
     }
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+}
 
 @media (max-width: 767px) {
     .banner-slider-wrapper .swiper-pagination {
@@ -16,7 +17,7 @@
         padding: 0 15px;
         margin-top: 25px;
     }
-    .swiper-pagination-bullet+.swiper-pagination-bullet {
+    .swiper-pagination-bullet + .swiper-pagination-bullet {
         margin-left: 20px;
     }
     .swiper-pagination-bullet {
@@ -26,10 +27,12 @@
         //border: none;
     }
     .swiper-pagination-bullet-active {
-        background: #FE000C;
+        background: #fe000c;
     }
 }
 
-@media (max-width: 575px) {}
+@media (max-width: 575px) {
+}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,50 @@
+@media (max-width: 1199px) {
+    .service-item{
+        min-height: 218px;
+    }
+    .service-title .service-item-info{
+        font-size: 14px;
+    }
+    .service-title{
+        padding-top: 27px;
+        &:hover{
+            padding-top: 17px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .service-title .service-item-info{
+        font-size: 16px;
+    }
+    .service-title{
+        padding-top: 45px;
+        &:hover{
+            padding-top: 35px;
+        }
+    }
+    .service-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service-item{
+        min-height: 248px;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-item{
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-items{
+        grid-template-columns: 1fr;
+    }
+    .service-item{
+        min-height: 288px;
+    }
+}
+
+@media (min-width: 1200px) {
+}
