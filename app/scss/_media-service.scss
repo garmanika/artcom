@@ -35,9 +35,19 @@
     .service-item{
         min-height: 300px;
     }
+    .service-title .service-item-title{
+        font-size: 24px;
+line-height: 32px;
+    }
+    .service-title:after {
+    height: 107px;
+    }
 }
 
 @media (max-width: 575px) {
+    .service-title:after {
+        height: 87px;
+    }
     .service-items{
         grid-template-columns: 1fr;
     }
