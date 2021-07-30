@@ -918,6 +918,10 @@ a.product-link span {
   }
 }
 @media (max-width:575px) {
+  .banner-slider-wrapper .swiper-pagination {
+    max-width: 100%;
+    margin: 25px -15px
+  }
   .products-inner {
     grid-template-columns: 1fr
   }

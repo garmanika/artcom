@@ -17,7 +17,7 @@ $(function() {
     });
     const swiper = new Swiper('.swiper-container', {
         // Default parameters
-        slidesPerView: 2,
+        //slidesPerView: 2,
         spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
@@ -28,7 +28,7 @@ $(function() {
             // when window width is >= 320px
             319: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 0,
 
             },
             768: {
