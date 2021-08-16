@@ -1,23 +1,45 @@
-@media (max-width: 1199px) {
-}
-
-@media (max-width: 991px) {
-    .products-inner {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 1199px) {
+        .product {
+            max-height: 218px;
+            min-height: 218px;
+        }
+        .product:hover {
+            padding-bottom: 89px;
+        }
+        .product-img.phone-station {
+            width: 162px;
+            height: 104px;
+        }
+        .product-img.terminal,
+        .product-img.router,
+        .product-img {
+            width: 104px;
+            height: 104px;
+        }
     }
-}
-
-@media (max-width: 767px) {
-    .product-title {
-        font-size: 16px;
+    
+    @media (max-width: 991px) {}
+    
+    @media (max-width: 767px) {
+        .product-title {
+            font-size: 16px;
+        }
+        .product {
+            max-height: 180px;
+            min-height: 180px;
+        }
+        .product:hover {
+            padding-bottom: 116px;
+        }
     }
-}
-
-@media (max-width: 575px) {
-    .products-inner {
-        grid-template-columns: 1fr;
+    
+    @media (max-width: 575px) {
+        .products-inner {
+            gap: 15px 0;
+        }
+        .product:hover {
+            padding-bottom: 90px;
+        }
     }
-}
-
-@media (min-width: 1200px) {
-}
+    
+    @media (min-width: 1200px) {}

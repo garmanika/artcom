@@ -30,7 +30,7 @@ function menuToggle() {
     $('.mobile-navigation-trigger').on('click', function() {
         $(this).toggleClass('active');
         $('body').toggleClass('hide-overflow-mobile');
-        $('ul.header-desktop-menu').fadeToggle();
+        $('ul.header-desktop-menu').slideToggle();
         $('.header-desktop-menu').toggleClass('active');
         $('.header-sub-menu-position').removeClass('mobile-navigation-sub-position');
     });

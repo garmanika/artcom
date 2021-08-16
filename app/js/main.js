@@ -15,17 +15,15 @@ $(function() {
         clearIncomplete: true,
         showMaskOnHover: false,
     });
-    const swiper = new Swiper('.swiper-container', {
-        // Default parameters
-        //slidesPerView: 2,
-        spaceBetween: 30,
+    const swiper = new Swiper('.banner-slider', {
+        slidesPerGroup: 1,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.banner-slider-pagination',
             type: 'bullets',
         },
 
         breakpoints: {
-            // when window width is >= 320px
+
             319: {
                 slidesPerView: 1,
                 spaceBetween: 0,
@@ -33,6 +31,7 @@ $(function() {
             },
             768: {
                 slidesPerView: 2,
+                spaceBetween: 30,
             }
         }
     })

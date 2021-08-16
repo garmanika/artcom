@@ -16,6 +16,7 @@ body {
     // font-size: 16px;
     color: #333;
     background: #e5e5e5;
+    font-feature-settings: 'pnum' on, 'lnum' on;
     &.hide-overflow-mobile {
         overflow: hidden;
     }
