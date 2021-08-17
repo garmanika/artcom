@@ -15,11 +15,15 @@ body {
     // font-weight: 400;
     // font-size: 16px;
     color: #333;
-    background: #e5e5e5;
+    background: #f7f7f7;
     font-feature-settings: 'pnum' on, 'lnum' on;
+    scrollbar-width: none;         
     &.hide-overflow-mobile {
         overflow: hidden;
     }
+}
+button, a{
+    cursor: pointer;
 }
 
 .title {
@@ -65,3 +69,14 @@ body {
 .footer {
     flex: 0 0 auto;
 }
+body::-webkit-scrollbar {
+    display: none;             /* ширина scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    //background: orange;        /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    //background-color: blue;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    //border: 3px solid orange;  /* padding вокруг плашки */
+  }

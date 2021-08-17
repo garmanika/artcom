@@ -56,6 +56,12 @@
     .footer-nav-item-box-link-icons {
         margin-right: 25px;
     }
+    .mobile-nav{
+        display: block;
+    }
+    .wrapper-page{
+        padding-bottom: 64px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -76,6 +82,14 @@
         margin-right: 0;
         margin-top: 10px;
     }
+    .footer-copy-inner{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 12px 0;
+    }
+    
 }
 
 @media (min-width: 1200px) {}
