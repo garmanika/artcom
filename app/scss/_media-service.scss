@@ -1,64 +1,98 @@
 @media (max-width: 1199px) {
-    .service-item{
-        min-height: 218px;
-    }
-    .service-title .service-item-info{
-        font-size: 14px;
-    }
-    .service-title{
-        padding-top: 27px;
-        &:hover{
-            padding-top: 17px;
-        }
-    }
+	.service-item:not(.service-title) {
+		.service-item-info {
+			max-width: 202px;
+		}
+	}
+	.service-item {
+		min-height: 218px;
+		max-height: 218px;
+	}
+	.service-item-count {
+		right: 19px;
+		bottom: 3px;
+	}
+	.service-title .service-item-info {
+		font-size: 14px;
+	}
+	.service-title {
+		padding-top: 27px;
+		&:hover {
+			padding-top: 17px;
+		}
+	}
+	.service-item:hover img {
+		display: none;
+	}
 }
 
 @media (max-width: 991px) {
-    .service-title .service-item-info{
-        font-size: 16px;
-    }
-    .service-title{
-        padding-top: 45px;
-        &:hover{
-            padding-top: 35px;
-        }
-    }
-    .service-items{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .service-item{
-        min-height: 248px;
-    }
+	.service-title .service-item-info {
+		font-size: 16px;
+	}
+	.service-title {
+		padding-top: 45px;
+		&:hover {
+			padding-top: 35px;
+		}
+	}
+	.service-item {
+		min-height: 248px;
+		max-height: 248px;
+	}
+	.service-item:hover img {
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
 }
 
 @media (max-width: 767px) {
-    .service-item{
-        min-height: 300px;
-    }
-    .service-title .service-item-title{
-        font-size: 24px;
-line-height: 32px;
-    }
-    .service-title:after {
-    height: 107px;
-    }
-    .service-item-count{
-        font-size: 120px;
-        right: 15px;
-        bottom: 15px;
-    }
+	.service-item {
+		min-height: 300px;
+		max-height: 300px;
+	}
+	.service-title .service-item-title {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.service-item-count {
+		font-size: 120px;
+		right: 15px;
+		bottom: 15px;
+	}
+	.service-item-link {
+		max-width: 192px;
+	}
+	.service-items {
+		margin-top: 40px;
+		margin-bottom: 60px;
+	}
+	.service-item:hover img {
+		width: 56px;
+		height: 56px;
+	}
+	.service-item {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.service-item-link {
+		max-width: 100%;
+	}
 }
 
 @media (max-width: 575px) {
-    .service-title:after {
-        height: 87px;
-    }
-    .service-items{
-        grid-template-columns: 1fr;
-    }
-    .service-item{
-        min-height: 288px;
-    }
+	.service-title:after {
+		height: 87px;
+	}
+	.service-items {
+		gap: 15px 0;
+		margin-top: 60px;
+	}
+	.service-item {
+		min-height: 288px;
+		max-height: 288px;
+	}
 }
 
 @media (min-width: 1200px) {

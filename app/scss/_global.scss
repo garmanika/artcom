@@ -1,82 +1,77 @@
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    position: relative;
-    font-family: "Raleway", sans-serif;
-    // font-weight: 400;
-    // font-size: 16px;
-    color: #333;
-    background: #f7f7f7;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    scrollbar-width: none;         
-    &.hide-overflow-mobile {
-        overflow: hidden;
-    }
+	position: relative;
+	font-family: "Raleway", sans-serif;
+	// font-weight: 400;
+	// font-size: 16px;
+	color: #333;
+	background: #f7f7f7;
+	font-feature-settings: "pnum" on, "lnum" on;
+	scrollbar-width: thin;
+	&.hide-overflow-mobile {
+		overflow: hidden;
+	}
 }
-button, a{
-    cursor: pointer;
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+button,
+a {
+	cursor: pointer;
 }
 
 .title {
-    // @include Rubik500;
-    // font-size: 48px;
-    // line-height: 54px;
-    // color: #333;
-    // position: relative;
-    // display: inline-block;
-    // margin-bottom: 42px;
+	// @include Rubik500;
+	// font-size: 48px;
+	// line-height: 54px;
+	// color: #333;
+	// position: relative;
+	// display: inline-block;
+	// margin-bottom: 42px;
 }
 
 .wrapper-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    ul,
-    ol,
-    li {
-        margin: 0;
-    }
-    button,
-    input,
-    textarea {
-        outline: none;
-    }
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-    ul,
-    li {
-        display: inline-block;
-        text-decoration: none;
-        padding: 0;
-    }
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	ul,
+	ol,
+	li {
+		margin: 0;
+	}
+	button,
+	input,
+	textarea {
+		outline: none;
+	}
+	a {
+		text-decoration: none;
+		//color: #333;
+	}
+	ul,
+	li {
+		display: inline-block;
+		text-decoration: none;
+		padding: 0;
+	}
 }
 
 .content {
-    flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 
 .footer {
-    flex: 0 0 auto;
+	flex: 0 0 auto;
 }
-body::-webkit-scrollbar {
-    display: none;             /* ширина scrollbar */
-  }
-  body::-webkit-scrollbar-track {
-    //background: orange;        /* цвет дорожки */
-  }
-  body::-webkit-scrollbar-thumb {
-    //background-color: blue;    /* цвет плашки */
-    border-radius: 20px;       /* закругления плашки */
-    //border: 3px solid orange;  /* padding вокруг плашки */
-  }

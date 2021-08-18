@@ -1,46 +1,50 @@
 @media (max-width: 1199px) {
-    .cooperation-button {
-        max-width: 210px;
-    }
+	.cooperation-button {
+		max-width: 210px;
+	}
 }
 
 @media (max-width: 991px) {
-    .cooperation-button {
-        max-width: 193px;
-    }
+	.cooperation-button {
+		max-width: 193px;
+	}
+	.cooperation-info img, .cooperation-info svg{
+		margin-right: 15px;
+	}
 }
 
 @media (max-width: 767px) {
-    .cooperation-inner {
-        flex-direction: column;
-    }
-    .cooperation-inner {
-        padding: 40px 0;
-        gap: 15px;
-    }
-    .cooperation {
-        background-image: url(../img/bg-560.jpg);
-    }
+	.cooperation-inner {
+		flex-direction: column;
+	}
+	.cooperation-inner {
+		padding: 40px 0;
+		gap: 15px;
+	}
+	.cooperation {
+		background-image: url(../img/bg-560.jpg);
+	}
 }
 
 @media (max-width: 575px) {
-    .cooperation {
-        background-image: url(../img/bg-320.jpg);
-    }
-    .cooperation-info {
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 100%;
-        width: 100%;
-        gap: 15px;
-    }
-    .cooperation-button {
-        max-width: 100%;
-    }
-    .cooperation-info img,
-    .cooperation-info svg {
-        margin-right: 0;
-    }
+	.cooperation {
+		background-image: url(../img/bg-320.jpg);
+	}
+	.cooperation-info {
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 100%;
+		width: 100%;
+		gap: 15px;
+	}
+	.cooperation-button {
+		max-width: 100%;
+	}
+	.cooperation-info img,
+	.cooperation-info svg {
+		margin-right: 0;
+	}
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
