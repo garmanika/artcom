@@ -809,10 +809,7 @@ li.is-parent {
 
 .footer-nav-items {
 	display: grid;
-	grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-			auto,
-			255px
-		);
+	grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
 	justify-content: space-between;
 	gap: 64px;
 }
@@ -980,3 +977,80 @@ li.is-parent {
 }
 
 @import "_media-footer";
+//text-page
+.breadcrumbs {
+	background: #f1f1f1;
+	padding: 35px 0;
+	margin-bottom: 60px;
+}
+.breadcrumbs-inner {
+	border-left: 3px solid #fe000c;
+	padding-left: 30px;
+}
+.breadcrumbs-list {
+	display: flex;
+}
+.breadcrumbs-list-item {
+	position: relative;
+	a,span {
+		font-size: 14px;
+		line-height: 20px;
+		color: #a29999;
+	}
+	&.active a,span {
+		color: #fe000c;
+	}
+	& + .breadcrumbs-list-item {
+		padding-left: 30px;
+		&::before {
+			content: "/";
+			position: absolute;
+			left: 11px;
+			bottom: 0;
+		}
+	}
+}
+.breadcrumbs-title {
+	margin-top: 8px;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #333;
+}
+ul.text-navigation-menu {
+	display: block;
+	background: #fff;
+	padding: 20px 0;
+}
+li.text-navigation-menu-item {
+	display: block;
+	text-align: center;
+	padding: 12px 0;
+	transition: all .4s;
+	& + li {
+		border-top: 1px solid #eee;
+	}
+	a {
+		font-size: 16px;
+		line-height: 24px;
+		color: #333333;
+		display: block;
+		transition: all .4s;
+	}
+	&.active {
+		background: #f2f2f2;
+		& + li {
+			border-top: none;
+		}
+		a {
+			color: #fe000c;
+		}
+	}
+	&:hover{
+		background: #f2f2f2;
+		a{
+			color: #fe000c;
+		}
+	}
+}
