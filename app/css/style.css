@@ -50,7 +50,9 @@ button {
   text-decoration: none
 }
 .wrapper-page li,
-.wrapper-page ul {
+.wrapper-page ul,
+li,
+ul {
   display: inline-block;
   text-decoration: none;
   padding: 0
@@ -1524,6 +1526,9 @@ li.is-parent a {
   right: 0
 }
 .mobile-nav-inner {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 15px;
   display: grid;
   grid-template-columns: repeat(4,auto);
   -webkit-box-pack: justify;
@@ -1532,7 +1537,11 @@ li.is-parent a {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  padding: 0 15px
+  margin: 0
+}
+.mobile-nav-inner li {
+  text-decoration: none;
+  padding: 0
 }
 .mobile-nav-item {
   text-align: center;

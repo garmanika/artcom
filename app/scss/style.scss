@@ -934,11 +934,19 @@ li.is-parent {
 }
 
 .mobile-nav-inner {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0;
 	display: grid;
 	grid-template-columns: repeat(4, auto);
 	justify-content: space-between;
 	align-items: baseline;
+	margin: 0;
 	padding: 0 15px;
+	li{
+		text-decoration: none;
+		padding: 0;
+	}
 }
 
 .mobile-nav-item {
