@@ -3,7 +3,8 @@
 		max-height: 218px;
 		min-height: 218px;
 	}
-	.product:hover {
+	.product:hover, 
+	.product:focus {
 		padding-bottom: 89px;
 	}
 	.product-img.phone-station {
@@ -29,7 +30,8 @@
 		max-height: 180px;
 		min-height: 180px;
 	}
-	.product:hover {
+	.product:hover, 
+	.product:focus {
 		padding-bottom: 116px;
 		.product-img {
 			display: none;
@@ -45,7 +47,8 @@
 	.products-inner {
 		gap: 15px 0;
 	}
-	.product:hover {
+	.product:hover,
+	.product:focus {
 		padding-bottom: 72px;
 	}
 }

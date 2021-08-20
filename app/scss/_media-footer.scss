@@ -29,6 +29,7 @@
 	}
 	.footer-nav-item-box-link {
 		gap: 10px;
+		margin-right: 40px;
 	}
 	.footer-nav-item-box-adress {
 		margin-bottom: 0;
@@ -62,6 +63,9 @@
 	.wrapper-page {
 		padding-bottom: 64px;
 	}
+	.footer-nav-item-box-link{
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 575px) {
@@ -88,6 +92,9 @@
 		align-items: flex-start;
 		gap: 2px;
 		padding: 12px 0;
+	}
+	.mobile-nav-inner{
+		padding: 0;
 	}
 }
 

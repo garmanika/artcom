@@ -277,8 +277,9 @@
 		z-index: 3;
 	}
 	.header-desktop-sub-menu > li.is-parent:hover .header-desktop-sub-sub {
-		height: calc(100% + 3px);
-		padding: 30px 0 0;
+		min-height: 100%;
+		height: auto;
+		padding: 30px 0;
 		opacity: 1;
 		border-top: 3px solid #fe000c;
 	}

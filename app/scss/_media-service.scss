@@ -17,11 +17,13 @@
 	}
 	.service-title {
 		padding-top: 27px;
-		&:hover {
+		&:hover,
+		&:focus {
 			padding-top: 17px;
 		}
 	}
-	.service-item:hover img {
+	.service-item:hover img,
+	.service-item:focus img {
 		display: none;
 	}
 }
@@ -32,7 +34,8 @@
 	}
 	.service-title {
 		padding-top: 45px;
-		&:hover {
+		&:hover,
+		&:focus {
 			padding-top: 35px;
 		}
 	}
@@ -40,7 +43,8 @@
 		min-height: 248px;
 		max-height: 248px;
 	}
-	.service-item:hover img {
+	.service-item:hover img,
+	.service-item:focus img {
 		display: block;
 		width: 30px;
 		height: 30px;
@@ -68,7 +72,8 @@
 		margin-top: 40px;
 		margin-bottom: 60px;
 	}
-	.service-item:hover img {
+	.service-item:hover img,
+	.service-item:focus img {
 		width: 56px;
 		height: 56px;
 	}
