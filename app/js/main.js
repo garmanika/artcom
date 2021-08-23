@@ -1,4 +1,6 @@
 $(function () {
+
+    
     function mobileSearchTrigger() {
 
         $('.mobile-search-trigger').on('click', function (e) {
@@ -65,6 +67,25 @@ $(function () {
         clearIncomplete: true,
         showMaskOnHover: false,
     });
+    const swiper2 = new Swiper('.slider', {
+        slidesPerGroup: 1,
+        pagination: {
+            el: '.slider-pagination',
+            type: 'bullets',
+        },
+        breakpoints: {
+
+            319: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+
+            },
+            575: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+    });
     const swiper = new Swiper('.banner-slider', {
         slidesPerGroup: 1,
         pagination: {
@@ -84,7 +105,9 @@ $(function () {
                 spaceBetween: 30,
             }
         }
-    })
+    });
+
+
     mobileSearchTrigger();
 
     menuToggle();
