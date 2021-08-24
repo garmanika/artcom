@@ -1,12 +1,16 @@
 @media (max-width: 1199px) {
+	.product:focus .product-img, .product:hover .product-img{
+		width: 75px;
+		height: 75px;
+	}
 	.product {
 		max-height: 218px;
 		min-height: 218px;
 	}
-	.product:hover, 
-	.product:focus {
-		padding-bottom: 89px;
-	}
+	// .product:hover, 
+	// .product:focus {
+	// 	padding-bottom: 110px;
+	// }
 	.product-img.phone-station {
 		width: 162px;
 		height: 100px;
@@ -17,9 +21,13 @@
 		width: 100px;
 		height: 100px;
 	}
+	.product:focus .phone-station, .product:hover .phone-station{
+		width: 125px;
+	}
 }
 
 @media (max-width: 991px) {
+
 }
 
 @media (max-width: 767px) {
@@ -39,7 +47,7 @@
 	}
 	.product {
 		padding-left: 24px;
-		padding-right: 1px;
+		padding-right: 8px;
 	}
 }
 

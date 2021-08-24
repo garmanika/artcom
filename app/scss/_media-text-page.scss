@@ -2,6 +2,9 @@
 }
 
 @media (max-width: 991px) {
+	.breadcrumbs{
+		margin-bottom: 70px;
+	}
     .slider .swiper-wrapper .slider-item-info{
         max-width: 210px;
         margin: 0 auto;
@@ -34,6 +37,10 @@
 }
 
 @media (max-width: 575px) {
+	.breadcrumbs{
+		padding: 20px 0;
+		margin-bottom: 30px;
+	}
     .info-text-imgbox{
         flex-direction: column;
     }
@@ -68,6 +75,9 @@
         font-size: 18px;
         line-height: 24px;
     }
+		.info-text-imgbox-inner h1{
+			margin-bottom: 8px;
+		}
 }
 
 @media (min-width: 1200px) {
