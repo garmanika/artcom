@@ -139,6 +139,6 @@ $(function () {
   });
   $(".direction-catalog-content-aside-item-head").on("click", function (event) {
 		$(this).closest('.direction-catalog-content-aside-item').toggleClass("open");
-    $(this).closest('.direction-catalog-content-aside-item').find('.direction-catalog-content-aside-item-content').slideToggle();
+    $(this).closest('.direction-catalog-content-aside-item').find('.direction-catalog-content-aside-item-content').toggle();
 	});
 });

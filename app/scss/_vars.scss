@@ -35,6 +35,12 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+@mixin no-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
 
 @mixin container-img {
     position: relative;
