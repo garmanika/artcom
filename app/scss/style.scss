@@ -425,6 +425,7 @@ li.is-parent {
   align-items: center;
   //max-width: 540px;
   width: 100%;
+  margin-top: 25px;
 }
 
 .swiper-pagination-bullet + .swiper-pagination-bullet {
@@ -741,7 +742,6 @@ li.is-parent {
 .cooperation {
   background: url(../img/bg.jpg);
   @include bgi;
-  border-bottom: 2px solid #fe000c;
 }
 
 .cooperation-inner {
@@ -799,6 +799,9 @@ li.is-parent {
 
 @import "_media-cooperation";
 //footer
+.footer {
+  border-top: 2px solid #fe000c;
+}
 //footer-nav
 .footer-nav {
   padding: 60px 0;
@@ -1001,6 +1004,9 @@ li.is-parent {
 
 @import "_media-footer";
 //text-page
+.about-company {
+  padding-bottom: 80px;
+}
 .about-company p {
   font-size: 16px;
   line-height: 24px;
@@ -1058,7 +1064,7 @@ ul.text-navigation-menu {
 }
 li.text-navigation-menu-item {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 12px 0;
   transition: all 0.4s;
   & + li {
@@ -1070,6 +1076,8 @@ li.text-navigation-menu-item {
     color: #333333;
     display: block;
     transition: all 0.4s;
+    max-width: 197px;
+    margin: 0 auto;
   }
   &.active {
     background: #f2f2f2;
@@ -1078,12 +1086,14 @@ li.text-navigation-menu-item {
     }
     a {
       color: #fe000c;
+      font-weight: 600;
     }
   }
   &:hover {
     background: #f2f2f2;
     a {
       color: #fe000c;
+      font-weight: 600;
     }
   }
 }
@@ -1092,6 +1102,7 @@ li.text-navigation-menu-item {
   font-size: 16px;
   line-height: 24px;
   color: #333333;
+  padding-bottom: 80px;
 }
 .info-text h1 {
 }
@@ -1317,6 +1328,26 @@ li.text-navigation-menu-item {
   padding-right: 32px;
   padding-top: 30px;
   padding-bottom: 30px;
+  svg {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    margin-bottom: 17px;
+    path {
+      fill: #fff;
+    }
+  }
+  a {
+    color: #ffffff;
+    line-height: 24px;
+  }
+  .tel {
+    margin-top: 8px;
+    font-size: 24px;
+  }
+  .mail {
+    font-size: 18px;
+  }
   p {
     margin: 0;
   }
@@ -1335,7 +1366,9 @@ li.text-navigation-menu-item {
     margin: 0 auto;
   }
 }
-
+.slider {
+  position: relative;
+}
 .slider .swiper-wrapper {
   .swiper-slide {
     min-width: 0;
@@ -1444,6 +1477,7 @@ h5 {
 
 //catalog-inner
 .catalog-inner {
+  padding-bottom: 80px;
   p {
     font-size: 16px;
     line-height: 24px;
@@ -1456,7 +1490,8 @@ h5 {
   }
 }
 .catalog-product {
-  margin: 48px 0;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 @import "_media-catalog";
@@ -1481,8 +1516,8 @@ h5 {
   }
 }
 .direction-catalog-head {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 28px 0 54px;
 
@@ -1796,8 +1831,8 @@ h5 {
     color: #333;
     background: #ffc000;
   }
-  &.marked-used{
-    background: #A29999;
+  &.marked-used {
+    background: #a29999;
     display: flex;
   }
 }
@@ -1855,10 +1890,10 @@ h5 {
   align-items: center;
   justify-content: space-between;
   margin-top: 16px;
-  &.mod{
+  &.mod {
     justify-content: center;
-    button{
-      background: #EEEEEE;
+    button {
+      background: #eeeeee;
       box-shadow: none;
       color: #333333;
     }
@@ -1903,3 +1938,330 @@ h5 {
     }
   }
 }
+//dealer
+.dealer-inner {
+  padding-bottom: 80px;
+}
+.dealer-contol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+  select {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8e8484;
+    padding: 13px 20px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
+    background-position: calc(100% - 14px);
+  }
+}
+.dealer-map {
+  width: 100%;
+  height: 100%;
+}
+.dealer-panel {
+  max-width: 350px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-bottom: 3px solid #fe000c;
+}
+.dealer-panel-head {
+  padding: 30px 25px 12px 30px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  span {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #333333;
+    display: block;
+  }
+}
+.dealer-panel-body {
+  padding: 0 30px 30px 30px;
+  display: grid;
+  gap: 16px;
+}
+.dealer-panel-item {
+  display: grid;
+  grid-template-columns: minmax(auto, 22px) auto;
+  align-items: start;
+  text-align: left;
+  gap: 15px;
+  &.dealer-panel-item-link {
+    align-items: center;
+  }
+  &.dealer-panel-item-tel {
+    font-weight: bold;
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+  svg {
+  }
+}
+.ymaps-2-1-79-balloon__close + .ymaps-2-1-79-balloon__content {
+  //?
+  margin-right: 0 !important;
+  padding: 0;
+  max-width: 350px;
+  background: #ffffff;
+  display: block;
+  border-radius: 5px;
+}
+.ymaps-2-1-79-balloon__close {
+  display: none;
+}
+
+.dealer-info {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  .dealer-panel {
+    border-bottom: none;
+    box-shadow: none;
+  }
+}
+.dealer-panel-item-tel-box {
+  a {
+    display: inline-block;
+    & + a {
+      margin-left: 7px;
+    }
+  }
+}
+.page-control {
+  margin-top: 50px;
+}
+.page-control-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  justify-content: space-between;
+  align-items: center;
+}
+.page-control-item-more {
+  background: #ffffff;
+  box-shadow: 0px 5px 5px rgba(51, 51, 51, 0.05);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+  padding: 12px 30px;
+  text-transform: uppercase;
+
+  color: #333333;
+}
+.page-control-item-more-inner {
+  text-align: center;
+}
+.page-control-item-pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.page-control-item-pagination {
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999;
+  background: #eeeeee;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+
+  &.active {
+    background: #ffffff;
+    font-weight: bold;
+
+    /* grey */
+
+    color: #a29999;
+  }
+  & + .page-control-item-pagination {
+    margin-left: 8px;
+  }
+}
+@import "_media-dealer";
+
+//partners
+.text-navigation-btn {
+  @include no-button;
+  width: 100%;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #fe000c;
+  box-shadow: 0px 5px 5px rgba(254, 0, 12, 0.15);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.partners-inner {
+  padding-bottom: 80px;
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #333333;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 19px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+  }
+}
+.partners-advantages {
+  margin: 48px 0;
+  .about-company-item-info {
+    font-size: 14px;
+    line-height: 20px;
+    color: #a29999;
+  }
+}
+.swiper-container {
+  overflow: hidden;
+}
+.partners-feedback-inner {
+  position: relative;
+  margin-bottom: 50px;
+  .partners-feedback-pagination {
+    display: none;
+  }
+  .swiper-button-prev {
+    left: -24px;
+  }
+  .swiper-button-next {
+    right: -24px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: #eeeeee;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    &:after {
+      display: none;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.partners-feedback {
+}
+.partners-feedback-info-inner {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px 30px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: minmax(auto, 655px) auto;
+  gap: 30px;
+  h5 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+  }
+}
+.partners-hesitation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  .text-navigation-btn {
+    max-width: 255px;
+    margin: 0;
+    margin-top: 24px;
+  }
+}
+.partners-hesitation-title {
+  display: none;
+}
+.partners-feedback-info-inner img {
+  width: 128px;
+  height: 170px;
+  object-fit: cover;
+}
+@import "_media-partners";
+//technological-documentation
+.technological-documentation {
+  padding-bottom: 75px;
+  h5 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .dealer-contol {
+    margin: 48px 0;
+  }
+}
+.technological-documentation-docs-inner {
+  display: grid;
+  gap: 48px;
+}
+.technological-documentation-doc {
+
+  position: relative;
+  svg,img{
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  &:hover{
+    .technological-documentation-doc-name{
+      color:  #FE000C;
+    }
+  }
+}
+.technological-documentation-doc-name {
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+  padding-left: 33px;
+  span {
+    color: #ccc8c8;
+  }
+}
+.technological-documentation-doc-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 16px;
+}
+@import "_media-technological-documentation";

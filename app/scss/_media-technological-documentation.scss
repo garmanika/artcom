@@ -1,0 +1,27 @@
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+    .technological-documentation h5{
+        display: none;
+    }
+    .technological-documentation{
+        padding-bottom: 65px;
+    }
+}
+
+@media (max-width: 767px) {
+    .technological-documentation{
+        padding-bottom: 60px;
+    }
+    .technological-documentation-docs-inner{
+        gap: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

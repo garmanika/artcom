@@ -2,10 +2,7 @@
 	.footer-nav-items {
 		gap: 30px;
 	}
-	.footer-nav-item-box-phone{
-		display: flex;
-		justify-content: flex-end;
-	}
+
 	.footer-nav-item-box-phone-inner{
 		max-width: max-content;
 	}
@@ -13,6 +10,10 @@
 }
 
 @media (max-width: 991px) {
+	.footer-nav-item-box-phone{
+		display: flex;
+		justify-content: flex-end;
+	}
 	.footer-nav-items {
 		grid-template-columns: 1fr;
 		gap: 0;
@@ -117,7 +118,9 @@
 		display: flex;
 		justify-content: flex-start;
 	}
-
+	.partners-inner h2{
+		display: none;
+	}
 }
 
 @media (min-width: 1200px) {

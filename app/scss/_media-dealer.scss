@@ -1,0 +1,40 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .dealer-info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .dealer-info{
+        grid-template-columns: 1fr
+    }
+    .dealer-panel{
+        max-width: 100%;
+    }
+    .dealer-contol{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .page-control-inner{
+        grid-template-columns: 1fr;
+    }
+    .page-control-item-more{
+        width: 100%;
+    }
+    .page-control-item-pagination-wrapper{
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .page-control{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

@@ -1,4 +1,5 @@
 $(function () {
+  
   function mobileSearchTrigger() {
     $(".mobile-search-trigger").on("click", function (e) {
       e.preventDefault();
@@ -66,11 +67,33 @@ $(function () {
     clearIncomplete: true,
     showMaskOnHover: false,
   });
+  const swiper3 = new Swiper(".partners-feedback", {
+    slidesPerGroup: 1,
+
+    pagination: {
+      el: ".partners-feedback-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.partners-feedback-next',
+      prevEl: '.partners-feedback-prev',
+    },
+
+    breakpoints: {
+      319: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
+  });
   const swiper2 = new Swiper(".slider", {
     slidesPerGroup: 1,
+    
     pagination: {
       el: ".slider-pagination",
       type: "bullets",
+      clickable: true,
     },
     breakpoints: {
       319: {
@@ -85,10 +108,13 @@ $(function () {
   });
   const swiper = new Swiper(".banner-slider", {
     slidesPerGroup: 1,
+    
     pagination: {
       el: ".banner-slider-pagination",
       type: "bullets",
+      clickable: true,
     },
+
 
     breakpoints: {
       319: {
@@ -141,4 +167,5 @@ $(function () {
 		$(this).closest('.direction-catalog-content-aside-item').toggleClass("open");
     $(this).closest('.direction-catalog-content-aside-item').find('.direction-catalog-content-aside-item-content').toggle();
 	});
+
 });

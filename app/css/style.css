@@ -26,7 +26,8 @@ body::-webkit-scrollbar {
 }
 a,
 button {
-  cursor: pointer
+  cursor: pointer;
+  outline: 0
 }
 .wrapper-page {
   display: -webkit-box;
@@ -810,7 +811,8 @@ li.is-parent a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%
+  width: 100%;
+  margin-top: 25px
 }
 .swiper-pagination-bullet + .swiper-pagination-bullet {
   margin-left: 20px
@@ -1310,8 +1312,7 @@ li.is-parent a {
   }
 }
 .cooperation {
-  background: url(../img/bg.jpg) center/cover no-repeat;
-  border-bottom: 2px solid #fe000c
+  background: url(../img/bg.jpg) center/cover no-repeat
 }
 .cooperation-inner {
   padding: 20px 0;
@@ -1423,6 +1424,9 @@ li.is-parent a {
   .cooperation-info svg {
     margin-right: 0
   }
+}
+.footer {
+  border-top: 2px solid #fe000c
 }
 .footer-nav {
   padding: 60px 0
@@ -1603,6 +1607,13 @@ li.is-parent a {
   .footer-nav-items {
     gap: 30px
   }
+  .footer-nav-item-box-phone-inner {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content
+  }
+}
+@media (max-width:991px) {
   .footer-nav-item-box-phone {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1611,13 +1622,6 @@ li.is-parent a {
     -ms-flex-pack: end;
     justify-content: flex-end
   }
-  .footer-nav-item-box-phone-inner {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content
-  }
-}
-@media (max-width:991px) {
   .footer-nav-items {
     grid-template-columns: 1fr;
     gap: 0
@@ -1731,6 +1735,12 @@ li.is-parent a {
     -ms-flex-pack: start;
     justify-content: flex-start
   }
+  .partners-inner h2 {
+    display: none
+  }
+}
+.about-company {
+  padding-bottom: 80px
 }
 .about-company p {
   font-size: 16px;
@@ -1792,7 +1802,7 @@ ul.text-navigation-menu {
 }
 li.text-navigation-menu-item {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 12px 0;
   -webkit-transition: .4s;
   -o-transition: .4s;
@@ -1808,7 +1818,9 @@ li.text-navigation-menu-item a {
   display: block;
   -webkit-transition: .4s;
   -o-transition: .4s;
-  transition: .4s
+  transition: .4s;
+  max-width: 197px;
+  margin: 0 auto
 }
 li.text-navigation-menu-item.active {
   background: #f2f2f2
@@ -1817,19 +1829,22 @@ li.text-navigation-menu-item.active + li {
   border-top: none
 }
 li.text-navigation-menu-item.active a {
-  color: #fe000c
+  color: #fe000c;
+  font-weight: 600
 }
 li.text-navigation-menu-item:hover {
   background: #f2f2f2
 }
 li.text-navigation-menu-item:hover a {
-  color: #fe000c
+  color: #fe000c;
+  font-weight: 600
 }
 .info-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #333
+  color: #333;
+  padding-bottom: 80px
 }
 .info-text h4 {
   font-weight: 600;
@@ -2028,6 +2043,27 @@ li.text-navigation-menu-item:hover a {
   padding: 30px 32px 30px 43px;
   color: #fff
 }
+.info-text-imgbox-inner svg {
+  width: 56px;
+  height: 56px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 17px
+}
+.info-text-imgbox-inner svg path {
+  fill: #fff
+}
+.info-text-imgbox-inner a {
+  color: #fff;
+  line-height: 24px
+}
+.info-text-imgbox-inner .tel {
+  margin-top: 8px;
+  font-size: 24px
+}
+.info-text-imgbox-inner .mail {
+  font-size: 18px
+}
 .info-text-imgbox-inner p {
   margin: 0
 }
@@ -2047,6 +2083,9 @@ li.text-navigation-menu-item:hover a {
   -o-object-fit: cover;
   object-fit: cover;
   margin: 0 auto
+}
+.slider {
+  position: relative
 }
 .slider .swiper-wrapper .swiper-slide {
   min-width: 0;
@@ -2116,7 +2155,7 @@ li.text-navigation-menu-item:hover a {
     color: #fff
   }
 }
-@media (max-width:575px) {
+@media (max-width:767px) {
   .breadcrumbs {
     padding: 20px 0;
     margin-bottom: 30px
@@ -2208,6 +2247,17 @@ h5 {
   font-size: 14px;
   line-height: 20px
 }
+@media (max-width:575px) {
+  .about-company-box {
+    grid-template-columns: 1fr
+  }
+  .about-company {
+    padding-bottom: 60px
+  }
+}
+.catalog-inner {
+  padding-bottom: 80px
+}
 .catalog-inner p {
   font-size: 16px;
   line-height: 24px;
@@ -2220,14 +2270,21 @@ h5 {
   margin-top: 25px
 }
 .catalog-product {
-  margin: 48px 0
+  margin-top: 48px;
+  margin-bottom: 48px
+}
+@media (max-width:767px) {
+  .catalog-product {
+    margin-bottom: 85px
+  }
 }
 @media (max-width:575px) {
-  .about-company-box {
-    grid-template-columns: 1fr
+  .catalog-inner {
+    padding-bottom: 60px
   }
   .catalog-product {
-    margin: 40px 0
+    margin-top: 40px;
+    margin-bottom: 40px
   }
 }
 .direction-catalog-box {
@@ -2256,12 +2313,8 @@ h5 {
   padding: 12px 30px
 }
 .direction-catalog-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 30px;
   margin: 28px 0 54px
 }
@@ -2727,4 +2780,452 @@ h5 {
   font-size: 18px;
   line-height: 20px;
   color: #333
+}
+.dealer-inner {
+  padding-bottom: 80px
+}
+.dealer-contol {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  margin-bottom: 30px
+}
+.dealer-contol select {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8484;
+  padding: 13px 20px;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-position: calc(100% - 14px)
+}
+.dealer-map {
+  width: 100%;
+  height: 100%
+}
+.dealer-panel {
+  max-width: 350px;
+  background: #fff;
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  border-radius: 5px;
+  border-bottom: 3px solid #fe000c
+}
+.dealer-panel-head {
+  padding: 30px 25px 12px 30px;
+  display: grid;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.dealer-panel-head span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333;
+  display: block
+}
+.dealer-panel-body {
+  padding: 0 30px 30px;
+  display: grid;
+  gap: 16px
+}
+.dealer-panel-item {
+  display: grid;
+  grid-template-columns: minmax(auto,22px) auto;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  gap: 15px
+}
+.dealer-panel-item.dealer-panel-item-link {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.dealer-panel-item.dealer-panel-item-tel {
+  font-weight: 700
+}
+.dealer-panel-item span {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333
+}
+.ymaps-2-1-79-balloon__close + .ymaps-2-1-79-balloon__content {
+  margin-right: 0!important;
+  padding: 0;
+  max-width: 350px;
+  background: #fff;
+  display: block;
+  border-radius: 5px
+}
+.ymaps-2-1-79-balloon__close {
+  display: none
+}
+.dealer-info {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px
+}
+.dealer-info .dealer-panel {
+  border-bottom: none;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.dealer-panel-item-tel-box a {
+  display: inline-block
+}
+.dealer-panel-item-tel-box a + a {
+  margin-left: 7px
+}
+.page-control {
+  margin-top: 50px
+}
+.page-control-inner {
+  display: grid;
+  grid-template-columns: repeat(3,33%);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.page-control-item-more {
+  background: #fff;
+  -webkit-box-shadow: 0 5px 5px rgba(51,51,51,.05);
+  box-shadow: 0 5px 5px rgba(51,51,51,.05);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  color: #333
+}
+.page-control-item-more-inner {
+  text-align: center
+}
+.page-control-item-pagination-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+.page-control-item-pagination {
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999;
+  background: #eee;
+  width: 32px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none
+}
+.page-control-item-pagination.active {
+  background: #fff;
+  font-weight: 700;
+  color: #a29999
+}
+.page-control-item-pagination + .page-control-item-pagination {
+  margin-left: 8px
+}
+@media (max-width:991px) {
+  .dealer-info {
+    grid-template-columns: repeat(2,1fr)
+  }
+}
+@media (max-width:767px) {
+  .dealer-info {
+    grid-template-columns: 1fr
+  }
+  .dealer-panel {
+    max-width: 100%
+  }
+  .dealer-contol {
+    grid-template-columns: 1fr;
+    gap: 10px
+  }
+  .page-control-inner {
+    grid-template-columns: 1fr
+  }
+  .page-control-item-more {
+    width: 100%
+  }
+  .page-control-item-pagination-wrapper {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 15px
+  }
+  .page-control {
+    margin-top: 30px
+  }
+}
+.text-navigation-btn {
+  background: #fe000c;
+  border: none;
+  padding: 12px 0;
+  margin: 0 0 15px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-box-shadow: 0 5px 5px rgba(254,0,12,.15);
+  box-shadow: 0 5px 5px rgba(254,0,12,.15);
+  border-radius: 5px
+}
+.partners-inner {
+  padding-bottom: 80px
+}
+.partners-inner h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #333;
+  padding: 0;
+  margin: 0 0 19px
+}
+.partners-inner p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0
+}
+.partners-advantages {
+  margin: 48px 0
+}
+.partners-advantages .about-company-item-info {
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999
+}
+.swiper-container {
+  overflow: hidden
+}
+.partners-feedback-inner {
+  position: relative;
+  margin-bottom: 50px
+}
+.partners-feedback-inner .partners-feedback-pagination {
+  display: none
+}
+.partners-feedback-inner .swiper-button-prev {
+  left: -24px
+}
+.partners-feedback-inner .swiper-button-next {
+  right: -24px
+}
+.partners-feedback-inner .swiper-button-next,
+.partners-feedback-inner .swiper-button-prev {
+  background: #eee;
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%
+}
+.partners-feedback-inner .swiper-button-next:after,
+.partners-feedback-inner .swiper-button-prev:after {
+  display: none
+}
+.partners-feedback-inner .swiper-button-next svg,
+.partners-feedback-inner .swiper-button-prev svg {
+  width: 24px;
+  height: 24px
+}
+.partners-feedback-info-inner {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px 30px;
+  display: grid;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-template-columns: minmax(auto,655px) auto;
+  gap: 30px
+}
+.partners-feedback-info-inner h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  margin: 16px 0 0;
+  padding: 0
+}
+.partners-hesitation {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px
+}
+.partners-hesitation .text-navigation-btn {
+  max-width: 255px;
+  margin: 24px 0 0
+}
+.partners-hesitation-title {
+  display: none
+}
+.partners-feedback-info-inner img {
+  width: 128px;
+  height: 170px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+@media (max-width:767px) {
+  .direction-catalog-head {
+    grid-template-columns: 1fr
+  }
+  .direction-catalog-head button {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+  .direction-catalog-head span {
+    max-width: 100%
+  }
+  .partners-feedback-info-inner {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding: 20px 27px 24px 15px
+  }
+  .partners-feedback-info-inner img {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    margin: 0 auto
+  }
+  .partners-feedback-info-inner .partners-feedback-info {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1
+  }
+  .partners-hesitation-title {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 23px
+  }
+}
+.technological-documentation {
+  padding-bottom: 75px
+}
+.technological-documentation h5 {
+  margin: 0 0 50px;
+  padding: 0
+}
+.technological-documentation .dealer-contol {
+  margin: 48px 0
+}
+.technological-documentation-docs-inner {
+  display: grid;
+  gap: 48px
+}
+.technological-documentation-doc {
+  position: relative
+}
+.technological-documentation-doc img,
+.technological-documentation-doc svg {
+  position: absolute;
+  top: 5px;
+  left: 0
+}
+.technological-documentation-doc:hover .technological-documentation-doc-name {
+  color: #fe000c
+}
+.technological-documentation-doc-name {
+  font-size: 16px;
+  line-height: 32px;
+  color: #333;
+  padding-left: 33px
+}
+.technological-documentation-doc-name span {
+  color: #ccc8c8
+}
+.technological-documentation-doc-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 16px
+}
+@media (max-width:991px) {
+  .partners-feedback-inner .partners-feedback-pagination {
+    display: block
+  }
+  .partners-feedback-inner .swiper-wrapper {
+    padding-bottom: 55px
+  }
+  .partners-feedback-inner .swiper-button-next,
+  .partners-feedback-inner .swiper-button-prev {
+    display: none
+  }
+  .partners-hesitation {
+    grid-template-columns: 1fr
+  }
+  .partners-hesitation img {
+    width: 100%;
+    height: 100%
+  }
+  .partners-hesitation .text-navigation-btn {
+    width: 100%;
+    max-width: 100%
+  }
+  .technological-documentation h5 {
+    display: none
+  }
+  .technological-documentation {
+    padding-bottom: 65px
+  }
+}
+@media (max-width:767px) {
+  .technological-documentation {
+    padding-bottom: 60px
+  }
+  .technological-documentation-docs-inner {
+    gap: 30px
+  }
 }
