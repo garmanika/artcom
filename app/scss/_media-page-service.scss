@@ -1,0 +1,36 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .page-service { 
+        padding-bottom: 70px;
+    }
+    .page-service img{
+        float: right;
+        margin: 20px 0 20px 30px;
+
+    }
+    .page-service button{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-service {
+        padding-bottom: 60px;
+     }
+    .page-service img{
+        float: none;
+        margin: 25px 0;
+    }
+    .page-service button{
+        margin-top: 32px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

@@ -2234,16 +2234,20 @@ h5 {
   gap: 48px;
 }
 .technological-documentation-doc {
-
+  display: block;
   position: relative;
-  svg,img{
+  & + .technological-documentation-doc {
+    margin-top: 2px;
+  }
+  svg,
+  img {
     position: absolute;
     top: 5px;
     left: 0;
   }
-  &:hover{
-    .technological-documentation-doc-name{
-      color:  #FE000C;
+  &:hover {
+    .technological-documentation-doc-name {
+      color: #fe000c;
     }
   }
 }
@@ -2265,3 +2269,56 @@ h5 {
   margin-bottom: 16px;
 }
 @import "_media-technological-documentation";
+
+//services
+.services-inner {
+  p {
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #333333;
+    & + p {
+      margin-top: 25px;
+    }
+  }
+}
+//page-service
+.page-service {
+  padding-bottom: 80px;
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    & + p {
+      margin-top: 25px;
+    }
+  }
+  img {
+    float: left;
+    margin: 30px 30px 30px 0;
+    display: block;
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+  }
+  button {
+    @include no-button;
+    display: block;
+    background: #fe000c;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 12px 0;
+    max-width: 193px;
+    width: 100%;
+    margin: 32px auto 0;
+  }
+}
+@import "_media-page-service";
