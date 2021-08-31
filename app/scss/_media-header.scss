@@ -222,6 +222,9 @@
 	ul.header-desktop-menu li span {
 		max-width: 720px;
 	}
+	.page-inner{
+		padding-bottom: 70px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -245,6 +248,9 @@
 	}
 	ul.header-desktop-menu {
 		height: calc(100vh - 128px);
+	}
+	.page-inner{
+		padding-bottom: 60px;
 	}
 }
 

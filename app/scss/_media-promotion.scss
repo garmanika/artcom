@@ -1,0 +1,26 @@
+@media (max-width: 1199px) {
+	.promotion .page-control{
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+	.promotion .dealer-contol{
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+	.promotion-items{
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 575px) {
+
+}
+
+@media (min-width: 1200px) {
+}

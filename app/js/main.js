@@ -1,5 +1,6 @@
 $(function () {
-  
+  const da = new DynamicAdapt("max");  
+		da.init();
   function mobileSearchTrigger() {
     $(".mobile-search-trigger").on("click", function (e) {
       e.preventDefault();
@@ -66,6 +67,30 @@ $(function () {
     mask: "+7 (999) 999-99-99",
     clearIncomplete: true,
     showMaskOnHover: false,
+  });
+  const swiper4 = new Swiper(".project-slider", {
+    slidesPerView: 3,
+
+    pagination: {
+      el: ".project-slider-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.project-slider-next',
+      prevEl: '.project-slider-prev',
+    },
+
+    breakpoints: {
+      319: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+			768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
   });
   const swiper3 = new Swiper(".partners-feedback", {
     slidesPerGroup: 1,

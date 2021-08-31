@@ -33,9 +33,9 @@
 }
 
 @media (max-width: 767px) {
-    .info-text{
-        //padding-bottom: 60px;
-    }
+	.breadcrumbs-inner{
+		padding-left: 15px;
+	}
 	.breadcrumbs{
 		padding: 20px 0;
 		margin-bottom: 30px;
@@ -77,6 +77,10 @@
 		.info-text-imgbox-inner h1{
 			margin-bottom: 8px;
 		}
+		.breadcrumbs-title{
+			font-size: 18px;
+			line-height: 24px;
+	}
 }
 
 @media (max-width: 575px) {

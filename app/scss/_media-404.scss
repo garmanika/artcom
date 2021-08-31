@@ -1,0 +1,47 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+  .page-404-inner {
+    min-height: 764px;
+  }
+}
+
+@media (max-width: 767px) {
+	.page-404-inner {
+    min-height: auto;
+		padding: 40px 0 60px;
+		svg{
+			width: 96px;
+			height: 96px;
+		}
+  }
+  .page-404-title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #333333;
+  }
+	.page-404-btn-box{
+		grid-template-columns: 1fr;
+	}
+	.page-404-btn{
+		max-width: 100%;
+		width: 100%;
+		display: block;
+	}
+	.page-404-inner{
+		display: block;
+		text-align: center;
+	}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

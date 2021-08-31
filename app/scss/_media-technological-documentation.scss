@@ -6,15 +6,11 @@
     .technological-documentation h5{
         display: none;
     }
-    .technological-documentation{
-        padding-bottom: 65px;
-    }
+
 }
 
 @media (max-width: 767px) {
-    .technological-documentation{
-        padding-bottom: 60px;
-    }
+
     .technological-documentation-docs-inner{
         gap: 30px;
     }

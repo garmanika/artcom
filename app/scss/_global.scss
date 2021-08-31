@@ -62,12 +62,7 @@ a {
 		text-decoration: none;
 		//color: #333;
 	}
-	ul,
-	li {
-		display: inline-block;
-		text-decoration: none;
-		padding: 0;
-	}
+
 }
 ul,
 li {
@@ -81,4 +76,7 @@ li {
 
 .footer {
 	flex: 0 0 auto;
+}
+.page-inner{
+	padding-bottom: 80px;
 }

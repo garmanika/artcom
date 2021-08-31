@@ -9,7 +9,8 @@
 
 @media (max-width: 767px) {
     .dealer-info{
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+				margin-top: 40px;
     }
     .dealer-panel{
         max-width: 100%;
@@ -31,6 +32,9 @@
     .page-control{
         margin-top: 30px;
     }
+		.dealer-inner{
+			padding-bottom: 60px;
+		}
 }
 
 @media (max-width: 575px) {
