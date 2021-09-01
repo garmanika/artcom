@@ -816,10 +816,7 @@ li.is-parent {
 
 .footer-nav-items {
   display: grid;
-  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-      auto,
-      255px
-    );
+  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
   justify-content: space-between;
   gap: 64px;
 }
@@ -1961,8 +1958,7 @@ h5 {
     border-radius: 5px;
     outline: none;
     appearance: none;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     background-position: calc(100% - 14px);
   }
 }
@@ -2722,7 +2718,7 @@ h5 {
 }
 .page-404-inner {
   min-height: 780px;
-	padding: 20px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2783,3 +2779,175 @@ h5 {
   color: #333333;
 }
 @import "_media-404";
+
+//partner-registration
+.partner-registration {
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #8e8484;
+    margin: 0;
+    padding: 0;
+  }
+  h5 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+.partner-registration-wraper {
+  margin-top: 25px;
+}
+.partner-registration-item {
+  position: relative;
+  input {
+    font-size: 14px;
+    line-height: 20px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 13px 20px;
+    width: 100%;
+  }
+  select {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8e8484;
+    padding: 13px 20px;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    outline: 0;
+    appearance: none;
+    background-position: calc(100% - 14px);
+  }
+  span {
+    color: red;
+    font-size: 18px;
+  }
+  input:focus + label {
+    display: none;
+  }
+  label {
+    display: block;
+    position: absolute;
+    top: 11px;
+    cursor: pointer;
+    left: 20px;
+    color: #8e8484;
+  }
+}
+.partner-registration-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 30px;
+}
+.partner-registration-items-mod {
+  grid-template-columns: 1fr;
+}
+
+.partner-registration-textarea {
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 96px;
+  padding: 13px 20px;
+  &::placeholder {
+    color: #8e8484;
+  }
+}
+.partner-registration-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  background: #fe000c;
+  box-shadow: 0px 5px 5px rgba(254, 0, 12, 0.15);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 12px 0;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+.partner-registration-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fe000c;
+}
+.partner-registration-btns {
+  margin-bottom: 20px;
+}
+.partner-registration-btns label {
+  position: relative;
+  padding-left: 30px;
+  & + label {
+    margin-left: 40px;
+  }
+}
+.radio-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 30px;
+}
+.radio-style {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a29999;
+  margin-left: -30px;
+  border-radius: 50%;
+}
+.radio-box:checked + .radio-style::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #fe000c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+@import "_media-partner-registration";
+
+//partner-registration-profile
+.partner-registration-profile-box{
+}
+.partner-registration-profile {
+  h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+}
+.partner-registration-profile-box {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 66% 33%;
+}
+.partner-registration-profile-inner{
+  margin-top: 30px;
+}
+@import "_media-partner-registration-profile";

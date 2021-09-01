@@ -3923,3 +3923,195 @@ h5 {
     display: block
   }
 }
+.partner-registration p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8484;
+  margin: 0;
+  padding: 0
+}
+.partner-registration h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 0 20px;
+  padding: 0
+}
+.partner-registration-wraper {
+  margin-top: 25px
+}
+.partner-registration-item {
+  position: relative
+}
+.partner-registration-item input {
+  font-size: 14px;
+  line-height: 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 13px 20px;
+  width: 100%
+}
+.partner-registration-item select {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8484;
+  padding: 13px 20px;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-position: calc(100% - 14px)
+}
+.partner-registration-item span {
+  color: red;
+  font-size: 18px
+}
+.partner-registration-item input:focus + label {
+  display: none
+}
+.partner-registration-item label {
+  display: block;
+  position: absolute;
+  top: 11px;
+  cursor: pointer;
+  left: 20px;
+  color: #8e8484
+}
+.partner-registration-items {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px 30px
+}
+.partner-registration-items-mod {
+  grid-template-columns: 1fr
+}
+.partner-registration-textarea {
+  resize: none;
+  background: #fff;
+  border: 1px solid #eee;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 96px;
+  padding: 13px 20px
+}
+.partner-registration-textarea::-webkit-input-placeholder {
+  color: #8e8484
+}
+.partner-registration-textarea::-moz-placeholder {
+  color: #8e8484
+}
+.partner-registration-textarea:-ms-input-placeholder {
+  color: #8e8484
+}
+.partner-registration-textarea::-ms-input-placeholder {
+  color: #8e8484
+}
+.partner-registration-textarea::placeholder {
+  color: #8e8484
+}
+.partner-registration-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  background: #fe000c;
+  -webkit-box-shadow: 0 5px 5px rgba(254,0,12,.15);
+  box-shadow: 0 5px 5px rgba(254,0,12,.15);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 0;
+  margin-top: 30px;
+  margin-bottom: 16px
+}
+.partner-registration-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fe000c
+}
+.partner-registration-btns {
+  margin-bottom: 20px
+}
+.partner-registration-btns label {
+  position: relative;
+  padding-left: 30px
+}
+.partner-registration-btns label + label {
+  margin-left: 40px
+}
+.radio-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 30px
+}
+.radio-style {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a29999;
+  margin-left: -30px;
+  border-radius: 50%
+}
+.radio-box:checked + .radio-style::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #fe000c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 50%
+}
+@media (max-width:767px) {
+  .partner-registration-items {
+    grid-template-columns: 1fr
+  }
+  .partner-registration-btns label {
+    display: block
+  }
+  .partner-registration-btns label + label {
+    margin: 8px 0 0
+  }
+}
+.partner-registration-profile h5 {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333
+}
+.partner-registration-profile-box {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 66% 33%
+}
+.partner-registration-profile-inner {
+  margin-top: 30px
+}
+@media (max-width:767px) {
+  .partner-registration-profile-box {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+}

@@ -1,0 +1,26 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+    .partner-registration-items{
+        grid-template-columns: 1fr;
+    }
+    .partner-registration-btns{
+        label{
+            display: block;
+            & + label{
+                margin: 0;
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
