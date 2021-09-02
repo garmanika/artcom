@@ -11,6 +11,14 @@ $(function () {
       $(".header-search-form").fadeOut();
     });
   }
+	$('.tabs-item').click(function() {
+		let id = $(this).attr('data-tab'),
+				content = $('.tab-content[data-tab="' + id + '"]');
+		$('.tabs-item.active').removeClass('active');
+		$(this).addClass('active');
+		$('.tab-content.active').removeClass('active');
+		content.addClass('active');
+});
 
   function menuToggle() {
     $(".mobile-navigation-trigger").on("click", function () {

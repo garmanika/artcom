@@ -1,0 +1,30 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+	.orders-panel-content-inner{
+		gap: 130px;
+	}
+	.orders-panel-content{
+		padding: 25px 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.orders-panel-content-inner{
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+	.orders-panel-content{
+		padding: 25px 15px;
+	}
+	.tabs-item + .tabs-item{
+		margin-left: 25px;
+	}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

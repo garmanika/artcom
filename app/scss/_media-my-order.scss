@@ -1,0 +1,81 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+	.my-order .orders-panel-content{
+		grid-template-columns: 1fr;
+		padding: 25px 15px;
+		gap: 12px;
+	}
+	.orders-panel-content{
+		position: relative;
+	}
+	.my-order .orders-panel-btn{
+		position: absolute;
+		right: 15px;
+		top: 25px;
+	}
+	.orders-panel-content{
+		.orders-panel-box:first-child{
+			padding-right: 90px;
+		}
+	}
+	.orders-panel-table-thead{
+		display: none;
+	}
+.orders-panel-table-row{
+	display: block;
+	padding: 25px 15px;
+}
+	.orders-panel-table-cell{
+		display: block;
+		text-align: left;
+		padding: 0;
+	}
+	.orders-panel-table-type{
+		span{
+			display: inline-block;
+		}
+	}
+	.orders-panel-table-count{
+		position: absolute;
+		top: 25px;
+		right: 15px;
+	}
+	.orders-panel-table-name{
+		padding-right: 20px;
+	}
+	.orders-panel-table-summ{
+		display: none;
+	}
+	.orders-panel-table-cell-price{
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-between;
+		gap: 15px;
+		margin-top: 18px;
+		.orders-panel-table-summ{
+			display: block;
+		}
+	}
+	.orders-panel-table-name{
+		margin-bottom: 4px;
+	}
+
+
+
+
+
+	.orders-panel-table-number-td{
+		display: none;
+	}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
