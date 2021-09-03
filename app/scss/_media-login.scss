@@ -1,0 +1,34 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .login-inner {
+        min-height: 764px;
+    }
+    .login-link {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .login-inner {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    .login-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 16px;
+        color: #333333;
+    }
+    .partner-feedback-inner{
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

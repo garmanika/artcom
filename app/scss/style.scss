@@ -816,10 +816,7 @@ li.is-parent {
 
 .footer-nav-items {
   display: grid;
-  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-      auto,
-      255px
-    );
+  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
   justify-content: space-between;
   gap: 64px;
 }
@@ -1961,8 +1958,7 @@ h5 {
     border-radius: 5px;
     outline: none;
     appearance: none;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     background-position: calc(100% - 14px);
   }
 }
@@ -2825,8 +2821,7 @@ h5 {
     line-height: 20px;
     color: #8e8484;
     padding: 13px 20px;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     border: 1px solid #eee;
     border-radius: 5px;
     outline: 0;
@@ -2865,7 +2860,7 @@ h5 {
     cursor: pointer;
     left: 20px;
     color: #8e8484;
-		pointer-events: none;
+    pointer-events: none;
   }
 }
 .partner-registration-items {
@@ -2893,7 +2888,7 @@ h5 {
   }
 }
 .partner-registration-btn {
-	@include no-button;
+  @include no-button;
   display: block;
   text-align: center;
   width: 100%;
@@ -2951,6 +2946,7 @@ h5 {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
 .partner-registration-item {
   span {
     color: red;
@@ -3119,10 +3115,7 @@ h5 {
 //my-order
 .my-order {
   .orders-panel-content {
-    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(
-        auto,
-        90px
-      );
+    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(auto, 90px);
     padding: 25px 30px;
     align-items: center;
   }
@@ -3189,8 +3182,7 @@ h5 {
 }
 .orders-panel-table-thead {
   display: table-header-group;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
 }
 .orders-panel-table-tr {
   display: table-row;
@@ -3211,13 +3203,11 @@ h5 {
 }
 .orders-panel-table-row {
   display: table-row;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
   position: relative;
 
   &:nth-child(2n + 1) {
-    background: linear-gradient(0deg, #ffffff, #ffffff),
-      linear-gradient(0deg, #a29999, #a29999), #333333;
+    background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(0deg, #a29999, #a29999), #333333;
   }
 }
 .orders-panel-table-cell {
@@ -3265,7 +3255,7 @@ h5 {
   align-items: center;
   max-width: 350px;
   margin: 0 auto;
-	padding: 15px 0;
+  padding: 15px 0;
   .partner-registration-item {
     width: 100%;
   }
@@ -3299,3 +3289,143 @@ h5 {
   width: 100%;
 }
 @import "_media-lost-password";
+.promotion-item-play {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+//login
+.login-inner {
+  min-height: 536px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.login-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.login-data {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 13px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  &::placeholder {
+    color: #8e8484;
+  }
+  & + .login-data {
+    margin-top: 15px;
+  }
+}
+.login-checkbox {
+  margin-top: 15px;
+  margin-bottom: 32px;
+  label {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    color: #a29999;
+  }
+  .check-box {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .check-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #a29999;
+    border-radius: 2px;
+    margin-left: -30px;
+  }
+  .check-box:checked + .check-style {
+    background-image: url(../img/svg/done.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.login-btn {
+  @include no-button;
+  display: block;
+  background: #fe000c;
+  box-shadow: 0px 5px 5px rgba(254, 0, 12, 0.15);
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.login-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fe000c;
+}
+.login-info {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999;
+}
+
+.partner-feedback {
+  .partners-feedback-info-inner,
+  .partner-feedback-inner {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      & + p {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.partner-feedback-box {
+  margin-top: 16px;
+  span {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    /* black */
+
+    color: #333333;
+  }
+}
+.partner-feedback-inner {
+  padding: 20px 30px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+@import "_media-login";
