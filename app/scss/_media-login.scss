@@ -25,6 +25,9 @@
     .partner-feedback-inner{
         padding: 20px 15px;
     }
+    .partner-registration-item-box{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 575px) {

@@ -4045,7 +4045,8 @@ h5 {
   font-size: 14px;
   line-height: 20px;
   min-height: 96px;
-  padding: 13px 20px
+  padding: 13px 20px;
+  width: 100%
 }
 .partner-registration-textarea::-webkit-input-placeholder {
   color: #8e8484
@@ -4686,6 +4687,68 @@ h5 {
   border-radius: 5px;
   margin-top: 15px
 }
+.application-training-item {
+  position: relative
+}
+.application-training-item input {
+  width: 100%;
+  height: 100%
+}
+.application-training-item input[type=date] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.application-training-item input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  z-index: 10;
+  background: 0 0
+}
+.partner-registration-item-box {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px 30px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 15px
+}
+.application-training-item-date {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  padding: 14px 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px
+}
+.application-training-item-date span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8484
+}
+.application-training-inner + .application-training-inner {
+  margin-top: 15px
+}
+.application-training-info {
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999
+}
 @media (max-width:991px) {
   .login-inner {
     min-height: 764px
@@ -4709,4 +4772,110 @@ h5 {
   .partner-feedback-inner {
     padding: 20px 15px
   }
+  .partner-registration-item-box {
+    grid-template-columns: 1fr
+  }
+}
+.basket-summary {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  margin-top: 32px
+}
+.basket-promo {
+  position: relative
+}
+.basket-promo input {
+  max-width: 252px;
+  width: 100%;
+  padding: 14px 20px;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background: #fff
+}
+.basket-promo button {
+  background: #0a0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: 0 5px 5px 0;
+  height: 48px;
+  width: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.basket-total {
+  min-width: 252px
+}
+.basket-total-summ {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative
+}
+.basket-total-summ span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #333
+}
+.basket-total-summ span.summ {
+  font-size: 24px;
+  color: #fe000c
+}
+.basket-total-gramme {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  position: relative
+}
+.basket-total-gramme:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  bottom: 6px;
+  left: 0;
+  z-index: 0;
+  border: 1px dashed #d1d1d1
+}
+.basket-total-gramme span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333
+}
+.basket-total-gramme span.gramm {
+  font-weight: 400;
+  line-height: 20px
 }
