@@ -1,0 +1,58 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+	.goods-calc{
+		width: 120px;
+	}
+	.goods-calc .value-button{
+		width: 35px;
+	}
+}
+
+@media (max-width: 767px) {
+	.basket-table-head,
+	.basket-delate{
+		display: none;
+	}
+	.basket-table-content{
+		display: block;
+		td{
+			display: block;
+		}
+	}
+	td.basket-table-td-price{
+		display: none;
+	}
+	.basket-calc-box{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		.basket-table-price,
+		.basket-delate{
+			display: block;
+		}
+	}
+	.goods-calc{
+		width: 100%;
+		padding: 0 20px;
+	}
+	.goods-calc .value-button{
+		width: auto;
+	}
+	.basket-summary{
+		grid-template-columns: 1fr;
+		gap: 30px 0;
+	}
+	.basket-promo input{
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

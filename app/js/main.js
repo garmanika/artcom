@@ -38,12 +38,27 @@ $(function () {
         "mobile-navigation-sub-position"
       );
     });
+		function resizeScreen(){
+			if (window.innerWidth <= 1199){
+				$(".header-desktop-menu .is-parent > a").on("click", function (e) {
+					e.preventDefault();
+					var subMenu = $(this).next(".mobile-navigation-sub-position");
+					subMenu.addClass("sub-opened");
+				});
+			
 
-    $(".header-desktop-menu .is-parent > a").on("click", function (e) {
-      e.preventDefault();
-      var subMenu = $(this).next(".mobile-navigation-sub-position");
-      subMenu.addClass("sub-opened");
-    });
+			
+			}
+			else {
+			
+
+			
+			}
+			}
+			resizeScreen();
+			window.addEventListener('resize', resizeScreen);
+
+
 
     $(".header-desktop-sub-menu-heading").on("click", function (e) {
       e.preventDefault();
