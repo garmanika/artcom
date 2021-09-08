@@ -109,9 +109,11 @@
     background-size: 24px 24px;
     border: none;
     &:hover {
+      box-shadow: none;
       background: url(../img/svg/close-button-h.svg);
       @include bgi;
       background-size: 24px 24px;
+
     }
   }
 }
@@ -243,7 +245,7 @@
   content: "";
   position: absolute;
   top: 7px;
-  left: 100%;
+  left: 107%;
   display: block;
   width: 8px;
   height: 8px;
@@ -496,11 +498,6 @@ li.is-parent {
       transform: translateY(0);
     }
     .product-img {
-      width: 84px;
-      height: 84px;
-    }
-    .phone-station {
-      width: 132px;
       height: 84px;
     }
   }
@@ -550,27 +547,10 @@ li.is-parent {
 }
 
 .product-img {
-  @include bgi;
+  object-fit: cover;
   transition: 0.35s linear;
-  width: 128px;
+
   height: 128px;
-  &.phone-station {
-    background-image: url(../img/svg/product.svg);
-    width: 200px;
-    height: 128px;
-  }
-  &.terminal {
-    background-image: url(../img/svg/product-1.svg);
-  }
-  &.router {
-    background-image: url(../img/svg/product-2.svg);
-  }
-  &.app {
-    background-image: url(../img/svg/app.svg);
-  }
-  &.used {
-    background-image: url(../img/svg/proc-box.svg);
-  }
 }
 
 @import "_media-products";
@@ -816,10 +796,7 @@ li.is-parent {
 
 .footer-nav-items {
   display: grid;
-  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-      auto,
-      255px
-    );
+  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
   justify-content: space-between;
   gap: 64px;
 }
@@ -1016,7 +993,7 @@ li.is-parent {
 .breadcrumbs {
   background: #f1f1f1;
   padding: 35px 0;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 .breadcrumbs-inner {
   border-left: 3px solid #fe000c;
@@ -1034,7 +1011,7 @@ ul.breadcrumbs-list {
     position: absolute;
     right: 11px;
     bottom: 1px;
-		font-size: 14px;
+    font-size: 14px;
     line-height: 20px;
     color: #a29999;
   }
@@ -1048,22 +1025,29 @@ ul.breadcrumbs-list {
     font-size: 14px;
     line-height: 20px;
     color: #a29999;
-		position: relative;
+    position: relative;
+    &:hover{
+      color: #fe000c;
+    }
   }
-  &.active a,
-  span {
-    color: #fe000c;
-  }
+  &.active{
+    a,
+    span {
+      color: #fe000c;
+    }
+  } 
   & + .breadcrumbs-list-item {
   }
 }
 .breadcrumbs-title {
+  margin: 0;
   margin-top: 8px;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
   color: #333;
+
 }
 ul.text-navigation-menu {
   display: block;
@@ -1965,8 +1949,7 @@ h5 {
     border-radius: 5px;
     outline: none;
     appearance: none;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     background-position: calc(100% - 14px);
   }
 }
@@ -2829,8 +2812,7 @@ h5 {
     line-height: 20px;
     color: #8e8484;
     padding: 13px 20px;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     border: 1px solid #eee;
     border-radius: 5px;
     outline: 0;
@@ -3063,6 +3045,7 @@ h5 {
   gap: 15px;
 }
 .orders-panel {
+  border: 1px solid #E0E0E0;
 }
 .orders-panel-title {
   font-weight: bold;
@@ -3125,10 +3108,7 @@ h5 {
 //my-order
 .my-order {
   .orders-panel-content {
-    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(
-        auto,
-        90px
-      );
+    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(auto, 90px);
     padding: 25px 30px;
     align-items: center;
   }
@@ -3195,8 +3175,7 @@ h5 {
 }
 .orders-panel-table-thead {
   display: table-header-group;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
 }
 .orders-panel-table-tr {
   display: table-row;
@@ -3217,13 +3196,11 @@ h5 {
 }
 .orders-panel-table-row {
   display: table-row;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
   position: relative;
 
   &:nth-child(2n + 1) {
-    background: linear-gradient(0deg, #ffffff, #ffffff),
-      linear-gradient(0deg, #a29999, #a29999), #333333;
+    background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(0deg, #a29999, #a29999), #333333;
   }
 }
 .orders-panel-table-cell {
@@ -3510,25 +3487,31 @@ h5 {
 }
 @import "_media-login";
 .basket-table {
-	box-shadow: inset 0 0 0 2px #e0e0e0;
+  box-shadow: 0 0 0 1px #e0e0e0;
 }
 .basket-summary {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: minmax(252px, auto) auto;
   justify-content: space-between;
+  gap: 30px;
   align-items: end;
   margin-top: 32px;
 }
 .basket-promo {
   position: relative;
   input {
-    max-width: 252px;
+
     width: 100%;
     padding: 14px 20px;
     display: block;
     border: none;
     border-radius: 5px;
     background: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 48px;
+
+    color: #a29999;
   }
   button {
     @include no-button;
@@ -3629,7 +3612,6 @@ h5 {
   table {
     width: 100%;
     border-collapse: collapse;
-		
   }
   tr {
     th {
@@ -3654,7 +3636,7 @@ h5 {
 }
 .basket-table-td-calc {
   .basket-table-price,
-	.basket-delate {
+  .basket-delate {
     display: none;
   }
 }
@@ -3691,7 +3673,7 @@ h5 {
   line-height: 20px;
   white-space: nowrap;
   color: #333333;
-	text-align: center;
+  text-align: center;
 }
 // .basket-calc {
 // 	display: flex;
@@ -3718,7 +3700,7 @@ h5 {
   background: #fff;
   position: relative;
   overflow: hidden;
-	margin: 0 auto;
+  margin: 0 auto;
 }
 .goods-calc input {
   padding: 0;
@@ -3753,10 +3735,10 @@ h5 {
 .basket-delate {
   @include no-button;
 }
-.basket-table-content{
-	background: #FFFFFF;
-	&:nth-child(odd){
-		background: #F5F5F5;
-	}
+.basket-table-content {
+  background: #ffffff;
+  &:nth-child(odd) {
+    background: #f5f5f5;
+  }
 }
 @import "_media-basket";

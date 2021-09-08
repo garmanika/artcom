@@ -1,6 +1,6 @@
 @media (max-width: 1199px) {
 	.product:focus .product-img, .product:hover .product-img{
-		width: 75px;
+
 		height: 75px;
 	}
 	.product {
@@ -11,19 +11,9 @@
 	// .product:focus {
 	// 	padding-bottom: 110px;
 	// }
-	.product-img.phone-station {
-		width: 162px;
-		height: 100px;
-	}
-	.product-img.terminal,
-	.product-img.router,
-	.product-img {
-		width: 100px;
-		height: 100px;
-	}
-	.product:focus .phone-station, .product:hover .phone-station{
-		width: 125px;
-	}
+
+
+
 }
 
 @media (max-width: 991px) {

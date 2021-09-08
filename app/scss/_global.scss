@@ -99,3 +99,23 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.btn{
+	background: #fe000c;
+    border: none;
+    padding: 12px 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+	&:hover{
+		background: #FE000C;
+box-shadow: 0px 5px 10px rgba(254, 0, 12, 0.5);
+border-radius: 5px; 
+	}
+}

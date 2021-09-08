@@ -8,6 +8,9 @@
 	.goods-calc .value-button{
 		width: 35px;
 	}
+	.basket-summary{
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media (max-width: 767px) {
@@ -28,7 +31,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 15px;
+		gap: 12px;
+		.basket-table-price{
+			min-width: 90px;
+		}
 		.basket-table-price,
 		.basket-delate{
 			display: block;
@@ -37,6 +43,8 @@
 	.goods-calc{
 		width: 100%;
 		padding: 0 20px;
+		max-width: 120px;
+		margin: 0 0 0 auto;
 	}
 	.goods-calc .value-button{
 		width: auto;
@@ -48,6 +56,15 @@
 	.basket-promo input{
 		width: 100%;
 		max-width: 100%;
+	}
+	.basket-table tr td{
+		padding: 0;
+	}
+	.basket-table-box{
+		padding: 15px 15px 0;
+	}
+	.basket-calc-box{
+		padding: 15px;
 	}
 }
 
