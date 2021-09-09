@@ -3,17 +3,20 @@
 }
 
 @media (max-width: 991px) {
-    .technological-documentation h5{
+    .technological-documentation p b{
         display: none;
     }
+		.technological-documentation .info-text-imgbox{
+			margin-top: 0;
+		}
 
 }
 
 @media (max-width: 767px) {
 
-    .technological-documentation-docs-inner{
-        gap: 30px;
-    }
+.technological-documentation-doc-box + .technological-documentation-doc-box{
+	margin-top: 32px;
+}
 }
 
 @media (max-width: 575px) {

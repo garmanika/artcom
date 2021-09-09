@@ -5,6 +5,9 @@
     .dealer-info{
         grid-template-columns: repeat(2, 1fr);
     }
+		.page-control.mod{
+			margin-top: 30px;
+		}
 }
 
 @media (max-width: 767px) {
@@ -34,6 +37,21 @@
     }
 		.dealer-inner{
 			padding-bottom: 60px;
+		}
+		.dealer-panel-body{
+padding: 0 15px 30px;
+		}
+		.dealer-panel-head{
+			padding: 30px 15px 12px;
+		}
+		.dealer-info{
+			gap: 15px;
+		}
+		.dealer-contol.mod{
+			margin-bottom: 30px;
+		}
+		.page-control.mod{
+			margin-top: 30px;
 		}
 }
 

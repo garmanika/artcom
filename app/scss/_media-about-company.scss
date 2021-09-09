@@ -2,15 +2,36 @@
 }
 
 @media (max-width: 991px) {
+	.about-company .info-text-imgbox{
+		margin-bottom: 24px;
+	}
 }
 
 @media (max-width: 767px) {
+	.about-company-box{
+		grid-template-columns: 1fr;
+		
+	}
+	.about-company-item-info{
+		max-width: 288px;
+		margin: 0 auto;
+	}
+	.about-company-item-title{
+		min-height: auto;
+	}
+	.about-company-box.about-company-box-mod{
+		margin-bottom: 15px;
+	}
+	.about-company .info-text-imgbox{
+		margin-bottom: 40px;
+	}
+	.about-company-box{
+		gap: 34px 0;
+	}
 }
 
 @media (max-width: 575px) {
-	.about-company-box{
-		grid-template-columns: 1fr;
-	}
+
 
 }
 

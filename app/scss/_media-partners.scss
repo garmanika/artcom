@@ -25,6 +25,9 @@
         width: 100%;
         max-width: 100%;
     }
+		.partners-feedback-info-inner{
+			padding: 25px 30px;
+		}
 }
 
 @media (max-width: 767px) {
@@ -49,7 +52,7 @@
         }
     }
     .partners-feedback-info-inner {
-        padding: 20px 27px 24px 15px;
+        padding: 30px 15px 25px 15px;
     }
     .partners-hesitation-title {
         display: block;
@@ -61,6 +64,12 @@
 
         margin-bottom: 23px;
     }
+		.partners-feedback-info-inner + .partners-feedback-info-inner{
+			margin-top: 15px;
+		}
+		.partners-feedback-info-inner.mod{
+			padding: 25px 15px;
+		}
 }
 
 @media (max-width: 575px) {
