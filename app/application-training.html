@@ -258,15 +258,19 @@
 								<div class="application-training-inner">
 									<div class="partner-registration-item">
 										<select>
-											<option selected="" disabled="" hidden="">Выберите программу обучения *</option>
+											<option selected="" disabled="" >Выберите программу обучения *</option>
 											<option>2</option>
 										</select>
+										<label for="select" class="select-placeholder">
+											Выберите программу обучения
+											<span> *</span>
+										</label>
 									</div>
 									<div class="partner-registration-item-box">
 										<div class="application-training-item">
 											<input type="date">
 											<div class="application-training-item-date">
-												<span>Выберите дату обучения*</span>
+												<div class="application-training-item-date-text">Выберите дату обучения <span> *</span></div>
 	
 												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 													viewBox="0 0 20 20" fill="none">
@@ -278,27 +282,30 @@
 										</div>
 										<div class="partner-registration-item">
 											<select>
-												<option selected="" disabled="" hidden="">Выберите программу обучения *
+												<option selected="" disabled="" >Выберите программу обучения *
 												</option>
 												<option>2</option>
 											</select>
+											<label for="select" class="select-placeholder">
+												Выберите программу обучения
+												<span> *</span>
+											</label>
 										</div>
 										<div class="partner-registration-item">
-											<input type="text" required="" placeholder="Фамилия, имя, отчество *">
-	
+											<input type="text" id="input" required="required">			
+    <label for="input">Фамилия, имя, отчество<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
-											<input class="masked-phone" type="tel" required=""
-												placeholder="Контактный телефон*">
-	
+											<input class="masked-phone" type="tel" required="">
+												<label for="input">Контактный телефон<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
-											<input type="text" required="" placeholder="Город *">
-	
+											<input type="text" required="">
+											<label for="input">Город<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
-											<input type="text" required="" placeholder="E-mail *">
-	
+											<input type="text" required="">
+											<label for="input">E-mail<span> *</span></label>
 										</div>
 	
 									</div>
@@ -306,32 +313,46 @@
 								<div class="application-training-inner">
 									<div class="partner-registration-item">
 										<select>
-											<option selected="" disabled="" hidden="">Выберите программу обучения *</option>
-											<option>2</option>
+											<option selected  disabled>Выберите программу обучения</option>
+											<option>Калуга</option>
+											<option>Москва</option>
 										</select>
+										<label for="select" class="select-placeholder">
+											Выберите программу обучения
+											<span> *</span>
+										</label>
 									</div>
 									<div class="partner-registration-item-box">
-										<div class="partner-registration-item">
+										<div class="partner-registration-item partner-registration-item-mod">
 											<input type="text"  placeholder="Сайт компании">
-	
+											<label >Сайт компании</label>
 										</div>
 										<div class="partner-registration-item">
-											<input type="text" required="" placeholder="Ваша должность *">
-	
-										</div>
-										<div class="partner-registration-item">
-											<select>
-												<option selected="" disabled="" hidden="">Менеджер в группе компаний «АРТКОМ»*
-												</option>
-												<option>2</option>
-											</select>
+											<input type="text" required="" placeholder="">
+											<label for="input">Ваша должность<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
 											<select>
-												<option selected="" disabled="" hidden="">Как Вы узнали об обучении*
+												<option selected="" disabled="" >Менеджер в группе компаний «АРТКОМ»*
 												</option>
 												<option>2</option>
 											</select>
+											<label for="select" class="select-placeholder">
+												Выберите программу обучения
+												<span> *</span>
+											</label>
+										</div>
+										<div class="partner-registration-item">
+											<select>
+												<option selected="" disabled="" >
+													Как Вы узнали об обучении
+												</option>
+												<option>2</option>
+											</select>
+											<label for="select" class="select-placeholder">
+												Как Вы узнали об обучении
+												<span> *</span>
+											</label>
 										</div>
 	
 									</div>

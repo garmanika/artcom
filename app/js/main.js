@@ -11,7 +11,9 @@ $(function () {
       $(".header-search-form").fadeOut();
     });
   }
-
+	$('select').change(function(){
+		$(this).addClass('select-change');
+	})
 
   function menuToggle() {
     $(".mobile-navigation-trigger").on("click", function () {

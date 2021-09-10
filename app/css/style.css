@@ -52,6 +52,21 @@ button {
 .wrapper-page textarea {
   outline: 0
 }
+.wrapper-page textarea::-webkit-input-placeholder {
+  opacity: 1
+}
+.wrapper-page textarea::-moz-placeholder {
+  opacity: 1
+}
+.wrapper-page textarea:-ms-input-placeholder {
+  opacity: 1
+}
+.wrapper-page textarea::-ms-input-placeholder {
+  opacity: 1
+}
+.wrapper-page textarea::placeholder {
+  opacity: 1
+}
 .wrapper-page a {
   text-decoration: none
 }
@@ -86,9 +101,41 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0
 }
+.btn {
+  background: #fe000c;
+  border: none;
+  padding: 12px 0;
+  margin: 0;
+  -webkit-box-shadow: 0 5px 5px rgba(254,0,12,.15);
+  box-shadow: 0 5px 5px rgba(254,0,12,.15);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  width: 100%
+}
 .btn:hover {
   -webkit-box-shadow: 0 5px 10px rgba(254,0,12,.5);
   box-shadow: 0 5px 10px rgba(254,0,12,.5)
+}
+.btn-wh {
+  background: #fff;
+  border: none;
+  padding: 12px 0;
+  margin: 0;
+  -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.05);
+  box-shadow: 0 5px 5px rgba(0,0,0,.05);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+  width: 100%
 }
 .btn-wh:hover {
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.1);
@@ -1761,8 +1808,8 @@ ul.breadcrumbs-list {
   position: absolute;
   right: 11px;
   bottom: 1px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 19px;
   color: #a29999
 }
 .breadcrumbs-list-item:last-child::after {
@@ -1899,7 +1946,7 @@ li.text-navigation-menu-item:hover a {
   color: #333;
   margin-bottom: 10px;
   display: block;
-  padding-left: 36px;
+  padding-left: 27px;
   font-size: 16px;
   line-height: 24px
 }
@@ -1924,10 +1971,12 @@ li.text-navigation-menu-item:hover a {
   background: #fe000c;
   border-radius: 50%
 }
+.info-text picture {
+  margin: 32px 0
+}
 .info-text img {
   display: block;
-  max-width: 100%;
-  margin: 32px 0
+  max-width: 100%
 }
 .info-text .img-left {
   float: left;
@@ -2150,7 +2199,7 @@ li.text-navigation-menu-item:hover a {
   .slider-box {
     margin: 32px 0 0
   }
-  .info-text img {
+  .info-text picture {
     margin: 24px 0
   }
   .breadcrumbs {
@@ -3914,11 +3963,19 @@ a.contacts-item-info-link:hover {
   margin-top: 48px
 }
 .contact-map-inner {
-  height: 400px
+  height: 400px;
+  position: relative
 }
 .contact-map-inner img {
   width: 100%;
   height: 100%
+}
+.contact-map-control {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40px
 }
 @media (max-width:991px) {
   .contact-map-inner {
@@ -3938,6 +3995,11 @@ a.contacts-item-info-link:hover {
   }
   .contact-map {
     margin: 40px -15px 0
+  }
+}
+@media (max-width:575px) {
+  .contacts-wrapper {
+    padding-bottom: 0
   }
 }
 .page-404-inner {
@@ -4097,9 +4159,17 @@ a.contacts-item-info-link:hover {
   font-size: 18px;
   color: red
 }
+.partner-registration-item input + label span {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600
+}
 .partner-registration-item input:active + label,
 .partner-registration-item input:focus + label {
   display: none
+}
+.partner-registration-item input:placeholder-shown + label {
+  display: block!important
 }
 .partner-registration-item .input-req input {
   position: relative;
@@ -4255,12 +4325,16 @@ a.contacts-item-info-link:hover {
   pointer-events: none;
   display: inline-block;
   position: absolute;
-  top: 13px;
+  top: 0;
   cursor: pointer;
-  left: 22px;
+  left: 0;
+  color: #8e8484;
   font-size: 14px;
   line-height: 20px;
-  color: #8e8484
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 13px 20px;
+  width: 100%
 }
 @media (max-width:767px) {
   .partner-registration-items {
@@ -4281,18 +4355,35 @@ a.contacts-item-info-link:hover {
   text-transform: uppercase;
   color: #333
 }
+.partner-registration-profile-wraper + .partner-registration-profile-wraper {
+  margin-left: 30px
+}
 .partner-registration-profile-box {
   display: grid;
-  gap: 30px;
   grid-template-columns: 66% 33%
 }
 .partner-registration-profile-inner {
   margin-top: 30px
 }
+@media (max-width:991px) {
+  .partner-registration-profile-box {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+  .partner-registration-profile-wraper + .partner-registration-profile-wraper {
+    margin-left: 0
+  }
+  .partner-registration-items-mod {
+    grid-template-columns: 1fr 1fr
+  }
+}
 @media (max-width:767px) {
   .partner-registration-profile-box {
     grid-template-columns: 1fr;
     gap: 30px
+  }
+  .partner-registration-items-mod {
+    grid-template-columns: 1fr
   }
 }
 .personal-account .service-item:focus,
@@ -4422,7 +4513,7 @@ a.contacts-item-info-link:hover {
 }
 @media (max-width:767px) {
   .orders-panel-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     gap: 10px 15px;
     padding: 25px 15px
   }
@@ -4432,10 +4523,20 @@ a.contacts-item-info-link:hover {
   .orders-panel-title {
     padding: 12px 15px
   }
-  .order-panel-btns {
-    position: absolute;
-    right: 15px;
-    top: 25px
+  .orders-panel-box.order-panel-btns {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1
+  }
+  .orders-panel-box {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: span 1;
+    grid-row-end: span 1
+  }
+  .orders-panel-box:nth-child(n+2) {
+    grid-column-end: 3
   }
 }
 .my-order .orders-panel-content {
@@ -4525,15 +4626,12 @@ a.contacts-item-info-link:hover {
 }
 @media (max-width:767px) {
   .my-order .orders-panel-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     padding: 25px 15px;
     gap: 12px
   }
   .orders-panel-content {
     position: relative
-  }
-  .orders-panel-content .orders-panel-box:first-child {
-    padding-right: 90px
   }
   .orders-panel-table-thead {
     display: none
@@ -4551,13 +4649,22 @@ a.contacts-item-info-link:hover {
     display: inline-block
   }
   .orders-panel-table-count {
-    position: absolute;
-    top: 25px;
-    right: 15px
+    display: none
   }
-  .orders-panel-table-name {
-    padding-right: 20px;
-    margin-bottom: 4px
+  .orders-panel-table-cell-mod {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    gap: 15px
+  }
+  .orders-panel-table-cell-mod .orders-panel-table-count {
+    display: block
   }
   .orders-panel-table-summ {
     display: none
@@ -4574,11 +4681,14 @@ a.contacts-item-info-link:hover {
   .orders-panel-table-cell-price .orders-panel-table-summ {
     display: block
   }
+  .orders-panel-table-name {
+    margin-bottom: 4px
+  }
   .orders-panel-table-number-td {
     display: none
   }
 }
-.lost-password-inner {
+.forgot-password-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4597,23 +4707,23 @@ a.contacts-item-info-link:hover {
   margin: 0 auto;
   padding: 15px 0
 }
-.lost-password-inner .partner-registration-item {
+.forgot-password-inner .partner-registration-item {
   width: 100%
 }
-.lost-password-title {
+.forgot-password-title {
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
   color: #333
 }
-.lost-password-info {
+.forgot-password-info {
   font-size: 14px;
   line-height: 20px;
   color: #a29999;
   margin: 18px 0 32px
 }
-.lost-password-btn {
+.forgot-password-btn {
   background: #fe000c;
   border: none;
   padding: 12px 0;
@@ -4630,20 +4740,20 @@ a.contacts-item-info-link:hover {
   width: 100%
 }
 @media (max-width:991px) {
-  .lost-password-inner {
+  .forgot-password-inner {
     min-height: 764px
   }
 }
 @media (max-width:767px) {
-  .lost-password-inner {
+  .forgot-password-inner {
     min-height: auto;
     padding: 60px 0
   }
-  .lost-password-title {
+  .forgot-password-title {
     font-size: 18px;
     line-height: 24px
   }
-  .lost-password-info {
+  .forgot-password-info {
     margin: 23px 0 32px
   }
 }
@@ -4674,6 +4784,9 @@ a.contacts-item-info-link:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center
+}
+.login-inner .partner-registration-item + .partner-registration-item {
+  margin-top: 15px
 }
 .login-title {
   font-weight: 500;
@@ -4858,6 +4971,11 @@ a.contacts-item-info-link:hover {
   border-radius: 5px
 }
 .application-training-item-date span {
+  color: #fe000c;
+  font-weight: 600;
+  font-size: 18px
+}
+.application-training-item-date-text {
   font-size: 14px;
   line-height: 20px;
   color: #8e8484
@@ -5131,7 +5249,7 @@ a.contacts-item-info-link:hover {
   padding: 0;
   border: none;
   text-align: center;
-  width: 50px;
+  width: 100%;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
@@ -5215,13 +5333,7 @@ a.contacts-item-info-link:hover {
     display: block
   }
   .goods-calc {
-    width: 100%;
-    padding: 0 20px;
-    max-width: 120px;
     margin: 0 0 0 auto
-  }
-  .goods-calc .value-button {
-    width: auto
   }
   .basket-summary {
     grid-template-columns: 1fr;
@@ -5240,4 +5352,37 @@ a.contacts-item-info-link:hover {
   .basket-calc-box {
     padding: 15px
   }
+  .basket-table-price {
+    text-align: left
+  }
+}
+.select-placeholder {
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8484;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
+  width: 100%;
+  height: 100%;
+  background-position: calc(100% - 14px)
+}
+.select-placeholder span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fe000c;
+  pointer-events: none
+}
+.select-change ~ .select-placeholder {
+  display: none
+}
+.partner-registration-item-mod input:focus + label,
+.partner-registration-item-mod input:hover + label {
+  display: none!important
+}
+.partner-registration-item-mod label {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  color: #8e8484
 }

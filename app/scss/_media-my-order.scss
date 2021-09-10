@@ -6,7 +6,7 @@
 
 @media (max-width: 767px) {
 	.my-order .orders-panel-content{
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr auto;
 		padding: 25px 15px;
 		gap: 12px;
 	}
@@ -14,11 +14,7 @@
 		position: relative;
 	}
 
-	.orders-panel-content{
-		.orders-panel-box:first-child{
-			padding-right: 90px;
-		}
-	}
+
 	.orders-panel-table-thead{
 		display: none;
 	}
@@ -37,12 +33,16 @@
 		}
 	}
 	.orders-panel-table-count{
-		position: absolute;
-		top: 25px;
-		right: 15px;
+		display: none;
 	}
-	.orders-panel-table-name{
-		padding-right: 20px;
+	.orders-panel-table-cell-mod{
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		gap: 15px;
+		.orders-panel-table-count{
+			display: block;
+		}
 	}
 	.orders-panel-table-summ{
 		display: none;

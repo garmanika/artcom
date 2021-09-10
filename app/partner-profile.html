@@ -257,22 +257,22 @@
 										<h5>персональные данные</h5>
 										<div class="partner-registration-items">
 											<div class="partner-registration-item">
-												<input type="text" required placeholder="Имя*">
-												
+												<input type="text" required >
+												<label >Имя<span> *</span></label>
 											</div>
 											<div class="partner-registration-item input-req">
-												<input type="text" required placeholder="Фамилия*">
-												
+												<input type="text" required >
+												<label >Фамилия<span> *</span></label>
 	
 											</div>
 											<div class="partner-registration-item">
-												<input type="text" required placeholder="E-mail*">
-												
+												<input type="text" required >
+												<label >E-mail<span> *</span></label>
 											</div>
 											<div class="partner-registration-item">
 												<input class="masked-phone"
-												type="tel" required="required" placeholder="Мобильный телефон*">
-												
+												type="tel" required="required" >
+												<label >Мобильный телефон<span> *</span></label>
 											</div>
 	
 		
@@ -283,12 +283,12 @@
 										<h5>Пароль</h5>
 										<div class="partner-registration-items partner-registration-items-mod">
 											<div class="partner-registration-item">
-												<input type="text" required placeholder="Новый пароль">
-												
+												<input type="text" required>
+												<label >Пароль<span> *</span></label>
 											</div>
 											<div class="partner-registration-item">
-												<input type="text" required placeholder="Подтверждение пароля*">
-												
+												<input type="text" required >
+												<label >Подтверждение пароля<span> *</span></label>
 											</div>
 		
 										</div>
@@ -313,31 +313,36 @@
 				</div>
 				<div class="partner-registration-items partner-registration-items-mod">
 					<div class="partner-registration-item">
-						<input type="text" required placeholder="Полное наименование организации*">
-						
+						<input type="text" required >
+						<label >Полное наименование организации<span> *</span></label>
 					</div>
 					<div class="partner-registration-item">
 						<select >
 							<option selected disabled hidden>Ваш регион</option>
-							<option>2</option>
+							<option>Калуга</option>
+							<option>Москва</option>
 						</select>
+						<label for="select" class="select-placeholder">
+							Ваш регион
+							
+						</label>
 					</div>
-					<div class="partner-registration-item">
+					<div class="partner-registration-item partner-registration-item-mod">
 						<input type="text"    placeholder="Юридический адрес"              >
-
+						<label >Юридический адрес</label>
 					</div>
-					<div class="partner-registration-item">
-						<input type="text"    placeholder="Фактический адрес"             >
-
+					<div class="partner-registration-item partner-registration-item-mod">
+						<input type="text" placeholder="Фактический адрес">
+						<label >Фактический адрес</label>
 					</div>
-					<div class="partner-registration-item">
+					<div class="partner-registration-item partner-registration-item-mod">
 						<input     placeholder="Контактный телефон"             class="masked-phone"
 						type="tel" >
-
+						<label >Контактный телефон</label>
 					</div>
-					<div class="partner-registration-item">
+					<div class="partner-registration-item partner-registration-item-mod">
 						<input type="text"    placeholder="Сайт компании"             >
-
+						<label >Сайт компании</label>
 					</div>
 					<textarea class="partner-registration-textarea" placeholder="Направления деятельности (по степени важности)"></textarea>
 					<textarea class="partner-registration-textarea" placeholder="Является ли Ваша фирма дилером, дистрибьютором или партнёром в области телекоммуникаций, каких производителей?"></textarea>
