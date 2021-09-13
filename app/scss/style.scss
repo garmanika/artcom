@@ -1542,23 +1542,24 @@ h5 {
     padding: 12px 30px;
   }
 }
+.direction-catalog-head-link {
+  border: none;
+  border-bottom: 3px solid #fe000c;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+  padding: 17px 22px 17px 15px;
+}
 .direction-catalog-head {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 28px 0 54px;
 
-  button {
-    border: none;
-    border-bottom: 3px solid #fe000c;
-    border-radius: 5px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 15px;
-    padding: 17px 22px 17px 15px;
-  }
+
   span {
     font-weight: bold;
     font-size: 14px;
@@ -2217,6 +2218,11 @@ h5 {
     right: -24px;
   }
 }
+.partners-feedback-info{
+  p + p{
+    margin-top: 24px;
+  }
+}
 .partners-feedback {
 }
 .partners-feedback-info-inner {
@@ -2355,22 +2361,36 @@ h5 {
     height: 100%;
   }
   button {
-    @include no-button;
-    display: block;
-    background: #fe000c;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-    padding: 12px 0;
-    max-width: 193px;
-    width: 100%;
-    margin: 32px auto 0;
+
   }
+}
+.page-service-btn{
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+display: block;
+background: #fe000c;
+box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+text-transform: uppercase;
+color: #ffffff;
+padding: 12px 0;
+max-width: 193px;
+width: 100%;
+margin: 32px auto 0;
 }
 @import "_media-page-service";
 
@@ -3850,4 +3870,8 @@ a.contacts-item-info-link:hover {
 	height: 100%;
 	color: #8E8484;
 
+}
+.partner-feedback-img{
+  display: block;
+  text-align: center;
 }

@@ -120,7 +120,7 @@ $(function () {
 
   const swiper3 = new Swiper(".partners-feedback", {
     slidesPerGroup: 1,
-
+    autoHeight: true,
     pagination: {
       el: ".partners-feedback-pagination",
       type: "bullets",
