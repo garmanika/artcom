@@ -799,10 +799,7 @@ li.is-parent {
 
 .footer-nav-items {
   display: grid;
-  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-      auto,
-      255px
-    );
+  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
   justify-content: space-between;
   gap: 64px;
 }
@@ -1988,8 +1985,7 @@ h5 {
     border-radius: 5px;
     outline: none;
     appearance: none;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     background-position: calc(100% - 14px);
   }
 }
@@ -2165,6 +2161,8 @@ h5 {
 .text-navigation-btn {
   @include no-button;
   width: 100%;
+  display: block;
+  text-align: center;
   padding: 12px 0;
   font-weight: bold;
   font-size: 14px;
@@ -2175,6 +2173,13 @@ h5 {
   box-shadow: 0px 5px 5px rgba(254, 0, 12, 0.15);
   border-radius: 5px;
   margin-bottom: 15px;
+}
+.text-navigation-btn-mod {
+  background: #333333;
+  box-shadow: none;
+  &:hover {
+    //box-shadow: 0px 5px 10px #333333;
+  }
 }
 .partners-hesitation-info-title {
   font-weight: 500;
@@ -2921,8 +2926,7 @@ a.contacts-item-info-link:hover {
     line-height: 20px;
     color: #8e8484;
     padding: 13px 20px;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     border: 1px solid #eee;
     border-radius: 5px;
     outline: 0;
@@ -3241,10 +3245,7 @@ a.contacts-item-info-link:hover {
 //my-order
 .my-order {
   .orders-panel-content {
-    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(
-        auto,
-        90px
-      );
+    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(auto, 90px);
     padding: 25px 30px;
     align-items: center;
   }
@@ -3269,8 +3270,7 @@ a.contacts-item-info-link:hover {
 }
 .orders-panel-table-thead {
   display: table-header-group;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
 }
 .orders-panel-table-tr {
   display: table-row;
@@ -3291,13 +3291,11 @@ a.contacts-item-info-link:hover {
 }
 .orders-panel-table-row {
   display: table-row;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
   position: relative;
 
   &:nth-child(2n + 1) {
-    background: linear-gradient(0deg, #ffffff, #ffffff),
-      linear-gradient(0deg, #a29999, #a29999), #333333;
+    background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(0deg, #a29999, #a29999), #333333;
   }
 }
 .orders-panel-table-cell {
@@ -3308,10 +3306,10 @@ a.contacts-item-info-link:hover {
   line-height: 20px;
   color: #333333;
 }
-.orders-panel-table-cell-mod{
-	.orders-panel-table-count{
-		display: none;
-	}
+.orders-panel-table-cell-mod {
+  .orders-panel-table-count {
+    display: none;
+  }
 }
 .orders-panel-table-th-mod,
 .orders-panel-table-cell-mod {
@@ -3868,8 +3866,7 @@ a.contacts-item-info-link:hover {
   background: #ffffff;
   width: 100%;
   height: 100%;
-  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-    #fff;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
   background-position: calc(100% - 14px);
   span {
     font-weight: 600;
@@ -3942,9 +3939,9 @@ a.contacts-item-info-link:hover {
   margin-bottom: 24px;
 }
 .price-table-wrapper {
-	& + .price-table-wrapper{
-		margin-top: 48px;
-	}
+  & + .price-table-wrapper {
+    margin-top: 48px;
+  }
   .orders-panel-table-tr {
     background: linear-gradient(0deg, #a29999, #a29999), #333333;
   }
@@ -3961,7 +3958,7 @@ a.contacts-item-info-link:hover {
     line-height: 24px;
     color: #333333;
     text-align: left;
-		max-width: 233px;
+    max-width: 233px;
   }
   .orders-panel-table-cell {
     padding: 15px 30px;
@@ -3977,39 +3974,95 @@ a.contacts-item-info-link:hover {
     font-size: 16px;
     line-height: 24px;
     color: #333333;
-		white-space: nowrap;
+    white-space: nowrap;
   }
   .price-table-status {
     font-size: 14px;
     line-height: 24px;
     color: #fe000c;
-		white-space: nowrap;
+    white-space: nowrap;
   }
 }
-.price-table-mod{
-	.price-table-status{
-		display: none;
-	}
+.price-table-mod {
+  .price-table-status {
+    display: none;
+  }
 }
 
 @import "_media-price";
 
 //programs
-.programs{
-	.service-items{
-		margin: 0 -15px;
-	}
-	.service-item:focus, .service-item:hover{
-		padding-bottom: 20px;
-	}
-	.service-item:focus img, .service-item:hover img{
-		display: block;
-	}
-	.service-item:not(.service-title) .service-item-info{
-		max-width: none;
-	}
-	.service-item-wrapper{
-		min-height: 143px;
-	}
+.programs {
+  .service-items {
+    margin: 0 -15px;
+  }
+  .service-item:focus,
+  .service-item:hover {
+    padding-bottom: 20px;
+  }
+  .service-item:focus img,
+  .service-item:hover img {
+    display: block;
+  }
+  .service-item:not(.service-title) .service-item-info {
+    max-width: none;
+  }
+  .service-item-wrapper {
+    min-height: 143px;
+  }
 }
 @import "_media-programs";
+
+//course
+.course {
+}
+.course-info {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 24px;
+}
+.course-panel {
+  padding: 27px 32px;
+  background: #ffffff;
+  border-radius: 5px;
+  & + .course-panel {
+    margin-top: 15px;
+  }
+}
+.course-panel-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fe000c;
+  margin-bottom: 8px;
+}
+.course-panel-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  & + .course-panel-info {
+    margin-top: 8px;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+.course-requirements {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 0;
+  max-width: 255px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #333333;
+  border-radius: 5px;
+  margin-top: 48px;
+}
+@import "_media-course";

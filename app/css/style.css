@@ -3150,6 +3150,8 @@ h5 {
   padding: 12px 0;
   margin: 0 0 15px;
   width: 100%;
+  display: block;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
@@ -3158,6 +3160,11 @@ h5 {
   -webkit-box-shadow: 0 5px 5px rgba(254,0,12,.15);
   box-shadow: 0 5px 5px rgba(254,0,12,.15);
   border-radius: 5px
+}
+.text-navigation-btn-mod {
+  background: #333;
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 .partners-hesitation-info-title {
   font-weight: 500;
@@ -5649,5 +5656,73 @@ a.contacts-item-info-link:hover {
   .programs .service-items {
     margin-top: 0;
     margin-bottom: 0
+  }
+}
+.course-info {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 24px
+}
+.course-panel {
+  padding: 27px 32px;
+  background: #fff;
+  border-radius: 5px
+}
+.course-panel + .course-panel {
+  margin-top: 15px
+}
+.course-panel-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fe000c;
+  margin-bottom: 8px
+}
+.course-panel-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333
+}
+.course-panel-info + .course-panel-info {
+  margin-top: 8px
+}
+.course-panel-info span {
+  font-weight: 600
+}
+.course-requirements {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 12px 0;
+  max-width: 255px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #333;
+  border-radius: 5px;
+  margin-top: 48px
+}
+@media (max-width:1199px) {
+  .course-link-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px
+  }
+  .course-info {
+    margin: 31px 0 48px
+  }
+}
+@media (max-width:767px) {
+  .course-link-btn {
+    grid-template-columns: 1fr;
+    gap: 0
+  }
+  .course-info {
+    margin: 31px 0 34px
   }
 }
