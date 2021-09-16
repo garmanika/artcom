@@ -1,0 +1,26 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+	.buy .service-title{
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+	}
+	.buy .service-title:hover{
+		padding-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.buy .service-title{
+padding-left: 24px;
+padding-right: 30px;
+	}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
