@@ -5930,12 +5930,6 @@ li.personal-table-control-link-mod {
     padding-bottom: 30px
   }
 }
-@media (max-width:767px) {
-  .buy .service-title {
-    padding-left: 24px;
-    padding-right: 30px
-  }
-}
 .order-creat-list {
   background: #fff;
   border-radius: 5px;
@@ -5955,7 +5949,7 @@ li.personal-table-control-link-mod {
   position: relative
 }
 .order-creat-list-box::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 11px;
   left: 0;
@@ -6051,4 +6045,129 @@ li.personal-table-control-link-mod {
 }
 .order-creat-list-box-total::after {
   display: none
+}
+.partner-personal-account .service-items {
+  margin-top: 30px
+}
+.partner-personal-account-inner {
+  display: grid;
+  grid-template-columns: 730px auto;
+  gap: 0 30px
+}
+.partner-personal-account-box {
+  background: #fff;
+  border-radius: 5px;
+  padding: 25px
+}
+.partner-personal-account-box.mod {
+  padding-bottom: 30px
+}
+.partner-personal-account-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #333
+}
+.partner-personal-account-title.mod {
+  color: #fe000c;
+  margin-bottom: 8px
+}
+.partner-personal-account-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 69px
+}
+.partner-personal-account-subbox {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0 25px
+}
+.partner-personal-account-subbox + .partner-personal-account-subbox {
+  margin-top: 8px
+}
+.partner-personal-account-subbox-inner {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0 27px
+}
+.partner-personal-account-info {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400
+}
+.partner-personal-account-info.mod {
+  font-weight: 600
+}
+.personal-sertificate-box {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(68px,auto));
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0 20px
+}
+.personal-sertificate-info {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333
+}
+.personal-sertificate-info.mod {
+  color: #a29999
+}
+.personal-sertificate-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  margin-bottom: 12px
+}
+.personal-sertificate-btn {
+  margin-top: 25px;
+  display: block;
+  font-weight: 700;
+  padding: 4px 0;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  background: #fe000c;
+  border-radius: 5px
+}
+@media (max-width:1199px) {
+  .partner-personal-account-inner {
+    grid-template-columns: 1fr 1fr
+  }
+}
+@media (max-width:991px) {
+  .partner-personal-account-inner {
+    grid-template-columns: 1fr;
+    gap: 30px 0
+  }
+}
+@media (max-width:767px) {
+  .buy .service-title {
+    padding-left: 24px;
+    padding-right: 30px
+  }
+  .partner-personal-account-subbox-inner {
+    gap: 0 11px
+  }
+  .partner-personal-account .service-items {
+    margin-top: 15px
+  }
+  .personal-sertificate-box {
+    gap: 0 15px
+  }
 }

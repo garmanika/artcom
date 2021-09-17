@@ -1,0 +1,31 @@
+@media (max-width: 1199px) {
+    .partner-personal-account-inner{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 991px) {
+    .partner-personal-account-inner{
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .partner-personal-account-subbox-inner{
+        gap: 0 11px;
+    }
+    .partner-personal-account .service-items{
+        margin-top: 15px;
+    }
+    .personal-sertificate-box{
+        gap: 0 15px;
+    }
+
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
