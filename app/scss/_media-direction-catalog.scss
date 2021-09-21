@@ -1,0 +1,201 @@
+@media (max-width: 1199px) {
+  .direction-catalog-content-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .direction-catalog-content {
+    gap: 40px 0;
+  }
+}
+
+@media (max-width: 991px) {
+	.direction-catalog-content-aside-buttons {
+padding: 0;
+	}
+	.direction-catalog-content-items{
+		margin: 30px 0 48px;
+	}
+  .direction-catalog-box {
+    display: block;
+    span {
+      display: block;
+    }
+  }
+  .direction-catalog-box-link {
+    width: auto;
+    display: inline-block;
+    max-width: none;
+    margin-top: 32px;
+  }
+  .direction-catalog {
+    .direction-catalog-head {
+      margin: 40px 0;
+    }
+  }
+  .direction-catalog-content-aside-control {
+    @include no-button;
+    background: #333333;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: 100%;
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		gap: 0 5px;
+		svg{
+			transform: rotate(180deg);
+			transition: all .3s linear;
+		}
+		&.open{
+			svg{
+				transform: rotate(0deg);
+			}
+		}
+
+  }
+  .direction-catalog-content-aside {
+    margin-top: 15px;
+  }
+  .direction-catalog-content-aside-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+		gap: 38px 30px;
+  }
+  .direction-catalog-content-aside-item
+    + .direction-catalog-content-aside-item {
+    border-top: none;
+  }
+  .direction-catalog-content-aside-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 16px;
+
+  }
+  .direction-catalog-content-aside-buttons
+    .direction-catalog-content-aside-button,
+		.direction-catalog-content-aside-buttons button {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+		padding: 4px 17px;
+  }
+	.direction-catalog-content-aside-buttons button + button{
+		margin: 0;
+	}
+	.direction-catalog-content-aside-buttons{
+		margin-top: 40px;
+	}
+	.direction-catalog-content-aside-item-head{
+		padding: 0 0 15px 0;
+	}
+	.direction-catalog-content-aside-title{
+		display: none;
+	}
+	.direction-catalog-content-aside-item-content{
+		padding: 0;
+	}
+	.direction-catalog-content-aside{
+		padding: 33px 30px;
+	}
+	.direction-catalog-content .info-text{
+		margin-top: 54px;
+	}
+	.direction-catalog-list .direction-catalog-content-item-inner{
+		gap: 54px;
+	}
+	.direction-catalog-content-aside-item-content{
+		display: block;
+	}
+	.direction-catalog-content-aside-item-head{
+		svg{
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.direction-catalog-content-aside-item-head{
+		svg{
+			display: block;
+		}
+	}
+	.direction-catalog-content-aside-item-content{
+		display: none;
+	}
+	.direction-catalog-content-items{
+		gap: 15px;
+	}
+	.direction-catalog-content-items{
+		margin: 30px 0;
+	}
+	.direction-catalog-content-aside-inner {
+display: block;
+  }
+	.direction-catalog-content-aside-buttons{
+		flex-direction: column;
+		gap: 8px 0;
+	}
+	.direction-catalog-content-aside-buttons .direction-catalog-content-aside-button, .direction-catalog-content-aside-buttons button{
+		
+		width: 100%;
+		max-width: 100%;
+	}
+	.direction-catalog-content-aside-buttons{
+		margin-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+  .direction-catalog-content-items {
+    grid-template-columns: 1fr;
+  }
+  .direction-catalog-box-link {
+    display: block;
+    margin-top: 24px;
+  }
+	.direction-catalog-content-aside-item
+	+ .direction-catalog-content-aside-item {
+	border-top: 1px solid #eee;
+}
+.direction-catalog-content-aside-item{
+	padding: 20px 15px;
+}
+.direction-catalog-content-aside{
+	padding: 30px 0;
+}
+.direction-catalog-content-aside-buttons .direction-catalog-content-aside-button, .direction-catalog-content-aside-buttons button{
+	padding: 12px 0;
+}
+.direction-catalog-content .info-text{
+	margin-top: 30px;
+}
+.direction-catalog-content-control{
+	padding: 15px;
+}
+.direction-catalog-content-aside-item-content .noUi-target{
+	max-width: 208px;
+}
+.direction-catalog-list .direction-catalog-content-item{
+	grid-template-columns: 1fr;
+}
+.direction-catalog-list .direction-catalog-content-item-inner{
+	gap: 15px;
+	justify-content: start;
+}
+.direction-catalog-list .direction-catalog-content-item-buy{
+	justify-content: space-between;
+}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
