@@ -4631,7 +4631,8 @@ a.contacts-item-info-link:hover {
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  cursor: pointer
 }
 .partner-registration-btns label + label {
   margin-left: 40px
@@ -6212,6 +6213,82 @@ li.personal-table-control-link-mod {
     padding-bottom: 30px
   }
 }
+@media (max-width:767px) {
+  .buy .service-title {
+    padding-left: 24px;
+    padding-right: 30px
+  }
+}
+.order-creat-panel {
+  background: #fff;
+  border-radius: 5px;
+  padding: 22px 30px 35px
+}
+.order-creat-panel + .order-creat-panel {
+  margin-top: 15px
+}
+.order-creat-panel-item-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333
+}
+.order-creat-panel-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.order-creat-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.order-creat-box img {
+  width: 32px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.order-creat-box-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  margin-left: 9px;
+  margin-top: 3px
+}
+.order-creat-panel-btn {
+  background: #eee;
+  border: none;
+  padding: 4px 16px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 5px
+}
+.partner-registration-btns.mod {
+  margin-bottom: 0;
+  padding: 17px 0
+}
+.partner-registration-btns.mod:first-child {
+  padding-top: 0
+}
+.partner-registration-btns.mod img {
+  margin-right: 17px
+}
+.partner-registration-btns.mod + .partner-registration-btns.mod {
+  border-top: 1px solid #eee
+}
 .order-creat-list {
   background: #fff;
   border-radius: 5px;
@@ -6447,10 +6524,6 @@ li.personal-table-control-link-mod {
   }
 }
 @media (max-width:767px) {
-  .buy .service-title {
-    padding-left: 24px;
-    padding-right: 30px
-  }
   .partner-personal-account-subbox-inner {
     gap: 0 11px
   }

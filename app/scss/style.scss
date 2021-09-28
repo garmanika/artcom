@@ -1644,9 +1644,9 @@ h5 {
     .direction-catalog-content-aside-item-head svg {
       transform: rotate(180deg);
     }
-		.direction-catalog-content-aside-item-content{
-			display: block;
-		}
+    .direction-catalog-content-aside-item-content {
+      display: block;
+    }
   }
   & + .direction-catalog-content-aside-item {
     border-top: 1px solid #eee;
@@ -1654,7 +1654,7 @@ h5 {
 }
 .direction-catalog-content-aside-item-head {
   display: grid;
-	grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-content: space-between;
   border: none;
@@ -2189,11 +2189,11 @@ h5 {
   justify-content: center;
   border-radius: 50%;
   border: none;
-	&:hover{
-		background: #ffffff;
+  &:hover {
+    background: #ffffff;
     font-weight: bold;
     color: #a29999;
-	}
+  }
   &.active {
     background: #ffffff;
     font-weight: bold;
@@ -2642,10 +2642,10 @@ h5 {
     @include img;
   }
 }
-.promotion-item:hover{
-	.promotion-item-title{
-		color: #fe000c;
-	}
+.promotion-item:hover {
+  .promotion-item-title {
+    color: #fe000c;
+  }
 }
 .promotion-item-title {
   font-weight: 600;
@@ -3111,6 +3111,7 @@ a.contacts-item-info-link:hover {
   padding-left: 30px;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
   & + label {
     margin-left: 40px;
   }
@@ -3234,7 +3235,6 @@ a.contacts-item-info-link:hover {
     text-transform: uppercase;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #333333;
-
   }
   & + .tabs-link-item {
     margin-left: 40px;
@@ -3251,8 +3251,8 @@ a.contacts-item-info-link:hover {
     }
   }
 }
-.tabs-link-mod .tabs-link-item a:hover{
-	color: #333;
+.tabs-link-mod .tabs-link-item a:hover {
+  color: #333;
 }
 .my-orders-nav {
   margin-bottom: 30px;
@@ -4309,7 +4309,64 @@ li.personal-table-control-link-mod {
 }
 @import "_media-buy";
 //order-creat
-
+.order-creat-panel {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 22px 30px 35px;
+  & + .order-creat-panel {
+    margin-top: 15px;
+  }
+}
+.order-creat-panel-item-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+.order-creat-panel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-creat-box {
+  display: flex;
+  align-items: center;
+	img{
+		width: 32px;
+		object-fit: cover;
+	}
+}
+.order-creat-box-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-left: 9px;
+	margin-top: 3px;
+}
+.order-creat-panel-btn {
+  @include no-button;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  color: #333333;
+  background: #eeeeee;
+  border-radius: 5px;
+}
+.partner-registration-btns.mod {
+  margin-bottom: 0;
+	padding: 17px 0;
+&:first-child{
+	padding-top: 0;
+}
+  img {
+    margin-right: 17px;
+  }
+  & + .partner-registration-btns.mod {
+    border-top: 1px solid #eee;
+  }
+}
 //order-creat-list
 .order-creat-list {
   background: #ffffff;
@@ -4517,12 +4574,12 @@ li.personal-table-control-link-mod {
   background: #fe000c;
   border-radius: 5px;
 }
-.cooperation.mod{
-	.cooperation-info{
-		align-items: center;
-	}
-	.cooperation-info-title{
-		margin: 0;
-	}
+.cooperation.mod {
+  .cooperation-info {
+    align-items: center;
+  }
+  .cooperation-info-title {
+    margin: 0;
+  }
 }
 @import "_media-partner-personal-account";
