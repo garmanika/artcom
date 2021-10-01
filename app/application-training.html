@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="@@favicon" type="image/x-icon" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link rel="stylesheet" href="css/bootstrap-grid.css" />
-		<link rel="stylesheet" href="css/normalize.css" />
-		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="@@favicon" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link rel="stylesheet" href="css/bootstrap-grid.css" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
-		<link rel="stylesheet" href="css/swiper-bundle.css" />
-		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;600;700&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title></title>
-	</head>
+	<link rel="stylesheet" href="css/swiper-bundle.css" />
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title></title>
+</head>
 
 <body>
 	<div class="wrapper-page">
@@ -254,12 +254,14 @@
 				<div class="row page-inner">
 					<div class="col-lg-12 col-xl-9">
 						<section class="application-training">
-							<form >
+							<form>
 								<div class="application-training-inner">
 									<div class="partner-registration-item">
-										<select>
-											<option selected="" disabled="" >Выберите программу обучения *</option>
-											<option>2</option>
+										<select class="select-check">
+											
+											<option selected="" disabled="" hidden value="">Выберите программу обучения *
+											</option>
+											<option >2</option>
 										</select>
 										<label for="select" class="select-placeholder">
 											Выберите программу обучения
@@ -267,24 +269,16 @@
 										</label>
 									</div>
 									<div class="partner-registration-item-box">
-										<div class="application-training-item">
-											<input type="date">
-											<div class="application-training-item-date">
-												<div class="application-training-item-date-text">Выберите дату обучения <span> *</span></div>
-	
-												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-													viewBox="0 0 20 20" fill="none">
-													<path
-														d="M10.0013 15.8333C10.1661 15.8333 10.3272 15.7845 10.4643 15.6929C10.6013 15.6013 10.7081 15.4712 10.7712 15.3189C10.8343 15.1666 10.8508 14.9991 10.8186 14.8374C10.7865 14.6758 10.7071 14.5273 10.5906 14.4108C10.474 14.2942 10.3255 14.2148 10.1639 14.1827C10.0022 14.1505 9.83467 14.167 9.6824 14.2301C9.53013 14.2932 9.39998 14.4 9.30841 14.537C9.21684 14.6741 9.16797 14.8352 9.16797 15C9.16797 15.221 9.25577 15.433 9.41205 15.5893C9.56833 15.7455 9.78029 15.8333 10.0013 15.8333ZM14.168 15.8333C14.3328 15.8333 14.4939 15.7845 14.6309 15.6929C14.768 15.6013 14.8748 15.4712 14.9379 15.3189C15.0009 15.1666 15.0174 14.9991 14.9853 14.8374C14.9531 14.6758 14.8738 14.5273 14.7572 14.4108C14.6407 14.2942 14.4922 14.2148 14.3305 14.1827C14.1689 14.1505 14.0013 14.167 13.8491 14.2301C13.6968 14.2932 13.5666 14.4 13.4751 14.537C13.3835 14.6741 13.3346 14.8352 13.3346 15C13.3346 15.221 13.4224 15.433 13.5787 15.5893C13.735 15.7455 13.947 15.8333 14.168 15.8333ZM14.168 12.5C14.3328 12.5 14.4939 12.4511 14.6309 12.3596C14.768 12.268 14.8748 12.1379 14.9379 11.9856C15.0009 11.8333 15.0174 11.6658 14.9853 11.5041C14.9531 11.3425 14.8738 11.194 14.7572 11.0774C14.6407 10.9609 14.4922 10.8815 14.3305 10.8494C14.1689 10.8172 14.0013 10.8337 13.8491 10.8968C13.6968 10.9598 13.5666 11.0667 13.4751 11.2037C13.3835 11.3407 13.3346 11.5019 13.3346 11.6667C13.3346 11.8877 13.4224 12.0997 13.5787 12.2559C13.735 12.4122 13.947 12.5 14.168 12.5ZM10.0013 12.5C10.1661 12.5 10.3272 12.4511 10.4643 12.3596C10.6013 12.268 10.7081 12.1379 10.7712 11.9856C10.8343 11.8333 10.8508 11.6658 10.8186 11.5041C10.7865 11.3425 10.7071 11.194 10.5906 11.0774C10.474 10.9609 10.3255 10.8815 10.1639 10.8494C10.0022 10.8172 9.83467 10.8337 9.6824 10.8968C9.53013 10.9598 9.39998 11.0667 9.30841 11.2037C9.21684 11.3407 9.16797 11.5019 9.16797 11.6667C9.16797 11.8877 9.25577 12.0997 9.41205 12.2559C9.56833 12.4122 9.78029 12.5 10.0013 12.5ZM15.8346 2.50001H15.0013V1.66668C15.0013 1.44566 14.9135 1.2337 14.7572 1.07742C14.6009 0.921141 14.389 0.833344 14.168 0.833344C13.947 0.833344 13.735 0.921141 13.5787 1.07742C13.4224 1.2337 13.3346 1.44566 13.3346 1.66668V2.50001H6.66797V1.66668C6.66797 1.44566 6.58017 1.2337 6.42389 1.07742C6.26761 0.921141 6.05565 0.833344 5.83464 0.833344C5.61362 0.833344 5.40166 0.921141 5.24538 1.07742C5.0891 1.2337 5.0013 1.44566 5.0013 1.66668V2.50001H4.16797C3.50493 2.50001 2.86904 2.7634 2.4002 3.23224C1.93136 3.70108 1.66797 4.33697 1.66797 5.00001V16.6667C1.66797 17.3297 1.93136 17.9656 2.4002 18.4344C2.86904 18.9033 3.50493 19.1667 4.16797 19.1667H15.8346C16.4977 19.1667 17.1336 18.9033 17.6024 18.4344C18.0712 17.9656 18.3346 17.3297 18.3346 16.6667V5.00001C18.3346 4.33697 18.0712 3.70108 17.6024 3.23224C17.1336 2.7634 16.4977 2.50001 15.8346 2.50001ZM16.668 16.6667C16.668 16.8877 16.5802 17.0997 16.4239 17.2559C16.2676 17.4122 16.0556 17.5 15.8346 17.5H4.16797C3.94696 17.5 3.73499 17.4122 3.57871 17.2559C3.42243 17.0997 3.33464 16.8877 3.33464 16.6667V9.16668H16.668V16.6667ZM16.668 7.50001H3.33464V5.00001C3.33464 4.779 3.42243 4.56703 3.57871 4.41075C3.73499 4.25447 3.94696 4.16668 4.16797 4.16668H5.0013V5.00001C5.0013 5.22102 5.0891 5.43298 5.24538 5.58927C5.40166 5.74555 5.61362 5.83334 5.83464 5.83334C6.05565 5.83334 6.26761 5.74555 6.42389 5.58927C6.58017 5.43298 6.66797 5.22102 6.66797 5.00001V4.16668H13.3346V5.00001C13.3346 5.22102 13.4224 5.43298 13.5787 5.58927C13.735 5.74555 13.947 5.83334 14.168 5.83334C14.389 5.83334 14.6009 5.74555 14.7572 5.58927C14.9135 5.43298 15.0013 5.22102 15.0013 5.00001V4.16668H15.8346C16.0556 4.16668 16.2676 4.25447 16.4239 4.41075C16.5802 4.56703 16.668 4.779 16.668 5.00001V7.50001ZM5.83464 12.5C5.99945 12.5 6.16057 12.4511 6.29761 12.3596C6.43465 12.268 6.54146 12.1379 6.60454 11.9856C6.66761 11.8333 6.68411 11.6658 6.65196 11.5041C6.6198 11.3425 6.54043 11.194 6.42389 11.0774C6.30735 10.9609 6.15886 10.8815 5.99721 10.8494C5.83556 10.8172 5.668 10.8337 5.51573 10.8968C5.36346 10.9598 5.23331 11.0667 5.14174 11.2037C5.05018 11.3407 5.0013 11.5019 5.0013 11.6667C5.0013 11.8877 5.0891 12.0997 5.24538 12.2559C5.40166 12.4122 5.61362 12.5 5.83464 12.5ZM5.83464 15.8333C5.99945 15.8333 6.16057 15.7845 6.29761 15.6929C6.43465 15.6013 6.54146 15.4712 6.60454 15.3189C6.66761 15.1666 6.68411 14.9991 6.65196 14.8374C6.6198 14.6758 6.54043 14.5273 6.42389 14.4108C6.30735 14.2942 6.15886 14.2148 5.99721 14.1827C5.83556 14.1505 5.668 14.167 5.51573 14.2301C5.36346 14.2932 5.23331 14.4 5.14174 14.537C5.05018 14.6741 5.0013 14.8352 5.0013 15C5.0013 15.221 5.0891 15.433 5.24538 15.5893C5.40166 15.7455 5.61362 15.8333 5.83464 15.8333Z"
-														fill="#A29999" />
-												</svg>
-											</div>
+										<div class="partner-registration-item ">
+											<input type="text" id="input" required="required" class="partner-registration-item-data">
+											<label for="input">Выберите дату<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
-											<select>
-												<option selected="" disabled="" >Выберите программу обучения *
+											<select class="select-check">
+												<option selected="" disabled="" hidden value="">Выберите программу
+													обучения *
 												</option>
-												<option>2</option>
+												<option value="">2</option>
 											</select>
 											<label for="select" class="select-placeholder">
 												Выберите программу обучения
@@ -292,12 +286,12 @@
 											</label>
 										</div>
 										<div class="partner-registration-item">
-											<input type="text" id="input" required="required">			
-    <label for="input">Фамилия, имя, отчество<span> *</span></label>
+											<input type="text" id="input" required="required">
+											<label for="input">Фамилия, имя, отчество<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
 											<input class="masked-phone" type="tel" required="">
-												<label for="input">Контактный телефон<span> *</span></label>
+											<label for="input">Контактный телефон<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
 											<input type="text" required="">
@@ -307,14 +301,14 @@
 											<input type="text" required="">
 											<label for="input">E-mail<span> *</span></label>
 										</div>
-	
+
 									</div>
 								</div>
 								<div class="application-training-inner">
 									<div class="partner-registration-item">
-										<select>
-											<option selected  disabled>Выберите программу обучения</option>
-											<option>Калуга</option>
+										<select class="select-check">
+											<option selected disabled hidden value="">Выберите программу обучения</option>
+											<option value="">Калуга</option>
 											<option>Москва</option>
 										</select>
 										<label for="select" class="select-placeholder">
@@ -324,18 +318,19 @@
 									</div>
 									<div class="partner-registration-item-box">
 										<div class="partner-registration-item partner-registration-item-mod">
-											<input type="text"  placeholder="Сайт компании">
-											<label >Сайт компании</label>
+											<input type="text" placeholder="Сайт компании">
+											<label>Сайт компании</label>
 										</div>
 										<div class="partner-registration-item">
 											<input type="text" required="" placeholder="">
 											<label for="input">Ваша должность<span> *</span></label>
 										</div>
 										<div class="partner-registration-item">
-											<select>
-												<option selected="" disabled="" >Менеджер в группе компаний «АРТКОМ»*
+											<select class="select-check">
+												<option selected="" disabled="" hidden value="">Менеджер в группе компаний
+													«АРТКОМ»*
 												</option>
-												<option>2</option>
+												<option value="">2</option>
 											</select>
 											<label for="select" class="select-placeholder">
 												Выберите программу обучения
@@ -343,23 +338,25 @@
 											</label>
 										</div>
 										<div class="partner-registration-item">
-											<select>
-												<option selected="" disabled="" >
+											<select class="select-check">
+												<option selected="" disabled="" hidden value="">
 													Как Вы узнали об обучении
 												</option>
-												<option>2</option>
+												<option value="">2</option>
 											</select>
 											<label for="select" class="select-placeholder">
 												Как Вы узнали об обучении
 												<span> *</span>
 											</label>
 										</div>
-	
+
 									</div>
 								</div>
-								<div class="application-training-inner"><textarea placeholder="Пожелания и комментарии" class="partner-registration-textarea"></textarea></div>
+								<div class="application-training-inner"><textarea placeholder="Пожелания и комментарии"
+										class="partner-registration-textarea"></textarea></div>
 								<button class="btn partner-registration-btn">Сохранить настройки профиля</button>
-								<div class="application-training-info">Нажимая кнопку "Отправить заявку", я принимаю политику обработки персональных данных
+								<div class="application-training-info">Нажимая кнопку "Отправить заявку", я принимаю
+									политику обработки персональных данных
 								</div>
 							</form>
 

@@ -3163,6 +3163,7 @@ a.contacts-item-info-link:hover {
     font-size: 14px;
     line-height: 20px;
     color: #8e8484;
+    height: 48px;
     // background:#fff;
     // width: 100%;
     // height: 100%;
@@ -3618,34 +3619,10 @@ a.contacts-item-info-link:hover {
   border-radius: 5px;
   margin-top: 15px;
 }
-
-.application-training-item {
-  position: relative;
-  input {
-    width: 100%;
-    height: 100%;
-  }
-  input[type="date"] {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    &::-webkit-calendar-picker-indicator {
-      position: absolute;
-      top: 0;
-      left: -25px;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      color: transparent;
-      z-index: 10;
-      background: 0 0;
-    }
-  }
+input.partner-registration-item-data{
+  background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff;
 }
+
 .partner-registration-item-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -3654,17 +3631,16 @@ a.contacts-item-info-link:hover {
   margin-top: 15px;
 }
 .application-training-item-date {
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100%;
 }
 .application-training-item-date {
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: auto auto;
-  padding: 14px 20px;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
+  padding: 12px 14px 13px 20px;
+
   border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
   span {
     color: #fe000c;
     font-weight: 600;
@@ -4138,21 +4114,17 @@ a.contacts-item-info-link:hover {
     font-weight: 600;
   }
 }
-.course-requirements {
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  padding: 12px 0;
-  max-width: 255px;
-  width: 100%;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #333333;
-  border-radius: 5px;
-  margin-top: 48px;
+.course-panel-info-btn{
+  .text-navigation-btn{
+
+    margin-bottom: 0;
+    max-width: 255px;
+    width: 100%;
+
+    margin-top: 48px;
+  }
 }
+
 @import "_media-course";
 
 //promotion-centrer

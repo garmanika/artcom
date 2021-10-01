@@ -2957,6 +2957,16 @@ h5 {
   }
 }
 @media (max-width:991px) {
+  .direction-catalog-head {
+    gap: 15px
+  }
+  .direction-catalog-head-link img {
+    width: 48px;
+    height: 48px
+  }
+  .direction-catalog-head-link {
+    padding: 17px
+  }
   .direction-catalog-content-aside-buttons {
     padding: 0
   }
@@ -3074,6 +3084,9 @@ h5 {
   }
 }
 @media (max-width:767px) {
+  .direction-catalog-head-link {
+    padding: 22px 15px
+  }
   .direction-catalog-content-aside-item-head svg {
     display: block
   }
@@ -3139,6 +3152,12 @@ h5 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between
+  }
+  .direction-catalog-content-aside-item-head {
+    padding-bottom: 0
+  }
+  .direction-catalog-content-aside-item.open .direction-catalog-content-aside-item-head {
+    padding-bottom: 15px
   }
 }
 .dealer-inner {
@@ -4680,6 +4699,7 @@ a.contacts-item-info-link:hover {
   cursor: pointer;
   left: 0;
   color: #8e8484;
+  height: 48px;
   font-size: 14px;
   line-height: 20px;
   border: 1px solid #eee;
@@ -5283,32 +5303,8 @@ a.contacts-item-info-link:hover {
   border-radius: 5px;
   margin-top: 15px
 }
-.application-training-item {
-  position: relative
-}
-.application-training-item input {
-  width: 100%;
-  height: 100%
-}
-.application-training-item input[type=date] {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%
-}
-.application-training-item input[type=date]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  top: 0;
-  left: -25px;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  color: transparent;
-  z-index: 10;
-  background: 0 0
+input.partner-registration-item-data {
+  background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff
 }
 .partner-registration-item-box {
   display: grid;
@@ -5320,17 +5316,13 @@ a.contacts-item-info-link:hover {
   margin-top: 15px
 }
 .application-training-item-date {
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100%;
-  display: grid;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  grid-template-columns: auto auto;
-  padding: 14px 20px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 5px
+  padding: 12px 14px 13px 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0
 }
 .application-training-item-date span {
   color: #fe000c;
@@ -5963,35 +5955,34 @@ a.contacts-item-info-link:hover {
 .course-panel-info span {
   font-weight: 600
 }
-.course-requirements {
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  padding: 12px 0;
+.course-panel-info-btn .text-navigation-btn {
+  margin-bottom: 0;
   max-width: 255px;
   width: 100%;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #fff;
-  background: #333;
-  border-radius: 5px;
   margin-top: 48px
 }
 @media (max-width:1199px) {
-  .course-link-btn {
+  .course-panel-info-btn {
+    display: none
+  }
+  .course-link-btn,
+  .text-navigation-btns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 15px
+    gap: 15px
+  }
+  .course-link-btn a,
+  .text-navigation-btns a {
+    margin-bottom: 0
   }
   .course-info {
     margin: 31px 0 48px
   }
 }
 @media (max-width:767px) {
-  .course-link-btn {
-    grid-template-columns: 1fr;
-    gap: 0
+  .course-link-btn,
+  .text-navigation-btns {
+    grid-template-columns: 1fr
   }
   .course-info {
     margin: 31px 0 34px

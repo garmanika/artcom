@@ -1,8 +1,16 @@
 @media (max-width: 1199px) {
-    .course-link-btn{
+   .course-panel-info-btn{
+        display: none;
+    }
+    .course-link-btn,
+    .text-navigation-btns{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0 15px;
+        gap: 15px;
+        a{
+            margin-bottom: 0;
+        }
+
     }
     .course-info{
         margin: 31px 0 48px;
@@ -14,9 +22,9 @@
 }
 
 @media (max-width: 767px) {
-    .course-link-btn{
+    .course-link-btn,
+    .text-navigation-btns{
         grid-template-columns: 1fr;
-        gap: 0;
     }
     .course-info{
         margin: 31px 0 34px;
