@@ -2639,6 +2639,47 @@ h5 {
   padding: 0;
   overflow: hidden
 }
+.direction-catalog-content-aside-item .direction-catalog-content-aside-item-content-checkbox + .direction-catalog-content-aside-item-content-checkbox {
+  margin-top: 12px
+}
+.direction-catalog-content-aside-item .direction-catalog-content-aside-item-content-checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-font-feature-settings: "pnum" on,"lnum" on;
+  font-feature-settings: "pnum" on,"lnum" on;
+  color: #333;
+  cursor: pointer;
+  position: relative
+}
+.direction-catalog-content-aside-item .direction-catalog-content-aside-item-content-checkbox .check-box {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0)
+}
+.direction-catalog-content-aside-item .direction-catalog-content-aside-item-content-checkbox .check-style {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a29999;
+  border-radius: 2px;
+  margin-left: -30px
+}
+.direction-catalog-content-aside-item .check-box:checked + .check-style {
+  background-image: url(../img/svg/checkbox-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6px 6px
+}
 .direction-catalog-content-aside-item.open .direction-catalog-content-aside-item-content-checkbox {
   height: auto;
   overflow: auto
@@ -2659,12 +2700,14 @@ h5 {
   -webkit-font-feature-settings: "pnum" on,"lnum" on;
   font-feature-settings: "pnum" on,"lnum" on;
   color: #333;
-  cursor: pointer
+  cursor: pointer;
+  position: relative
 }
 .direction-catalog-content-aside-item.open .direction-catalog-content-aside-item-content-checkbox .check-box {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 20px;
+  height: 20px;
+  left: 0;
   overflow: hidden;
   clip: rect(0 0 0 0)
 }
@@ -3067,8 +3110,7 @@ h5 {
     display: none
   }
   .direction-catalog-content-aside-item-content {
-    padding: 0;
-    display: block
+    padding: 0
   }
   .direction-catalog-content-aside {
     padding: 33px 30px
@@ -3079,11 +3121,21 @@ h5 {
   .direction-catalog-list .direction-catalog-content-item-inner {
     gap: 54px
   }
+  .direction-catalog-content-aside-item .direction-catalog-content-aside-item-content {
+    display: block
+  }
+  .direction-catalog-content-aside-item-content-checkbox {
+    height: auto;
+    overflow: auto
+  }
   .direction-catalog-content-aside-item-head svg {
     display: none
   }
 }
 @media (max-width:767px) {
+  .direction-catalog-content-aside-item .direction-catalog-content-aside-item-content {
+    display: none
+  }
   .direction-catalog-head-link {
     padding: 22px 15px
   }
@@ -4650,16 +4702,16 @@ a.contacts-item-info-link:hover {
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer
+  align-items: center
 }
 .partner-registration-btns label + label {
   margin-left: 40px
 }
 .radio-box {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 20px;
+  height: 20px;
+  left: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
   padding-left: 30px
@@ -4700,7 +4752,6 @@ a.contacts-item-info-link:hover {
   cursor: pointer;
   left: 0;
   color: #8e8484;
-  height: 48px;
   font-size: 14px;
   line-height: 20px;
   border: 1px solid #eee;
@@ -5304,7 +5355,18 @@ a.contacts-item-info-link:hover {
   border-radius: 5px;
   margin-top: 15px
 }
-input.partner-registration-item-data {
+.application-training-item {
+  position: relative
+}
+.application-training-item input {
+  height: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 13px 14px 13px 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  width: 100%;
   background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff
 }
 .partner-registration-item-box {
@@ -5513,6 +5575,7 @@ input.partner-registration-item-data {
   border-collapse: collapse
 }
 .basket-table tr th {
+  white-space: nowrap;
   background: -webkit-gradient(linear,left bottom,left top,from(#a29999),to(#a29999)),#333;
   background: -o-linear-gradient(bottom,#a29999,#a29999),#333;
   background: linear-gradient(0deg,#a29999,#a29999),#333;
@@ -6218,11 +6281,8 @@ li.personal-table-control-link-mod {
 .order-creat-panel + .order-creat-panel {
   margin-top: 15px
 }
-.order-creat-panel-item-title {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #333
+.order-creat-panel .partner-registration-btns label + label {
+  margin-left: 30px
 }
 .order-creat-panel-inner {
   display: -webkit-box;
@@ -6233,52 +6293,111 @@ li.personal-table-control-link-mod {
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between
+  justify-content: space-between;
+  gap: 7px
 }
-.order-creat-box {
+.partner-registration-btns img {
+  margin-left: 4px;
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.partner-registration-btns.mod img {
+  margin-left: 7px;
+  width: 26px;
+  height: 26px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.partner-registration-btns.mod .order-creat-panel-radio-box {
+  margin-left: 17px
+}
+.order-creat-panel-prices {
+  text-align: center
+}
+.order-creat-panel-price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 1px
+}
+.order-creat-panel-price.mod {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fe000c
+}
+.order-creat-panel-subprice {
+  font-size: 14px;
+  line-height: 24px;
+  color: #a29999
+}
+.order-creat-panel-radio-box {
+  margin-left: 14px
+}
+.order-creat-panel-radio-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333
+}
+.order-creat-panel-radio-box.mod .order-creat-panel-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333
+}
+.order-creat-panel-subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999
+}
+.order-creat-panel-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  gap: 9px
 }
-.order-creat-box img {
-  width: 32px;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.order-creat-box-title {
-  font-size: 16px;
-  line-height: 24px;
-  color: #333;
-  margin-left: 9px;
-  margin-top: 3px
-}
-.order-creat-panel-btn {
-  background: #eee;
-  border: none;
-  padding: 4px 16px;
-  margin: 0;
+.order-creat-title {
   font-weight: 700;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   text-transform: uppercase;
   color: #333;
-  border-radius: 5px
+  margin-bottom: 12px
 }
-.partner-registration-btns.mod {
-  margin-bottom: 0;
+.order-creat-panel-btns {
+  min-width: 194px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+.order-creat-panel-delivery .order-creat-panel-box {
+  max-width: 340px;
+  width: 100%
+}
+.order-creat-panel-delivery .partner-registration-btns {
+  margin-bottom: 0
+}
+.order-creat-panel-delivery .order-creat-panel-inner {
   padding: 17px 0
 }
-.partner-registration-btns.mod:first-child {
-  padding-top: 0
-}
-.partner-registration-btns.mod img {
-  margin-right: 17px
-}
-.partner-registration-btns.mod + .partner-registration-btns.mod {
+.order-creat-panel-delivery .order-creat-panel-inner + .order-creat-panel-inner {
   border-top: 1px solid #eee
+}
+.order-creat .login-checkbox {
+  margin: 17px 0 25px
+}
+.order-creat .login-btn {
+  margin: 0
 }
 .order-creat-list {
   background: #fff;
@@ -6395,6 +6514,117 @@ li.personal-table-control-link-mod {
 }
 .order-creat-list-box-total::after {
   display: none
+}
+.order-creat-panel .partner-registration-item label {
+  border: none
+}
+.order-creat-panel .partner-registration-textarea {
+  border: 1px solid #eee
+}
+.order-creat-panel .login-checkbox {
+  margin: 0
+}
+.order-creat-panel .login-checkbox .check-box:checked + .check-style {
+  background-image: url(../img/svg/checkbox-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6px 6px
+}
+.order-creat-check-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333
+}
+.basket-table-quantity {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  text-align: center
+}
+.basket-table-td-quantity .basket-table-price {
+  display: none
+}
+@media (max-width:1199px) {
+  .order-creat-list {
+    margin-bottom: 15px
+  }
+}
+@media (max-width:767px) {
+  .order-creat .login-checkbox {
+    margin-bottom: 12px
+  }
+  .order-creat-panel .basket-table-td-quantity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 10px 15px 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+  .order-creat-panel .basket-table-td-quantity .basket-table-price {
+    display: block
+  }
+  .order-creat-panel {
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  .order-creat-panel-prices {
+    margin-top: 16px
+  }
+  .order-creat-panel-btns {
+    min-width: auto
+  }
+  .order-creat-panel-delivery .order-creat-panel-box {
+    max-width: 100%;
+    display: block
+  }
+  .order-creat-panel-inner.mod .order-creat-panel-prices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%
+  }
+  .order-creat-panel-inner.mod .order-creat-panel-btns {
+    min-width: 100%;
+    max-width: 100%
+  }
+  .order-creat-panel-inner.mod .order-creat-list-btn {
+    display: block;
+    width: 100%;
+    text-align: center
+  }
+  .order-creat-panel .partner-registration-btns label + label {
+    margin-left: 0
+  }
+  .order-creat-panel-delivery .order-creat-panel-inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+  }
+  .order-creat-panel .partner-registration-btns label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+  .order-creat-panel-box.radio-mod .partner-registration-btns label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start
+  }
+  .order-creat-panel-box.radio-mod .partner-registration-btns label .radio-style {
+    top: 5px
+  }
 }
 .partner-personal-account .service-items {
   margin-top: 30px

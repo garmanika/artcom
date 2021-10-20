@@ -121,9 +121,16 @@ padding: 0;
 	.direction-catalog-list .direction-catalog-content-item-inner{
 		gap: 54px;
 	}
-	.direction-catalog-content-aside-item-content{
-		display: block;
+	.direction-catalog-content-aside-item{
+		.direction-catalog-content-aside-item-content{
+			display: block;
+		}
+		
 	}
+	.direction-catalog-content-aside-item-content-checkbox{
+		height: auto;overflow: auto;
+	}
+
 	.direction-catalog-content-aside-item-head{
 		svg{
 			display: none;
@@ -132,6 +139,12 @@ padding: 0;
 }
 
 @media (max-width: 767px) {
+	.direction-catalog-content-aside-item{
+		.direction-catalog-content-aside-item-content{
+			display: none;
+		}
+		
+	}
 	.direction-catalog-head-link{
 		padding: 22px 15px;
 	}

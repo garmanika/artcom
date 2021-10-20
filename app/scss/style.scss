@@ -787,10 +787,7 @@ li.is-parent {
 
 .footer-nav-items {
   display: grid;
-  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-      auto,
-      255px
-    );
+  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
   justify-content: space-between;
   gap: 64px;
 }
@@ -1762,6 +1759,46 @@ h5 {
   padding: 0;
   overflow: hidden;
 }
+.direction-catalog-content-aside-item {
+  .direction-catalog-content-aside-item-content-checkbox {
+    & + .direction-catalog-content-aside-item-content-checkbox {
+      margin-top: 12px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #333333;
+      cursor: pointer;
+      position: relative;
+    }
+    .check-box {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    .check-style {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #a29999;
+      border-radius: 2px;
+      margin-left: -30px;
+    }
+  }
+  .check-box:checked + .check-style {
+    background-image: url(../img/svg/checkbox-check.svg);
+    @include bgi;
+    background-size: 6px 6px;
+  }
+}
+
 .direction-catalog-content-aside-item.open {
   .direction-catalog-content-aside-item-content-checkbox {
     height: auto;
@@ -1778,11 +1815,13 @@ h5 {
       font-feature-settings: "pnum" on, "lnum" on;
       color: #333333;
       cursor: pointer;
+      position: relative;
     }
     .check-box {
       position: absolute;
-      width: 1px;
-      height: 1px;
+      width: 20px;
+      height: 20px;
+      left: 0;
       overflow: hidden;
       clip: rect(0 0 0 0);
     }
@@ -2049,8 +2088,7 @@ h5 {
     border-radius: 5px;
     outline: none;
     appearance: none;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     background-position: calc(100% - 14px);
   }
 }
@@ -3002,8 +3040,7 @@ a.contacts-item-info-link:hover {
     line-height: 20px;
     color: #8e8484;
     padding: 13px 20px;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     border: 1px solid #eee;
     border-radius: 5px;
     outline: 0;
@@ -3111,15 +3148,15 @@ a.contacts-item-info-link:hover {
   padding-left: 30px;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
   & + label {
     margin-left: 40px;
   }
 }
 .radio-box {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 20px;
+  height: 20px;
+  left: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
   padding-left: 30px;
@@ -3164,7 +3201,6 @@ a.contacts-item-info-link:hover {
     font-size: 14px;
     line-height: 20px;
     color: #8e8484;
-    height: 48px;
     // background:#fff;
     // width: 100%;
     // height: 100%;
@@ -3327,10 +3363,7 @@ a.contacts-item-info-link:hover {
 //my-order
 .my-order {
   .orders-panel-content {
-    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(
-        auto,
-        90px
-      );
+    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(auto, 90px);
     padding: 25px 30px;
     align-items: center;
   }
@@ -3355,8 +3388,7 @@ a.contacts-item-info-link:hover {
 }
 .orders-panel-table-thead {
   display: table-header-group;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
 }
 .orders-panel-table-tr {
   display: table-row;
@@ -3377,13 +3409,11 @@ a.contacts-item-info-link:hover {
 }
 .orders-panel-table-row {
   display: table-row;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
   position: relative;
 
   &:nth-child(2n + 1) {
-    background: linear-gradient(0deg, #ffffff, #ffffff),
-      linear-gradient(0deg, #a29999, #a29999), #333333;
+    background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(0deg, #a29999, #a29999), #333333;
   }
 }
 .orders-panel-table-cell {
@@ -3619,10 +3649,22 @@ a.contacts-item-info-link:hover {
   border-radius: 5px;
   margin-top: 15px;
 }
-input.partner-registration-item-data{
-  background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff;
-}
 
+.application-training-item {
+  position: relative;
+  input {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 13px 14px 13px 20px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    width: 100%;
+    background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff;
+  }
+}
 .partner-registration-item-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -3792,6 +3834,7 @@ input.partner-registration-item-data{
   }
   tr {
     th {
+      white-space: nowrap;
       background: linear-gradient(0deg, #a29999, #a29999), #333333;
       color: #fff;
       text-align: center;
@@ -3929,8 +3972,7 @@ input.partner-registration-item-data{
   background: #ffffff;
   width: 100%;
   height: 100%;
-  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-    #fff;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
   background-position: calc(100% - 14px);
   span {
     font-weight: 600;
@@ -4114,9 +4156,8 @@ input.partner-registration-item-data{
     font-weight: 600;
   }
 }
-.course-panel-info-btn{
-  .text-navigation-btn{
-
+.course-panel-info-btn {
+  .text-navigation-btn {
     margin-bottom: 0;
     max-width: 255px;
     width: 100%;
@@ -4288,58 +4329,121 @@ li.personal-table-control-link-mod {
   & + .order-creat-panel {
     margin-top: 15px;
   }
-}
-.order-creat-panel-item-title {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #333333;
+  .partner-registration-btns label + label {
+    margin-left: 30px;
+  }
 }
 .order-creat-panel-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 7px;
 }
-.order-creat-box {
-  display: flex;
-  align-items: center;
-	img{
-		width: 32px;
-		object-fit: cover;
-	}
+
+.partner-registration-btns {
+  img {
+    margin-left: 4px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  &.mod {
+    img {
+      margin-left: 7px;
+      width: 26px;
+      height: 26px;
+      object-fit: cover;
+    }
+    .order-creat-panel-radio-box {
+      margin-left: 17px;
+    }
+  }
 }
-.order-creat-box-title {
+.order-creat-panel-prices {
+  text-align: center;
+}
+.order-creat-panel-price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 1px;
+  &.mod {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fe000c;
+  }
+}
+.order-creat-panel-subprice {
+  font-size: 14px;
+  line-height: 24px;
+  color: #a29999;
+}
+.order-creat-panel-radio-box {
+  margin-left: 14px;
+}
+.order-creat-panel-radio-title {
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #333333;
-  margin-left: 9px;
-	margin-top: 3px;
 }
-.order-creat-panel-btn {
-  @include no-button;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 24px;
-  text-transform: uppercase;
-  padding: 4px 16px;
-  color: #333333;
-  background: #eeeeee;
-  border-radius: 5px;
-}
-.partner-registration-btns.mod {
-  margin-bottom: 0;
-	padding: 17px 0;
-&:first-child{
-	padding-top: 0;
-}
-  img {
-    margin-right: 17px;
+.order-creat-panel-radio-box.mod {
+  .order-creat-panel-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
   }
-  & + .partner-registration-btns.mod {
-    border-top: 1px solid #eee;
+}
+.order-creat-panel-subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: #a29999;
+}
+.order-creat-panel-box {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.order-creat-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 12px;
+}
+.order-creat-panel-btns {
+  min-width: 194px;
+  display: flex;
+  justify-content: flex-end;
+}
+.order-creat-panel-delivery {
+  .order-creat-panel-box {
+    max-width: 340px;
+    width: 100%;
+  }
+  .partner-registration-btns {
+    margin-bottom: 0;
+  }
+  .order-creat-panel-inner {
+    padding: 17px 0;
+    & + .order-creat-panel-inner {
+      border-top: 1px solid #eee;
+    }
   }
 }
 //order-creat-list
+.order-creat{
+  .login-checkbox{
+    margin: 17px 0 25px;
+  }
+  .login-btn {
+    margin: 0;
+  }
+}
 .order-creat-list {
   background: #ffffff;
   border-radius: 5px;
@@ -4450,6 +4554,41 @@ li.personal-table-control-link-mod {
     display: none;
   }
 }
+.order-creat-panel {
+  .partner-registration-item label {
+    border: none;
+  }
+  .partner-registration-textarea {
+    border: 1px solid #eee;
+  }
+  .login-checkbox {
+    margin: 0;
+  }
+  .login-checkbox .check-box:checked + .check-style {
+    background-image: url(../img/svg/checkbox-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6px 6px;
+  }
+}
+.order-creat-check-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+.basket-table-quantity {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+}
+.basket-table-td-quantity{
+  .basket-table-price{
+    display: none;
+  }
+}
+
+@import "_media-order-creat.scss";
 //partner-personal-account
 .partner-personal-account {
   .service-items {

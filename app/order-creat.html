@@ -249,61 +249,280 @@
 			</section>
 			<div class="container">
 				<div class="row page-inner">
-					<div class="col-lg-12 col-xl-8">
+					<div class="col-lg-12 col-xl-8  order-1 order-xl-0">
 						<section class="order-creat">
-							<div class="order-creat-inner">
-								<div class="order-creat-panel partner-registration">
-									<div class="partner-registration"><h5>Тип плательщика</h5></div>
-									
-									<div class="partner-registration-btns">
+							<div class="order-creat-panel">
+								<div class="order-creat-title">Тип плательщика</div>
+								<div class="partner-registration-btns">
+									<label>
+										<input name="rd" type="radio" class="radio-box" checked="">
+										<span class="radio-style"></span>
+										Юридическое лицо
+									</label>
+									<label>
+										<input name="rd" type="radio" class="radio-box">
+										<span class="radio-style"></span>
+										Физическое лицо
+									</label>
+								</div>
+							</div>
+							<div class="order-creat-panel">
+								<div class="order-creat-title">местоположение доставки</div>
+								<div class="order-creat-panel-inner">
+									<div class="order-creat-panel-box">
+										<img src="img/country.png" alt="">
+										<div class="order-creat-panel-box-location">Москва</div>
+									</div>
+									<button class="order-creat-list-btn">Изменить</button>
+								</div>
+							</div>
+							<div class="order-creat-panel order-creat-panel-delivery">
+								<div class="order-creat-title">Способ доставки</div>
+								<div class="order-creat-panel-inner ">
+									<div class="order-creat-panel-box">
+										<div class="partner-registration-btns mod">
+											<label>
+												<input name="sd" type="radio" class="radio-box" checked="">
+												<span class="radio-style"></span>
+												<img src="img/svg/car.svg" alt="">
+												<div class="order-creat-panel-radio-box">
+													<div class="order-creat-panel-radio-title">Cамовывоз со склада</div>
+												</div>
+												
+											</label>
+										</div>
+								</div>
+
+							</div>
+								<div class="order-creat-panel-inner mod">
+									<div class="order-creat-panel-box">
+										<div class="partner-registration-btns">
+											<label>
+												<input name="sd" type="radio" class="radio-box" checked="">
+												<span class="radio-style"></span>
+												<img src="img/point of issue.png" alt="">
+												<div class="order-creat-panel-radio-box mod">
+													<div class="order-creat-panel-radio-title">Cамовывоз со склада</div>
+													<div class="order-creat-panel-subtitle">
+														Новочеркасский бальвар, д. 41, корп. 1 (м. Марьино)</div>
+											</div>
+												</div>
+
+											</label>
+										</div>
+										<div class="order-creat-panel-prices">
+											<div class="order-creat-panel-price">180 ₽</div>
+											<div class="order-creat-panel-subprice">1-5 рабочих дней</div>
+										</div>
+										<div class="order-creat-panel-btns">
+											<button class="order-creat-list-btn">другой пункт выдачи</button>
+										</div>
+										
+							</div>
+								<div class="order-creat-panel-inner">
+									<div class="order-creat-panel-box">
+										<div class="partner-registration-btns">
+											<label>
+												<input name="sd" type="radio" class="radio-box" checked="">
+												<span class="radio-style"></span>
+												<img src="img/svg/delivery-man.svg" alt="">
+												<div class="order-creat-panel-radio-box ">
+													<div class="order-creat-panel-radio-title">Курьером до двери</div>
+													<div class="order-creat-panel-subtitle">
+														Со страховкой</div>
+												</div>
+												
+											</label>
+										</div>
+								</div>
+								<div class="order-creat-panel-prices">
+									<div class="order-creat-panel-price mod">Бесплатно</div>
+									<div class="order-creat-panel-subprice">1-11 дней</div>
+								</div>
+								<div class="order-creat-panel-btns">
+									<button class="order-creat-list-btn">другой тариф</button>
+								</div>
+								
+							</div>
+							</div>
+							<div class="order-creat-panel">
+								<div class="order-creat-title">способ оплаты</div>
+								<div class="order-creat-panel-inner">
+									<div class="order-creat-panel-box radio-mod">
+										<div class="partner-registration-btns">
+											<label>
+												<input name="sd" type="radio" class="radio-box" checked="">
+												<span class="radio-style"></span>
+												<img src="img/svg/receipt.svg" alt="">
+												<div class="order-creat-panel-radio-box ">
+													<div class="order-creat-panel-radio-title">Курьером до двери</div>
+													<div class="order-creat-panel-subtitle">
+														После подтверждения заказа вам будет выставлен счет для оплаты по безналичному перечислению</div>
+												</div>
+												
+											</label>
+										</div>
+								</div>
+								
+							</div>
+							</div>
+							<div class="order-creat-panel">
+								<div class="order-creat-title">информация о покупателе</div>
+								<div class="partner-registration-items partner-registration-items-mod">
+									<div class="partner-registration-item">
+										<input type="text" required="">
+										 <label for="input">Полное наименование организации <span>*</span></label>
+									</div>
+									<div class="partner-registration-item">
+										<input type="text" required="">
+										 <label for="input">ИНН <span>*</span></label>
+									</div>
+									<div class="partner-registration-item">
+										<input type="text" required="">
+										 <label for="input">Ф.И.О. <span>*</span></label>
+									</div>
+									<div class="partner-registration-item">
+										<input type="text" required="">
+										 <label for="input">E-mail <span>*</span></label>
+									</div>
+									<div class="partner-registration-item">
+										<input type="text" required="">
+										 <label for="input">Телефон <span>*</span></label>
+									</div>
+									<textarea class="partner-registration-textarea" placeholder="Комментарий к заказу"></textarea>
+									<div class="login-checkbox">
 										<label>
-											<input name="rd" type="radio" class="radio-box" checked="">
-											<span class="radio-style"></span>
-											Организация
-										</label>
-										<label>
-											<input name="rd" type="radio" class="radio-box">
-											<span class="radio-style"></span>
-											Частное лицо (freelance)
+											<input type="checkbox" class="check-box" required="" checked>
+											<span class="check-style"></span>
+											<div class="order-creat-check-title">Оформление под проект</div>
 										</label>
 									</div>
-								</div>
-								<div class="order-creat-panel">
-									<div class="partner-registration">
-										<h5>местоположение доставки</h5>
-										<div class="order-creat-panel-inner">
-											<div class="order-creat-box">
-												<img src="img/country.png" alt="">
-												<div class="order-creat-box-title">Москва</div>
-											</div>
-											<button class="order-creat-panel-btn">Изменить</button>
-										</div>
+									
+									<div class="partner-registration-item  partner-registration-item-mod">
+										<input type="text" placeholder="Конечный пользователь (укажите полное название без сокращений)  ">
 
 									</div>
-								</div>
-								<div class="order-creat-panel">
-									<div class="partner-registration"><h5>Способ доставки</h5></div>
-									<div class="partner-registration-btns mod">
-										<label>
-											<input name="rd1" type="radio" class="radio-box" checked="">
-											<span class="radio-style"></span>
-											<img src="img/svg/car.svg" alt="">
-											<div class="order-creat-panel-item-title">Cамовывоз со склада</div>
-										</label>
+									<div class="partner-registration-item partner-registration-item-mod">
+										<input type="text" placeholder="Город  ">
+										
 									</div>
-									<div class="partner-registration-btns mod">
-										<label>
-											<input name="rd1" type="radio" class="radio-box" checked="">
-											<span class="radio-style"></span>
-											<img src="img/svg/car.svg" alt="">
-											<div class="order-creat-panel-item-title">Cамовывоз со склада</div>
-										</label>
+									<div class="partner-registration-item partner-registration-item-mod">
+										<input placeholder="Тип бизнеса компании  "  type="text" inputmode="text">
+										
+									</div>
+									<div class="partner-registration-item partner-registration-item-mod">
+										<input type="text" placeholder="Контакное лицо">
+										
+									</div>
+									<div class="partner-registration-item partner-registration-item-mod">
+										<input type="text" placeholder="Должность ">
+										
+									</div>
+									<div class="partner-registration-item partner-registration-item-mod ">
+										<input type="tel" placeholder="Телефон  " class="masked-phone">
+										
+									</div>
+									<div class="partner-registration-item partner-registration-item-mod">
+										<input type="text" placeholder="Адрес электронной почты (желательно корпоративная) ">
+										
+									</div>
+									<div class="partner-registration-item partner-registration-item-mod">
+										<input type="text" placeholder="Ожидаемая дата принятия решения  ">
+										
 									</div>
 								</div>
 							</div>
+							<div class="order-creat-panel">
+								<div class="order-creat-title">состав заказа</div>
+								<div class="basket-table">
+									<table>
+										<tbody>
+											<tr class="basket-table-head">
+												<th class="basket-table-rh-mod">наименование</th>
+												<th>кол-во</th>
+												<th>Цена</th>
+												
+											</tr>
+											<tr class="basket-table-content">
+												<td>
+													<div class="basket-table-box">
+														<div class="basket-table-img">
+															<img src="img/catalog/tel-min.png" alt="">
+														</div>
+														<div class="basket-table-info">
+															<div class="basket-table-info-title">eMG80-VMMLV.STG
+															</div>
+															<div class="basket-table-info-text">организация доступа расширения памяти VM на VVMU /15час.
+															</div>
+														</div>
+													</div>
+	
+												</td>
+	
+											
+											
+	
+											
+											
+												<td class="basket-table-td-quantity">
+													<div class="basket-table-quantity">4 шт</div>
+													<div class="basket-table-price">9 999 999 ₽</div>
+	
+												</td>
+												<td class="basket-table-td-price">
+													<div class="basket-table-price">9 999 999 ₽</div>
+												</td>
+											</tr>
+											<tr class="basket-table-content">
+												<td>
+													<div class="basket-table-box">
+														<div class="basket-table-img">
+															<img src="img/catalog/tel-min.png" alt="">
+														</div>
+														<div class="basket-table-info">
+															<div class="basket-table-info-title">eMG80-VMMLV.STG
+															</div>
+															<div class="basket-table-info-text">организация доступа расширения памяти VM на VVMU /15час.
+															</div>
+														</div>
+													</div>
+	
+												</td>
+	
+											
+											
+	
+											
+											
+												<td class="basket-table-td-quantity">
+													<div class="basket-table-quantity">4 шт</div>
+													<div class="basket-table-price">9 999 999 ₽</div>
+	
+												</td>
+												<td class="basket-table-td-price">
+													<div class="basket-table-price">9 999 999 ₽</div>
+												</td>
+	
+											</tr>
+	
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="login-checkbox">
+								<label>
+									<input type="checkbox" class="check-box" required="">
+									<span class="check-style"></span>
+									Нажимая кнопку «Оформить заказ», 
+я даю согласие на обработку персональных данных и соглашаюсь 
+с условиями продажи
+								</label>
+							</div>
+							<button type="submit" class="login-btn btn">оформить заказ</button>
 						</section>
 					</div>
-					<div class="col-12 col-xl-4 order-0 order-xl-1">
+					<div class="col-12 col-xl-4  order-0 order-xl-1">
 						<div class="order-creat-list">
 							<div class="order-creat-list-box order-creat-list-box-head">
 								<div class="order-creat-list-title">состав заказа</div>
@@ -339,7 +558,7 @@
 								<div class="order-creat-list-headline">Итого к оплате</div>
 								<div class="order-creat-list-total"> 1 380 ₽</div>
 							</div>
-							<button class="order-creat-list-req">быстрое оформление</button>
+							<button class="btn order-creat-list-req">быстрое оформление</button>
 							<div class="order-creat-list-description">Если есть вопросы по доставке и оплате, или просто нет времени, тогда нажмите на «быстрое оформление»</div>
 						</div>
 					</div>

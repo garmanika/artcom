@@ -1,0 +1,93 @@
+@media (max-width: 1199px) {
+    .order-creat-list{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+    .order-creat .login-checkbox{
+        margin-bottom: 12px;
+    }
+    .order-creat-panel{
+        .basket-table-td-quantity{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px 20px;
+            align-items: center;
+            .basket-table-price{
+                display: block;
+            }
+        }
+    }
+    .order-creat-panel{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .order-creat-panel-prices{
+        margin-top: 16px;
+    }
+    .order-creat-panel-btns{
+        min-width: auto;
+
+    }
+    .order-creat-panel-delivery .order-creat-panel-box{
+        max-width: 100%;
+        display: block;
+    }
+    .order-creat-panel-inner.mod{
+        .order-creat-panel-prices{
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+        .order-creat-panel-btns{
+            min-width: 100%;
+            max-width: 100%;
+            
+        }
+        .order-creat-list-btn{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .order-creat-list-btn{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .order-creat-panel .partner-registration-btns label + label{
+        margin-left: 0;
+    }
+    .order-creat-panel-delivery{
+        .order-creat-panel-inner{
+            flex-wrap: wrap;
+        }
+
+    }
+    .order-creat-panel{
+        .partner-registration-btns label{
+            display: flex;
+        }
+    }
+    .order-creat-panel-box.radio-mod{
+        .partner-registration-btns label{
+            display: flex;
+            align-items: start;
+            .radio-style{
+                top: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
