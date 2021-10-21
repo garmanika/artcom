@@ -6755,3 +6755,80 @@ li.personal-table-control-link-mod {
     gap: 0 15px
   }
 }
+.telephone-exchanges .direction-catalog-content-items {
+  grid-template-columns: repeat(2,1fr)
+}
+.telephone-exchanges .partner-registration-btn {
+  margin: 0
+}
+.telephone-exchanges .direction-catalog-content-item {
+  gap: 22px
+}
+.telephone-exchanges .direction-catalog-content-aside,
+.telephone-exchanges .direction-catalog-content-items {
+  margin-top: 48px
+}
+.product-card-inner {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 70px
+}
+.product-card-control-prices {
+  margin-bottom: 32px
+}
+.product-card-control-prices-new {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  color: #333
+}
+.product-card-control-prices-old {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  color: #a29999
+}
+.product-card-control-prices .direction-catalog-content-item-info .status {
+  text-align: left;
+  margin-bottom: 8px;
+  margin-top: 0
+}
+.product-one-calc.goods-calc {
+  width: 215px;
+  margin: 0
+}
+@media (max-width:991px) {
+  .telephone-exchanges .direction-catalog-box-link {
+    display: none
+  }
+  .telephone-exchanges .direction-catalog-content-aside-control {
+    margin-top: 40px
+  }
+  .telephone-exchanges .direction-catalog-content-aside {
+    margin-top: 15px
+  }
+  .telephone-exchanges .direction-catalog-content {
+    gap: 30px
+  }
+  .telephone-exchanges .direction-catalog-content-items {
+    margin-top: 0
+  }
+}
+@media (max-width:767px) {
+  .telephone-exchanges .direction-catalog-box-link {
+    display: block
+  }
+  .telephone-exchanges .direction-catalog-content-aside-control {
+    margin-top: 15px
+  }
+  .telephone-exchanges .direction-catalog-content-items {
+    grid-template-columns: 1fr
+  }
+  .telephone-exchanges.page-inner {
+    padding-bottom: 54px
+  }
+}

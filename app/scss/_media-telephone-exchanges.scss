@@ -1,0 +1,50 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+	.telephone-exchanges{
+		.direction-catalog-box-link{
+			display: none;
+		}
+		.direction-catalog-content-aside-control{
+			margin-top: 40px;
+		}
+		.direction-catalog-content-aside{
+			margin-top: 15px;
+		}
+		.direction-catalog-content-items{
+			margin-top: 30px;
+		}
+		.direction-catalog-content{
+			gap: 30px;
+		}
+	}
+	.telephone-exchanges .direction-catalog-content-items{
+		margin-top: 0;
+	}
+	
+}
+
+@media (max-width: 767px) {
+	.telephone-exchanges .direction-catalog-box-link{
+		display: block;
+	}
+	.telephone-exchanges .direction-catalog-content-aside-control{
+		margin-top: 15px;
+	}
+	.telephone-exchanges{
+
+	}
+	.telephone-exchanges .direction-catalog-content-items{
+		grid-template-columns: 1fr;
+	}
+	.telephone-exchanges.page-inner{
+		padding-bottom: 54px;
+	}
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
