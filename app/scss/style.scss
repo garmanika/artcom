@@ -787,10 +787,7 @@ li.is-parent {
 
 .footer-nav-items {
   display: grid;
-  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(
-      auto,
-      255px
-    );
+  grid-template-columns: auto minmax(auto, 160px) auto minmax(auto, 200px) minmax(auto, 255px);
   justify-content: space-between;
   gap: 64px;
 }
@@ -2091,8 +2088,7 @@ h5 {
     border-radius: 5px;
     outline: none;
     appearance: none;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     background-position: calc(100% - 14px);
   }
 }
@@ -3044,8 +3040,7 @@ a.contacts-item-info-link:hover {
     line-height: 20px;
     color: #8e8484;
     padding: 13px 20px;
-    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-      #fff;
+    background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
     border: 1px solid #eee;
     border-radius: 5px;
     outline: 0;
@@ -3368,10 +3363,7 @@ a.contacts-item-info-link:hover {
 //my-order
 .my-order {
   .orders-panel-content {
-    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(
-        auto,
-        90px
-      );
+    grid-template-columns: minmax(auto, 190px) repeat(2, auto) minmax(auto, 90px);
     padding: 25px 30px;
     align-items: center;
   }
@@ -3396,8 +3388,7 @@ a.contacts-item-info-link:hover {
 }
 .orders-panel-table-thead {
   display: table-header-group;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
 }
 .orders-panel-table-tr {
   display: table-row;
@@ -3418,13 +3409,11 @@ a.contacts-item-info-link:hover {
 }
 .orders-panel-table-row {
   display: table-row;
-  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
-    linear-gradient(0deg, #a29999, #a29999), #333333;
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5), linear-gradient(0deg, #a29999, #a29999), #333333;
   position: relative;
 
   &:nth-child(2n + 1) {
-    background: linear-gradient(0deg, #ffffff, #ffffff),
-      linear-gradient(0deg, #a29999, #a29999), #333333;
+    background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(0deg, #a29999, #a29999), #333333;
   }
 }
 .orders-panel-table-cell {
@@ -3673,8 +3662,7 @@ a.contacts-item-info-link:hover {
     border: 1px solid #eeeeee;
     border-radius: 5px;
     width: 100%;
-    background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px
-      no-repeat #fff;
+    background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff;
   }
 }
 .partner-registration-item-box {
@@ -3984,8 +3972,7 @@ a.contacts-item-info-link:hover {
   background: #ffffff;
   width: 100%;
   height: 100%;
-  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-    #fff;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
   background-position: calc(100% - 14px);
   span {
     font-weight: 600;
@@ -4709,6 +4696,10 @@ li.personal-table-control-link-mod {
 @import "_media-partner-personal-account";
 //telephone-exchanges
 .telephone-exchanges {
+  .direction-catalog-content-item-inner {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
   .direction-catalog-content-items {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4723,16 +4714,16 @@ li.personal-table-control-link-mod {
     margin-top: 48px;
   }
 }
-.product-card-inner{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: space-between;
-	gap: 70px;
+.product-card-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 70px;
 }
 .product-card-slider.swiper {
 }
-.product-card-control-prices{
-	margin-bottom: 32px;
+.product-card-control-prices {
+  margin-bottom: 32px;
 }
 .product-card-control-prices-new {
   font-weight: 600;
@@ -4746,15 +4737,51 @@ li.personal-table-control-link-mod {
   text-decoration-line: line-through;
   color: #a29999;
 }
-.product-card-control-prices{
-	.direction-catalog-content-item-info .status{
-		text-align: left;
-		margin-bottom: 8px;
-		margin-top: 0;
-	}
+.product-card-control-prices {
+  .direction-catalog-content-item-info .status {
+    text-align: left;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
 }
-.product-one-calc.goods-calc{
-	width: 215px;
-	margin: 0;
+.product-one-calc.goods-calc {
+  width: 215px;
+  margin: 0;
 }
 @import "_media-telephone-exchanges";
+//product-card
+.product-card-promotion {
+  .direction-catalog-content-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.product-card-promotion-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #333333;
+  margin: 48px 0 24px;
+}
+.product-card-watched-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 21px 15px;
+  align-items: start;
+}
+.product-card-watched-card-info-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.product-card-watched-card-info-price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #333333;
+}

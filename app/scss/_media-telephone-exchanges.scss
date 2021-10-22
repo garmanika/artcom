@@ -1,4 +1,8 @@
 @media (max-width: 1199px) {
+	.telephone-exchanges .direction-catalog-content-item-inner{
+		padding-left: 45px;
+		padding-right: 45px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -26,6 +30,10 @@
 }
 
 @media (max-width: 767px) {
+	.telephone-exchanges .direction-catalog-content-item-inner{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	.telephone-exchanges .direction-catalog-box-link{
 		display: block;
 	}

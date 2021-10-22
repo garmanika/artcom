@@ -6755,6 +6755,10 @@ li.personal-table-control-link-mod {
     gap: 0 15px
   }
 }
+.telephone-exchanges .direction-catalog-content-item-inner {
+  padding-left: 75px;
+  padding-right: 75px
+}
 .telephone-exchanges .direction-catalog-content-items {
   grid-template-columns: repeat(2,1fr)
 }
@@ -6801,6 +6805,12 @@ li.personal-table-control-link-mod {
   width: 215px;
   margin: 0
 }
+@media (max-width:1199px) {
+  .telephone-exchanges .direction-catalog-content-item-inner {
+    padding-left: 45px;
+    padding-right: 45px
+  }
+}
 @media (max-width:991px) {
   .telephone-exchanges .direction-catalog-box-link {
     display: none
@@ -6819,6 +6829,10 @@ li.personal-table-control-link-mod {
   }
 }
 @media (max-width:767px) {
+  .telephone-exchanges .direction-catalog-content-item-inner {
+    padding-left: 15px;
+    padding-right: 15px
+  }
   .telephone-exchanges .direction-catalog-box-link {
     display: block
   }
@@ -6831,4 +6845,40 @@ li.personal-table-control-link-mod {
   .telephone-exchanges.page-inner {
     padding-bottom: 54px
   }
+}
+.product-card-promotion .direction-catalog-content-items {
+  grid-template-columns: repeat(4,1fr)
+}
+.product-card-promotion-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  -webkit-font-feature-settings: "pnum" on,"lnum" on;
+  font-feature-settings: "pnum" on,"lnum" on;
+  color: #333;
+  margin: 48px 0 24px
+}
+.product-card-watched-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 21px 15px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start
+}
+.product-card-watched-card-info-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  margin-bottom: 8px
+}
+.product-card-watched-card-info-price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #333
 }
