@@ -4785,3 +4785,32 @@ li.personal-table-control-link-mod {
   line-height: 20px;
   color: #333333;
 }
+.product-card-tabs{
+  .tabs-link{
+    margin: 50px 0 20px;
+  }
+  .tab-content{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+}
+.product-card-tabs-descriptions{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  .order-creat-list-info,
+  .order-creat-list-summ{
+    background: #f7f7f7;
+  }
+
+}
+.product-card-tabs{
+  .promotion-items{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
+@import "_media-product-card";

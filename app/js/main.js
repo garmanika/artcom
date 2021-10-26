@@ -1,9 +1,20 @@
-$('.select-check').each(function() {
-  if ($(this).val() !== "") {
-      $(this).addClass('select-change');
-  }
-});
+
 $(function () {
+  $('.select-check').each(function() {
+    if ($(this).val() !== "") {
+        $(this).addClass('select-change');
+    }
+  });
+  $('.tabs-link-item').click(function() {
+    let id = $(this).attr('data-tab'),
+        content = $('.tab-content[data-tab="' + id + '"]');
+    $('.tabs-link-item.active').removeClass('active');
+    $(this).addClass('active');
+    $('.tab-content.active').removeClass('active');
+    content.addClass('active');
+});
+
+
   const da = new DynamicAdapt("max");
   da.init();
   function mobileSearchTrigger() {
@@ -101,50 +112,57 @@ $(function () {
     clearIncomplete: true,
     showMaskOnHover: false,
   });
-	// Инициализация превью слайдера
-const sliderThumbs = new Swiper('.slider__thumbs .swiper', { // ищем слайдер превью по селектору
-	// задаем параметры
-	direction: 'vertical', // вертикальная прокрутка
-	slidesPerView: 3, // показывать по 3 превью
-	spaceBetween: 24, // расстояние между слайдами
-	navigation: { // задаем кнопки навигации
-		nextEl: '.slider__next', // кнопка Next
-		prevEl: '.slider__prev' // кнопка Prev
-	},
-	freeMode: true, // при перетаскивании превью ведет себя как при скролле
-	breakpoints: { // условия для разных размеров окна браузера
-		0: { // при 0px и выше
-			direction: 'horizontal', // горизонтальная прокрутка
-		},
-		768: { // при 768px и выше
-			direction: 'vertical', // вертикальная прокрутка
-		}
-	}
-});
-// Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper', { // ищем слайдер превью по селектору
-	// задаем параметры
-	direction: 'vertical', // вертикальная прокрутка
-	slidesPerView: 1, // показывать по 1 изображению
-	spaceBetween: 32, // расстояние между слайдами
-	mousewheel: true, // можно прокручивать изображения колёсиком мыши
-	navigation: { // задаем кнопки навигации
-		nextEl: '.slider__next', // кнопка Next
-		prevEl: '.slider__prev' // кнопка Prev
-	},
-	grabCursor: true, // менять иконку курсора
-	thumbs: { // указываем на превью слайдер
-		swiper: sliderThumbs // указываем имя превью слайдера
-	},
-	breakpoints: { // условия для разных размеров окна браузера
-		0: { // при 0px и выше
-			direction: 'horizontal', // горизонтальная прокрутка
-		},
-		768: { // при 768px и выше
-			direction: 'vertical', // вертикальная прокрутка
-		}
-	}
-});
+
+  const swiper6 = new Swiper(".product-card-watched-cards", {
+    slidesPerView: 3,
+
+
+
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiper5 = new Swiper(".product-cards-slider", {
+    slidesPerView: 3,
+
+
+
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
   const swiper4 = new Swiper(".project-slider", {
     slidesPerView: 3,
 

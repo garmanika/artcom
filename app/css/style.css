@@ -6882,3 +6882,29 @@ li.personal-table-control-link-mod {
   line-height: 20px;
   color: #333
 }
+.product-card-tabs .tabs-link {
+  margin: 50px 0 20px
+}
+.product-card-tabs .tab-content {
+  display: none
+}
+.product-card-tabs .tab-content.active {
+  display: block
+}
+.product-card-tabs-descriptions {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px
+}
+.product-card-tabs-descriptions .order-creat-list-info,
+.product-card-tabs-descriptions .order-creat-list-summ {
+  background: #f7f7f7
+}
+.product-card-tabs .promotion-items {
+  grid-template-columns: repeat(3,1fr)
+}
+@media (max-width:767px) {
+  .product-card-tabs-descriptions {
+    grid-template-columns: 1fr
+  }
+}
