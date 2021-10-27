@@ -52,6 +52,11 @@ $(function () {
         "mobile-navigation-sub-position"
       );
     });
+
+      $('.header-desktop-menu.menu > .is-parent').on('click', function() {
+        $('.header-desktop-menu.menu > .is-parent').toggleClass('active');
+      })
+    
     $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
         $(".header").addClass("header-shadow");
@@ -80,7 +85,62 @@ $(function () {
 				// .closest(".direction-catalog-content-aside-item")
 				// .find(".direction-catalog-content-aside-item-content")
 		});
+    const breakpoint = window.matchMedia('(min-width: 767px)');
 
+    // keep track of swiper instances to destroy later
+    let mySwiper;
+
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+
+    const breakpointChecker = function() {
+
+        // if larger viewport and multi-row layout needed
+        if (breakpoint.matches === true) {
+
+            // clean up old instances and inline styles when available
+            if (mySwiper !== undefined) mySwiper.destroy(true, true);
+
+            // or/and do nothing
+            return;
+
+            // else if a small viewport and single column layout needed
+        } else if (breakpoint.matches === false) {
+
+            // fire small viewport version of swiper
+            return enableSwiper();
+        }
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+
+    const enableSwiper = function() {
+        mySwiper = new Swiper(".product-card-tabs-slider", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".product-card-tabs-slider > .swiper-pagination",
+                clickable: true,
+            },
+        });
+
+
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+
+    // keep an eye on viewport size changes
+    breakpoint.addListener(breakpointChecker);
+
+    // kickstart
+    breakpointChecker();
+
+    //
     $(".header-desktop-sub-menu-heading").on("click", function (e) {
       e.preventDefault();
       var subMenu = $(this).closest(".mobile-navigation-sub-position");
@@ -247,6 +307,7 @@ $(function () {
       },
     },
   });
+
   //count
   function decreaseValue(current) {
     var value = parseInt(current.val());
@@ -278,6 +339,41 @@ $(function () {
   //End count
 
   mobileSearchTrigger();
+  const sliderThumbs = new Swiper('.slider-thumbs .swiper', { // ищем слайдер превью по селектору
+    // задаем параметры
+    direction: 'vertical', // вертикальная прокрутка
+    slidesPerView: 4, // показывать по 3 превью
+    spaceBetween: 15, // расстояние между слайдами
+    navigation: { // задаем кнопки навигации
+      nextEl: '.slider-next', // кнопка Next
+      prevEl: '.slider-prev' // кнопка Prev
+    },
+    freeMode: true, // при перетаскивании превью ведет себя как при скролле
+  });
+  // Инициализация слайдера изображений
+  const sliderImages = new Swiper('.slider-images .swiper', { // ищем слайдер превью по селектору
+    // задаем параметры
+
+    slidesPerView: 1, // показывать по 1 изображению
+    spaceBetween: 32, // расстояние между слайдами
+    mousewheel: true, // можно прокручивать изображения колёсиком мыши
+    navigation: { // задаем кнопки навигации
+      nextEl: '.slider-next', // кнопка Next
+      prevEl: '.slider-prev' // кнопка Prev
+    },
+    grabCursor: true, // менять иконку курсора
+    thumbs: { // указываем на превью слайдер
+      swiper: sliderThumbs // указываем имя превью слайдера
+    },
+    breakpoints: { // условия для разных размеров окна браузера
+      0: { // при 0px и выше
+        direction: 'horizontal', // горизонтальная прокрутка
+      },
+      768: { // при 768px и выше
+        direction: 'vertical', // вертикальная прокрутка
+      }
+    }
+  });
 
   menuToggle();
   const slider = document.getElementById("sliderPrice");
@@ -301,6 +397,7 @@ $(function () {
       from: (value) => value,
     },
   });
+
 
   // bind inputs with noUiSlider
   slider.noUiSlider.on("update", (values, handle) => {
