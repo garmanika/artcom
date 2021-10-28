@@ -361,53 +361,49 @@ $(function () {
       nextEl: '.slider-next', // кнопка Next
       prevEl: '.slider-prev' // кнопка Prev
     },
+    pagination: {
+      el: ".slider-images-pagination",
+      clickable: true,
+  },
     grabCursor: true, // менять иконку курсора
     thumbs: { // указываем на превью слайдер
       swiper: sliderThumbs // указываем имя превью слайдера
     },
-    breakpoints: { // условия для разных размеров окна браузера
-      0: { // при 0px и выше
-        direction: 'horizontal', // горизонтальная прокрутка
-      },
-      768: { // при 768px и выше
-        direction: 'vertical', // вертикальная прокрутка
-      }
-    }
   });
 
   menuToggle();
-  const slider = document.getElementById("sliderPrice");
-  const rangeMin = parseInt(slider.dataset.min);
-  const rangeMax = parseInt(slider.dataset.max);
-  const step = parseInt(slider.dataset.step);
-  const filterInputs = document.querySelectorAll("input.filter-input");
+  // const slider = document.getElementById("sliderPrice");
+  // const rangeMin = parseInt(slider.dataset.min);
+  // const rangeMax = parseInt(slider.dataset.max);
+  // const step = parseInt(slider.dataset.step);
+  // const filterInputs = document.querySelectorAll("input.filter-input");
 
-  noUiSlider.create(slider, {
-    start: [rangeMin, rangeMax],
-    connect: true,
-    step: step,
-    range: {
-      min: rangeMin,
-      max: rangeMax,
-    },
+  // noUiSlider.create(slider, {
+  //   start: [rangeMin, rangeMax],
+  //   connect: true,
+  //   step: step,
+  //   range: {
+  //     min: rangeMin,
+  //     max: rangeMax,
+  //   },
 
-    // make numbers whole
-    format: {
-      to: (value) => value,
-      from: (value) => value,
-    },
-  });
+  //   // make numbers whole
+  //   format: {
+  //     to: (value) => value,
+  //     from: (value) => value,
+  //   },
+  // });
 
 
-  // bind inputs with noUiSlider
-  slider.noUiSlider.on("update", (values, handle) => {
-    filterInputs[handle].value = values[handle];
-  });
+  // // bind inputs with noUiSlider
+  // slider.noUiSlider.on("update", (values, handle) => {
+  //   filterInputs[handle].value = values[handle];
+  // });
 
-  filterInputs.forEach((input, indexInput) => {
-    input.addEventListener("change", () => {
-      slider.noUiSlider.setHandle(indexInput, input.value);
-    });
-  });
+  // filterInputs.forEach((input, indexInput) => {
+  //   input.addEventListener("change", () => {
+  //     slider.noUiSlider.setHandle(indexInput, input.value);
+  //   });
+  // });
 
 });

@@ -1,7 +1,57 @@
 @media (max-width: 1199px) {
+    .slider-images{
+        width: 330px;
+      }
+    .product-card-inner{
+        grid-template-columns: minmax(auto, 330px) 1fr;
+        gap: 30px;
+    }
+    .product-card-slider .slider-flex{
+        grid-template-columns: minmax(auto, 330px);
+    }
+    .product-card-slider .slider-images .slider-image{
+        width: 330px;
+        height: 330px;
+        img{
+            width: 330px;
+            height: 330px;
+        }
+    }
+    .slider-col{
+        display: none;
+    }
+    .product-card-slider .slider-flex{
+        grid-template-columns: minmax(auto, 472px);
+    }
+    .product-card-slider .slider-images-pagination{
+        display: block;
+        width: 100%;
+        bottom: 0;
+    }
+    .slider-images .swiper{
+        padding-bottom: 34px;
+    }
+    .product-card-control-box-mod{
+        margin: 30px 0 45px;
+        grid-template-rows: 1fr 1fr;
+        .product-card-control-panel-mod-l{
+            grid-column: 1/2;
+            grid-row: 2/2;
+        }
+    }
+    .product-card-control-panel-mod{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .product-card-slider .slider-flex{
+        grid-template-columns: minmax(auto, 330px);
+    }
 }
 
 @media (max-width: 991px) {
+
     .tab-container {
         .direction-catalog-list .direction-catalog-content-item-inner{
             gap: 15px;
@@ -20,10 +70,25 @@
     .product-card-tabs .promotion-items{
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .product-card-control-box{
+        gap: 15px 30px;
+    }
 }
 
 @media (max-width: 767px) {
+    .slider-images{
+        width: 510px;
+      }
+        .product-card-slider .slider-flex{
+        grid-template-columns: minmax(auto, 510px);
+    }
+    .product-card-slider .slider-images .slider-image, .product-card-slider .slider-images .slider-image img{
+        width: 100%;
+        height: 100%;
+    }
+    .product-card-slider .slider-images .slider-image, .product-card-slider .slider-images .slider-image img{
+        margin: 0 auto;
+    }
     .product-card-tabs .promotion-items{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -49,9 +114,34 @@
     .tab-container .direction-catalog-list .direction-catalog-content-item{
         gap: 15px;
     }
+    .product-card-control-box,
+    .product-card-control-box-mod{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    .product-card-inner{
+        gap: 16px;
+    }
 }
 
 @media (max-width: 575px) {
+    .slider-images{
+        width: auto;
+        max-width: 100%;
+      }
+    .product-card-slider .slider-flex{
+        grid-template-columns: minmax(auto,285px);
+    }
+     .product-card-control-piggy{
+        grid-column: 1;
+    }
+    .product-card-control-panel-mod{
+        
+    }
+    .product-card-control-box-mod .product-card-control-panel-mod-l{
+        
+    }
 }
 
 @media (min-width: 1200px) {
