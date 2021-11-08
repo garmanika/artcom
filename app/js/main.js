@@ -309,23 +309,23 @@ $(function () {
   });
 
   //count
-  function decreaseValue(current) {
-    var value = parseInt(current.val());
-    if (value === 0 || value < 0) {
-      value = 1;
-      current.val(value);
-    }
-    if (value > 1) {
-      value--;
-      current.val(value);
-    }
-  }
+  // function decreaseValue(current) {
+  //   var value = parseInt(current.val());
+  //   if (value === 0 || value < 0) {
+  //     value = 1;
+  //     current.val(value);
+  //   }
+  //   if (value > 1) {
+  //     value--;
+  //     current.val(value);
+  //   }
+  // }
 
-  function increaseValue(current) {
-    var value = parseInt(current.val());
-    value++;
-    current.val(value);
-  }
+  // function increaseValue(current) {
+  //   var value = parseInt(current.val());
+  //   value++;
+  //   current.val(value);
+  // }
 
   $(".decrease").on("click", function (event) {
     let current = $(this).closest(".goods-calc").find(".number");

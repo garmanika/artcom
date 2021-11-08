@@ -1200,7 +1200,7 @@ li.is-parent a {
 .service-title .service-item-title {
   font-weight: 500;
   font-size: 32px;
-  line-height: 28px;
+  line-height: 40px;
   text-transform: uppercase;
   color: #333;
   margin-bottom: 16px;
@@ -5760,6 +5760,7 @@ a.contacts-item-info-link:hover {
   line-height: 24px;
   text-transform: uppercase;
   color: #333;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 .goods-calc .value-button {
   font-weight: 700;
@@ -5805,8 +5806,20 @@ a.contacts-item-info-link:hover {
   .basket-summary {
     grid-template-columns: 1fr 1fr;
   }
+  .basket-table tr td{
+    padding: 30px 7px;
+  }
+  .basket-table tr td:first-child{
+    padding-left: 30px;
+  }
+  .basket-table tr td:last-child{
+    padding-right: 30px;
+  }
 }
 @media (max-width: 767px) {
+  .basket-table tr td:first-child{
+    padding-left: 0;
+  }
   .basket-delate,
   .basket-table-head {
     display: none;
