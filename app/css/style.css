@@ -1101,14 +1101,11 @@ li.is-parent a {
 .service-item {
   background: #e0e0e0;
   border-radius: 5px;
-  padding: 30px 30px 20px;
+  padding: 71px 30px 20px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1120,9 +1117,20 @@ li.is-parent a {
   -o-transition: .35s linear;
   transition: .35s linear
 }
+.buy .service-item,
+.buy .service-item:focus,
+.buy .service-item:hover {
+  padding-top: 83px;
+  border: none
+}
+.buy .service-item.service-title,
+.buy .service-item.service-title:hover {
+  padding-top: 60px;
+  padding-bottom: 20px
+}
 .service-item:focus,
 .service-item:hover {
-  padding-bottom: 100px;
+  padding-top: 31px;
   border: none
 }
 .service-item:focus .product-link,
@@ -1240,6 +1248,10 @@ li.is-parent a {
   opacity: .35
 }
 @media (max-width:1199px) {
+  .buy .service-item {
+    min-height: 263px;
+    max-height: 263px
+  }
   .service-item:not(.service-title) .service-item-info {
     max-width: 202px
   }
@@ -1267,6 +1279,15 @@ li.is-parent a {
   }
 }
 @media (max-width:991px) {
+  .buy .service-item {
+    min-width: 330px;
+    min-height: 248px
+  }
+  .buy .service-item,
+  .buy .service-item:focus,
+  .buy .service-item:hover {
+    padding-top: 64px
+  }
   .service-title .service-item-info {
     font-size: 16px
   }
@@ -1317,6 +1338,15 @@ li.is-parent a {
   }
   .services .service-items {
     margin-top: 35px
+  }
+  .buy .service-item {
+    min-width: auto;
+    min-height: auto;
+    padding-bottom: 88px
+  }
+  .buy .service-item:focus,
+  .buy .service-item:hover {
+    padding-bottom: 88px
   }
 }
 @media (max-width:575px) {
@@ -5715,6 +5745,9 @@ a.contacts-item-info-link:hover {
   background: #f5f5f5
 }
 @media (max-width:991px) {
+  .basket-table tr th.basket-table-th-p {
+    padding: 0
+  }
   .goods-calc {
     width: 120px
   }
@@ -6250,16 +6283,11 @@ li.personal-table-control-link-mod {
 .buy .service-title:after {
   display: none
 }
-.buy .service-item:focus,
-.buy .service-item:hover {
-  padding-bottom: 20px
-}
 .buy .service-title:hover {
   padding-top: 54px;
   padding-bottom: 20px
 }
-.buy .service-item:focus img,
-.buy .service-item:hover img {
+.buy .service-item img {
   display: block
 }
 .buy .service-item.service-title {
@@ -6272,6 +6300,11 @@ li.personal-table-control-link-mod {
   justify-content: center
 }
 @media (max-width:991px) {
+  .buy .service-item.service-title,
+  .buy .service-item.service-title:hover {
+    padding-bottom: 80px;
+    padding-top: 84px
+  }
   .buy .service-title {
     padding: 30px;
     display: -webkit-box;
@@ -6289,6 +6322,10 @@ li.personal-table-control-link-mod {
   .buy .service-title {
     padding-left: 24px;
     padding-right: 30px
+  }
+  .service-title .service-item-title {
+    font-size: 32px;
+    line-height: 40px
   }
 }
 .order-creat-panel {
