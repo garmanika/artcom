@@ -1263,6 +1263,9 @@ li.is-parent a {
   color: #fff;
   opacity: 0.35;
 }
+.service-item.no-anim:hover{
+  padding: 71px 30px 20px;
+}
 @media (max-width: 1199px) {
   .buy {
     .service-item {
@@ -1324,6 +1327,10 @@ li.is-parent a {
   }
 }
 @media (max-width: 767px) {
+  .service-item.no-anim:hover{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .service-item {
     min-height: 300px;
     max-height: 300px;
