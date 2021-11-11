@@ -5,7 +5,7 @@ $(function () {
         $(this).addClass('select-change');
     }
   });
-  $('.tabs-link-item').click(function() {
+  $('.product-card-tabs > .tabs-link-item').click(function() {
     let id = $(this).attr('data-tab'),
         content = $('.tab-content[data-tab="' + id + '"]');
     $('.tabs-link-item.active').removeClass('active');

@@ -1,4 +1,9 @@
 @media (max-width: 1199px) {
+	.catalog-product{
+		.product{
+			min-height: 248px;
+		}
+	}
     .slider-images{
         width: 330px;
       }
@@ -51,7 +56,15 @@
 }
 
 @media (max-width: 991px) {
-
+	.project{
+		.info-text ol li, .info-text ul li{
+			padding-left: 24px;
+		}
+	}
+	.personal-sertificate .personal-sertificate-btn{
+		max-width: 291px;
+		width: 100%;
+	}
     .tab-container {
         .direction-catalog-list .direction-catalog-content-item-inner{
             gap: 15px;
@@ -73,9 +86,36 @@
     .product-card-control-box{
         gap: 15px 30px;
     }
+		.order-creat-panel-delivery .order-creat-panel-box {
+			max-width: 295px;
+		}
+		.order-creat-panel{
+			
+		}
 }
 
 @media (max-width: 767px) {
+	.catalog-product{
+		.product{
+			min-height: 180px;
+		}
+	}
+	.order-creat-btns{
+		display: flex;
+		flex-direction: column;
+	}
+	.order-creat-btns label + label{
+		margin-left: 0;
+		margin-top: 8px;
+	}
+	.web-form-item input:placeholder-shown + label.web-form-label-desk,
+	.web-form-item textarea:placeholder-shown + label.web-form-label-desk {
+		display: none;
+	}
+	.web-form-item input:placeholder-shown ~ label.web-form-label-mob,
+	.web-form-item textarea:placeholder-shown ~ label.web-form-label-mob {
+		display: block;
+	}
     .slider-images{
         width: 510px;
       }
@@ -123,9 +163,32 @@
     .product-card-inner{
         gap: 16px;
     }
+		.partner-personal-account-box{
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.partner-personal-account-box-inner{
+			width: calc(100% - 50px);
+		}
+		.order-creat-list-box{
+			gap: 2px;
+		}
+		.web-form-item input,
+		.web-form-item label{
+			padding-right: 15px;
+		}
 }
 
 @media (max-width: 575px) {
+	.personal-sertificate .personal-sertificate-btn{
+		max-width: none;
+	}
+	.order-creat-panel{
+		padding-bottom: 5px;
+	}
+	.order-creat-panel-delivery .order-creat-panel-box {
+		max-width: none;
+	}
     .slider-images{
         width: auto;
         max-width: 100%;
@@ -142,6 +205,23 @@
     .product-card-control-box-mod .product-card-control-panel-mod-l{
         
     }
+		.order-creat-panel-location{
+			.order-creat-panel-inner{
+				flex-direction: column;
+			align-items: start;
+			}
+			.order-creat-list-btn{
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.personal-sertificate .personal-sertificate-btn{
+			width: calc(100% - 50px);
+		}
+		.personal-sertificate-wrapper{
+			padding-bottom: 72px;
+		}
 }
 
 @media (min-width: 1200px) {

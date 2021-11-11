@@ -253,7 +253,7 @@
 						<section class="order-creat">
 							<div class="order-creat-panel">
 								<div class="order-creat-title">Тип плательщика</div>
-								<div class="partner-registration-btns">
+								<div class="order-creat-btns">
 									<label>
 										<input name="rd" type="radio" class="radio-box" checked="">
 										<span class="radio-style"></span>
@@ -266,7 +266,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="order-creat-panel">
+							<div class="order-creat-panel order-creat-panel-location">
 								<div class="order-creat-title">местоположение доставки</div>
 								<div class="order-creat-panel-inner">
 									<div class="order-creat-panel-box">
@@ -302,7 +302,7 @@
 												<span class="radio-style"></span>
 												<img src="img/point of issue.png" alt="">
 												<div class="order-creat-panel-radio-box mod">
-													<div class="order-creat-panel-radio-title">Cамовывоз со склада</div>
+													<div class="order-creat-panel-radio-title">До пункта выдачи</div>
 													<div class="order-creat-panel-subtitle">
 														Новочеркасский бальвар, д. 41, корп. 1 (м. Марьино)</div>
 											</div>
@@ -351,11 +351,11 @@
 									<div class="order-creat-panel-box radio-mod">
 										<div class="partner-registration-btns">
 											<label>
-												<input name="sd" type="radio" class="radio-box" checked="">
+												<input name="pm" type="radio" class="radio-box" checked="">
 												<span class="radio-style"></span>
 												<img src="img/svg/receipt.svg" alt="">
 												<div class="order-creat-panel-radio-box ">
-													<div class="order-creat-panel-radio-title">Курьером до двери</div>
+													<div class="order-creat-panel-radio-title">Оплата по счету</div>
 													<div class="order-creat-panel-subtitle">
 														После подтверждения заказа вам будет выставлен счет для оплаты по безналичному перечислению</div>
 												</div>
@@ -368,28 +368,44 @@
 							</div>
 							<div class="order-creat-panel">
 								<div class="order-creat-title">информация о покупателе</div>
-								<div class="partner-registration-items partner-registration-items-mod">
-									<div class="partner-registration-item">
+								<div class="web-form-items web-form-items-mod">
+									<div class="web-form-item">
 										<input type="text" required="" placeholder=" ">
-										 <label for="input">Полное наименование организации <span>*</span></label>
+										<label class="web-form-label-desk" for="input">Полное наименование организации <span>*</span></label>
+										<label class="web-form-label-mob" for="input">Полное наименование организации <span>*</span></label>
+						
 									</div>
-									<div class="partner-registration-item">
+									<div class="web-form-item">
 										<input type="text" required="" placeholder=" ">
-										 <label for="input">ИНН <span>*</span></label>
+										<label class="web-form-label-desk" for="input">ИНН <span>*</span></label>
+										<label class="web-form-label-mob" for="input">ИНН <span>*</span></label>
+		
 									</div>
-									<div class="partner-registration-item">
+									<div class="web-form-item">
 										<input type="text" required="" placeholder=" ">
-										 <label for="input">Ф.И.О. <span>*</span></label>
+										<label class="web-form-label-desk" for="input">Ф.И.О. <span>*</span></label>
+										<label class="web-form-label-mob" for="input">Ф.И.О. <span>*</span></label>
+				
 									</div>
-									<div class="partner-registration-item">
-										<input type="text" required="" placeholder=" ">
-										 <label for="input">E-mail <span>*</span></label>
+									<div class="web-form-item">
+										<input type="email" required="" placeholder=" ">
+										<label class="web-form-label-desk" for="input">E-mail <span>*</span></label>
+										<label class="web-form-label-mob" for="input">E-mail <span>*</span></label>
+				
 									</div>
-									<div class="partner-registration-item">
-										<input type="text" required="" placeholder=" ">
-										 <label for="input">Телефон <span>*</span></label>
+									<div class="web-form-item">
+										<input type="tel" class="masked-phone" required="" placeholder=" ">
+							
+										 <label class="web-form-label-desk" for="input">Телефон <span>*</span></label>
+										 <label class="web-form-label-mob" for="input">Телефон <span>*</span></label>
 									</div>
-									<textarea class="partner-registration-textarea" placeholder="Комментарий к заказу"></textarea>
+									<div class="web-form-item ">
+										<textarea class="web-form-item-textarea" placeholder=" "></textarea>
+										<label class="web-form-label-desk">Комментарий к заказу <span>*</span></label>
+										<label class="web-form-label-mob" >Комментарий к заказу <span>*</span></label>
+								
+									</div>
+							
 									<div class="login-checkbox">
 										<label>
 											<input type="checkbox" class="check-box" required="" checked>
@@ -397,37 +413,55 @@
 											<div class="order-creat-check-title">Оформление под проект</div>
 										</label>
 									</div>
-									
-									<div class="partner-registration-item  partner-registration-item-mod">
-										<input type="text" placeholder="Конечный пользователь (укажите полное название без сокращений)  ">
-
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Конечный пользователь (укажите полное название без сокращений)</label>
+										<label class="web-form-label-mob" for="input">Конечный пользователь</label>
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod">
-										<input type="text" placeholder="Город  ">
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Город </label>
+										<label class="web-form-label-mob" for="input">Город </label>
+										
 										
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod">
-										<input placeholder="Тип бизнеса компании  "  type="text" inputmode="text">
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Тип бизнеса компании</label>
+										<label class="web-form-label-mob" for="input">Тип бизнеса компании</label>
+						
 										
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod">
-										<input type="text" placeholder="Контакное лицо">
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Контакное лицо</label>
+										<label class="web-form-label-mob" for="input">Контакное лицо</label>
+							
 										
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod">
-										<input type="text" placeholder="Должность ">
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Должность</span></label>
+										<label class="web-form-label-mob" for="input">Должность</label>
+					
 										
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod ">
-										<input type="tel" placeholder="Телефон  " class="masked-phone">
-										
+									<div class="web-form-item">
+										<input class="masked-phone" type="tel"  placeholder=" " inputmode="text">
+										<label class="web-form-label-desk" for="input">Контактный телефон</label>
+										<label class="web-form-label-mob" for="input">Контактный телефон</label>
+					
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod">
-										<input type="text" placeholder="Адрес электронной почты (желательно корпоративная) ">
-										
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Адрес электронной почты (желательно корпоративная)</label>
+										<label class="web-form-label-mob" for="input mob">Адрес электронной почты</label>
 									</div>
-									<div class="partner-registration-item partner-registration-item-mod">
-										<input type="text" placeholder="Ожидаемая дата принятия решения  ">
+									<div class="web-form-item">
+										<input type="text"  placeholder=" ">
+										<label class="web-form-label-desk" for="input">Ожидаемая дата принятия решения</label>
+										<label class="web-form-label-mob" for="input">Ожидаемая дата принятия решения</label>
+						
 										
 									</div>
 								</div>

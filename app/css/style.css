@@ -939,7 +939,6 @@ li.is-parent a {
   overflow: hidden;
   background: #fff;
   min-height: 263px;
-  max-height: 263px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1038,21 +1037,25 @@ li.is-parent a {
   height: 128px
 }
 @media (max-width:1199px) {
+  .product-img {
+    height: 104px
+  }
   .product:focus .product-img,
   .product:hover .product-img {
     height: 75px
   }
   .product {
-    max-height: 218px;
     min-height: 218px
   }
 }
 @media (max-width:767px) {
+  .product-img {
+    height: 96px
+  }
   .product-title {
     font-size: 16px
   }
   .product {
-    max-height: 180px;
     min-height: 180px;
     padding-left: 24px;
     padding-right: 8px
@@ -1111,7 +1114,6 @@ li.is-parent a {
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 263px;
-  max-height: 263px;
   overflow: hidden;
   -webkit-transition: .35s linear;
   -o-transition: .35s linear;
@@ -1247,20 +1249,19 @@ li.is-parent a {
   color: #fff;
   opacity: .35
 }
+.service-item.no-anim:focus,
 .service-item.no-anim:hover {
   padding: 71px 30px 20px
 }
 @media (max-width:1199px) {
   .buy .service-item {
-    min-height: 263px;
-    max-height: 263px
+    min-height: 263px
   }
   .service-item:not(.service-title) .service-item-info {
     max-width: 202px
   }
   .service-item {
-    min-height: 218px;
-    max-height: 218px
+    min-height: 218px
   }
   .service-item-count {
     right: 19px;
@@ -1302,8 +1303,7 @@ li.is-parent a {
     padding-top: 35px
   }
   .service-item {
-    min-height: 248px;
-    max-height: 248px
+    min-height: 248px
   }
   .service-item:focus img,
   .service-item:hover img {
@@ -1311,13 +1311,13 @@ li.is-parent a {
   }
 }
 @media (max-width:767px) {
+  .service-item.no-anim:focus,
   .service-item.no-anim:hover {
     padding-left: 24px;
     padding-right: 24px
   }
   .service-item {
     min-height: 300px;
-    max-height: 300px;
     padding-left: 24px;
     padding-right: 24px
   }
@@ -1365,8 +1365,7 @@ li.is-parent a {
     margin-top: 60px
   }
   .service-item {
-    min-height: 288px;
-    max-height: 288px
+    min-height: 288px
   }
 }
 .cooperation {
@@ -1961,11 +1960,14 @@ li.text-navigation-menu-item:hover a {
 .info-text ul li {
   position: relative;
   color: #333;
-  margin-bottom: 10px;
   display: block;
   padding-left: 27px;
   font-size: 16px;
   line-height: 24px
+}
+.info-text ol li + li,
+.info-text ul li + li {
+  margin-top: 8px
 }
 .info-text ol li:before {
   display: block;
@@ -3339,11 +3341,6 @@ h5 {
   line-height: 20px;
   color: #333
 }
-.dealer-panel-item.dealer-panel-item-link {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
-}
 .dealer-panel-item.dealer-panel-item-tel {
   font-weight: 700
 }
@@ -3371,9 +3368,6 @@ h5 {
 }
 .dealer-panel-item-tel-box a {
   display: inline-block
-}
-.dealer-panel-item-tel-box a + a {
-  margin-left: 7px
 }
 .page-control {
   margin-top: 50px
@@ -4221,9 +4215,6 @@ h5 {
 .ymaps-2-1-79-balloon__tail {
   display: none!important
 }
-.project .info-text + .info-text {
-  margin-top: 24px
-}
 .project .info-text h3 {
   margin-bottom: 8px
 }
@@ -4273,10 +4264,22 @@ h5 {
   color: #333
 }
 .project-slider-inner {
+  margin-bottom: 37px;
   position: relative
 }
-.project-slider-inner .swiper {
-  padding-bottom: 37px
+.project-slider-inner .swiper-button-next,
+.project-slider-inner .swiper-button-prev {
+  width: 32px;
+  height: 32px
+}
+.project-slider-inner .project-slider-next {
+  right: -16px
+}
+.project-slider-inner .project-slider-prev {
+  left: -16px
+}
+.project-slider-inner .swiper-pagination {
+  display: none
 }
 .project-slider-inner .swiper-horizontal > .swiper-pagination-bullets,
 .project-slider-inner .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -4321,6 +4324,12 @@ h5 {
   right: -30px
 }
 @media (max-width:991px) {
+  .project-slider-inner {
+    margin-bottom: 41px
+  }
+  .project-slider-inner .swiper-pagination {
+    display: block
+  }
   .project-slider-next,
   .project-slider-prev {
     display: none
@@ -4334,11 +4343,8 @@ h5 {
   .project-short-info-item-title {
     margin: 0
   }
-  .project .partners-feedback-info-inner {
-    display: none
-  }
   .project-slider-inner .swiper {
-    padding-bottom: 33px
+    padding-bottom: 40px
   }
   .project-info {
     margin-top: 48px
@@ -4348,6 +4354,9 @@ h5 {
   }
 }
 @media (max-width:767px) {
+  .project-slider-inner {
+    margin-bottom: 31px
+  }
   .project-short-info {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -4592,10 +4601,10 @@ a.contacts-item-info-link:hover {
 .partner-registration-wraper {
   margin-top: 25px
 }
-.partner-registration-item {
+.web-form-item {
   position: relative
 }
-.partner-registration-item input {
+.web-form-item input {
   font-size: 14px;
   line-height: 20px;
   background: #fff;
@@ -4604,7 +4613,7 @@ a.contacts-item-info-link:hover {
   padding: 13px 20px;
   width: 100%
 }
-.partner-registration-item select {
+.web-form-item select {
   display: block;
   width: 100%;
   font-size: 14px;
@@ -4620,70 +4629,71 @@ a.contacts-item-info-link:hover {
   appearance: none;
   background-position: calc(100% - 14px)
 }
-.partner-registration-item span {
+.web-form-item span {
   font-size: 18px;
   color: red
 }
-.partner-registration-item input + label span {
+.web-form-item input + label span {
   font-size: 18px;
   line-height: 20px;
   font-weight: 600
 }
-.partner-registration-item input:active + label,
-.partner-registration-item input:focus + label {
+.web-form-item input:active + label,
+.web-form-item input:focus + label {
   display: none
 }
-.partner-registration-item input:placeholder-shown + label {
-  display: block!important
+.web-form-item input:placeholder-shown + label,
+.web-form-item textarea:placeholder-shown + label {
+  display: block
 }
-.partner-registration-item .input-req input {
+.web-form-item .input-req input {
   position: relative;
   display: block
 }
-.partner-registration-item .input-req input::-webkit-input-placeholder::after {
+.web-form-item .input-req input::-webkit-input-placeholder::after {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
   content: "*"
 }
-.partner-registration-item .input-req input::-moz-placeholder::after {
+.web-form-item .input-req input::-moz-placeholder::after {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
   content: "*"
 }
-.partner-registration-item .input-req input:-ms-input-placeholder::after {
+.web-form-item .input-req input:-ms-input-placeholder::after {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
   content: "*"
 }
-.partner-registration-item .input-req input::-ms-input-placeholder::after {
+.web-form-item .input-req input::-ms-input-placeholder::after {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
   content: "*"
 }
-.partner-registration-item .input-req input::placeholder::after {
+.web-form-item .input-req input::placeholder::after {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
   content: "*"
 }
-.partner-registration-items {
+.web-form-items {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 15px 30px
 }
-.partner-registration-items-mod {
+.web-form-items-mod {
   grid-template-columns: 1fr
 }
-.partner-registration-textarea {
+.web-form-item-textarea {
   resize: none;
   background: #fff;
   border: 1px solid #eee;
@@ -4693,23 +4703,23 @@ a.contacts-item-info-link:hover {
   border: none;
   font-size: 14px;
   line-height: 20px;
-  min-height: 96px;
+  min-height: 108px;
   padding: 13px 20px;
   width: 100%
 }
-.partner-registration-textarea::-webkit-input-placeholder {
+.web-form-item-textarea::-webkit-input-placeholder {
   color: #8e8484
 }
-.partner-registration-textarea::-moz-placeholder {
+.web-form-item-textarea::-moz-placeholder {
   color: #8e8484
 }
-.partner-registration-textarea:-ms-input-placeholder {
+.web-form-item-textarea:-ms-input-placeholder {
   color: #8e8484
 }
-.partner-registration-textarea::-ms-input-placeholder {
+.web-form-item-textarea::-ms-input-placeholder {
   color: #8e8484
 }
-.partner-registration-textarea::placeholder {
+.web-form-item-textarea::placeholder {
   color: #8e8484
 }
 .partner-registration-btn {
@@ -4781,7 +4791,7 @@ a.contacts-item-info-link:hover {
   transform: translate(-50%,-50%);
   border-radius: 50%
 }
-.partner-registration-item label {
+.web-form-item label {
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -4790,17 +4800,14 @@ a.contacts-item-info-link:hover {
   color: #8e8484;
   font-size: 14px;
   line-height: 20px;
-  border: 1px solid #eee;
-  border-radius: 5px;
   padding: 13px 20px;
-  width: 100%;
   display: none
 }
-.partner-registration-item input:placeholder-visible ~ label {
+.web-form-item input:placeholder-visible ~ label {
   display: block
 }
 @media (max-width:767px) {
-  .partner-registration-items {
+  .web-form-items {
     grid-template-columns: 1fr
   }
   .partner-registration-btns label {
@@ -4810,7 +4817,7 @@ a.contacts-item-info-link:hover {
     margin: 8px 0 0
   }
 }
-.partner-registration-profile h5 {
+.personal-form-title {
   margin: 0 0 20px;
   font-weight: 700;
   font-size: 14px;
@@ -4836,16 +4843,13 @@ a.contacts-item-info-link:hover {
   .partner-registration-profile-wraper + .partner-registration-profile-wraper {
     margin-left: 0
   }
-  .partner-registration-items-mod {
-    grid-template-columns: 1fr 1fr
-  }
 }
 @media (max-width:767px) {
   .partner-registration-profile-box {
     grid-template-columns: 1fr;
     gap: 30px
   }
-  .partner-registration-items-mod {
+  .web-form-items-mod {
     grid-template-columns: 1fr
   }
 }
@@ -5072,6 +5076,12 @@ a.contacts-item-info-link:hover {
   line-height: 20px;
   color: #333
 }
+.orders-panel-table-cell:first-child {
+  width: 275px
+}
+.orders-panel-table-cell:last-child {
+  width: 110px
+}
 .orders-panel-table-cell-mod .orders-panel-table-count {
   display: none
 }
@@ -5177,7 +5187,7 @@ a.contacts-item-info-link:hover {
   margin: 0 auto;
   padding: 15px 0
 }
-.forgot-password-inner .partner-registration-item {
+.forgot-password-inner .web-form-item {
   width: 100%
 }
 .forgot-password-title {
@@ -5260,7 +5270,7 @@ a.contacts-item-info-link:hover {
   -ms-flex-pack: center;
   justify-content: center
 }
-.login-inner .partner-registration-item + .partner-registration-item {
+.login-inner .web-form-item + .web-form-item {
   margin-top: 15px
 }
 .login-title {
@@ -5399,18 +5409,15 @@ a.contacts-item-info-link:hover {
 .application-training-item {
   position: relative
 }
-.application-training-item input {
+.web-form-item-date input {
   height: 100%;
   font-size: 14px;
   line-height: 20px;
-  padding: 13px 14px 13px 20px;
-  background: #fff;
-  border: 1px solid #eee;
+  padding: 13px 20px;
   border-radius: 5px;
-  width: 100%;
   background: url(../img/svg/calendart.svg) calc(100% - 14px) center/20px 20px no-repeat #fff
 }
-.partner-registration-item-box {
+.web-form-item-box {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 15px 30px;
@@ -5466,7 +5473,7 @@ a.contacts-item-info-link:hover {
   .partner-feedback-inner {
     padding: 20px 15px
   }
-  .partner-registration-item-box {
+  .web-form-item-box {
     grid-template-columns: 1fr
   }
 }
@@ -5622,7 +5629,7 @@ a.contacts-item-info-link:hover {
   background: linear-gradient(0deg,#a29999,#a29999),#333;
   text-align: center;
   vertical-align: middle;
-  padding: 14px 30px;
+  padding: 14px 15px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
@@ -5630,10 +5637,14 @@ a.contacts-item-info-link:hover {
   color: #fff
 }
 .basket-table tr th:first-child {
-  text-align: left
+  text-align: left;
+  padding-left: 30px
+}
+.basket-table tr th:last-child {
+  padding-right: 30px
 }
 .basket-table tr td {
-  padding: 15px 30px
+  padding: 15px
 }
 .basket-table-td-calc .basket-delate,
 .basket-table-td-calc .basket-table-price {
@@ -5852,11 +5863,7 @@ a.contacts-item-info-link:hover {
 .select-change ~ .select-placeholder {
   display: none
 }
-.partner-registration-item-mod input:focus + label,
-.partner-registration-item-mod input:hover + label {
-  display: none!important
-}
-.partner-registration-item-mod label {
+.web-form-item-mod label {
   background: #fff;
   width: 100%;
   height: 100%;
@@ -5931,7 +5938,20 @@ a.contacts-item-info-link:hover {
   line-height: 20px;
   text-transform: uppercase;
   color: #fff;
-  padding: 15px 30px
+  padding: 15px 10px
+}
+.price-table-wrapper .orders-panel-table-cell:first-child {
+  padding-left: 30px
+}
+.price-table-wrapper .orders-panel-table-cell:last-child {
+  padding-right: 30px;
+  padding-left: 40px
+}
+.orders-panel-table-th:first-child {
+  padding-left: 30px
+}
+.orders-panel-table-th:last-child {
+  padding-right: 30px
 }
 .price-table-wrapper .price-table-name {
   font-size: 14px;
@@ -5941,13 +5961,14 @@ a.contacts-item-info-link:hover {
   max-width: 233px
 }
 .price-table-wrapper .orders-panel-table-cell {
-  padding: 15px 30px
+  padding: 15px 10px
 }
 .price-table-wrapper .price-table-info {
   font-size: 14px;
   line-height: 24px;
   color: #333;
-  text-align: left
+  text-align: left;
+  max-width: 540px
 }
 .price-table-wrapper .price-table-summ {
   font-weight: 600;
@@ -6338,7 +6359,7 @@ li.personal-table-control-link-mod {
 .order-creat-panel {
   background: #fff;
   border-radius: 5px;
-  padding: 22px 30px 35px
+  padding: 22px 30px 7px
 }
 .order-creat-panel + .order-creat-panel {
   margin-top: 15px
@@ -6383,7 +6404,8 @@ li.personal-table-control-link-mod {
   font-size: 18px;
   line-height: 24px;
   color: #333;
-  margin-bottom: 1px
+  margin-bottom: 1px;
+  white-space: nowrap
 }
 .order-creat-panel-price.mod {
   font-weight: 600;
@@ -6473,16 +6495,16 @@ li.personal-table-control-link-mod {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0 5px;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 0 30px;
   position: relative
 }
 .order-creat-list-box::after {
   content: "";
   position: absolute;
-  bottom: 11px;
+  top: 20px;
   left: 0;
   width: 100%;
   border-bottom: 1px dashed #d1d1d1
@@ -6530,7 +6552,8 @@ li.personal-table-control-link-mod {
   background: #fff;
   position: relative;
   z-index: 1;
-  padding-left: 2px
+  padding-left: 2px;
+  white-space: nowrap
 }
 .order-creat-list-box-head {
   margin-bottom: 25px
@@ -6543,14 +6566,20 @@ li.personal-table-control-link-mod {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #333
+  color: #333;
+  background: #fff;
+  position: relative;
+  z-index: 1
 }
 .order-creat-list-total {
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #fe000c
+  color: #fe000c;
+  background: #fff;
+  position: relative;
+  z-index: 1
 }
 .order-creat-list-req {
   background: #fe000c;
@@ -6575,12 +6604,12 @@ li.personal-table-control-link-mod {
   margin-top: 27px
 }
 .order-creat-list-box-total::after {
-  display: none
+  top: 19px
 }
-.order-creat-panel .partner-registration-item label {
+.order-creat-panel .web-form-item label {
   border: none
 }
-.order-creat-panel .partner-registration-textarea {
+.order-creat-panel .web-form-item-textarea {
   border: 1px solid #eee
 }
 .order-creat-panel .login-checkbox {
@@ -6612,9 +6641,6 @@ li.personal-table-control-link-mod {
   }
 }
 @media (max-width:767px) {
-  .order-creat .login-checkbox {
-    margin-bottom: 12px
-  }
   .order-creat-panel .basket-table-td-quantity {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6634,6 +6660,7 @@ li.personal-table-control-link-mod {
     padding-left: 15px;
     padding-right: 15px
   }
+  .order-creat-panel-btns,
   .order-creat-panel-prices {
     margin-top: 16px
   }
@@ -6699,10 +6726,26 @@ li.personal-table-control-link-mod {
 .partner-personal-account-box {
   background: #fff;
   border-radius: 5px;
-  padding: 25px
+  padding: 25px 30px;
+  min-height: 262px;
+  position: relative
+}
+.partner-personal-account-box-inner {
+  bottom: 25px;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  position: absolute;
+  width: calc(100% - 60px)
+}
+.partner-personal-account-box-wrapper {
+  padding-bottom: 182px
 }
 .partner-personal-account-box.mod {
-  padding-bottom: 30px
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px
 }
 .partner-personal-account-title {
   font-weight: 600;
@@ -6719,8 +6762,7 @@ li.personal-table-control-link-mod {
 .partner-personal-account-subtitle {
   font-size: 16px;
   line-height: 24px;
-  color: #333;
-  margin-bottom: 69px
+  color: #333
 }
 .partner-personal-account-subbox {
   display: grid;
@@ -7213,7 +7255,57 @@ li.personal-table-control-link-mod {
 .tab-container .direction-catalog-content-item-buy-box {
   white-space: nowrap
 }
+.order-creat-btns label {
+  position: relative;
+  padding-left: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.order-creat-btns label + label {
+  margin-left: 30px
+}
+.order-creat-panel ~ .login-checkbox .check-style {
+  top: 0
+}
+.personal-sertificate {
+  position: relative
+}
+.personal-sertificate .personal-sertificate-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width: calc(100% - 60px);
+  margin-top: 0
+}
+.personal-sertificate-wrapper {
+  padding-bottom: 56px
+}
+.dealer-panel-item.dealer-panel-item-tel span {
+  margin: 0
+}
+.dealer-panel-item.dealer-panel-item-tel .dealer-panel-item-tel-box {
+  margin-left: 15px
+}
+.partners-feedback-info p {
+  margin: 0
+}
+.product-card-watched-card-img img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
 @media (max-width:1199px) {
+  .catalog-product .product {
+    min-height: 248px
+  }
   .slider-images {
     width: 330px
   }
@@ -7260,6 +7352,14 @@ li.personal-table-control-link-mod {
   }
 }
 @media (max-width:991px) {
+  .project .info-text ol li,
+  .project .info-text ul li {
+    padding-left: 24px
+  }
+  .personal-sertificate .personal-sertificate-btn {
+    max-width: 291px;
+    width: 100%
+  }
   .tab-container .direction-catalog-list .direction-catalog-content-item-inner {
     gap: 15px
   }
@@ -7279,8 +7379,35 @@ li.personal-table-control-link-mod {
   .product-card-control-box {
     gap: 15px 30px
   }
+  .order-creat-panel-delivery .order-creat-panel-box {
+    max-width: 295px
+  }
 }
 @media (max-width:767px) {
+  .catalog-product .product {
+    min-height: 180px
+  }
+  .order-creat-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .order-creat-btns label + label {
+    margin-left: 0;
+    margin-top: 8px
+  }
+  .web-form-item input:placeholder-shown + label.web-form-label-desk,
+  .web-form-item textarea:placeholder-shown + label.web-form-label-desk {
+    display: none
+  }
+  .web-form-item input:placeholder-shown ~ label.web-form-label-mob,
+  .web-form-item textarea:placeholder-shown ~ label.web-form-label-mob {
+    display: block
+  }
   .slider-images {
     width: 510px
   }
@@ -7334,8 +7461,28 @@ li.personal-table-control-link-mod {
   .product-card-inner {
     gap: 16px
   }
+  .partner-personal-account-box {
+    padding-left: 25px;
+    padding-right: 25px
+  }
+  .partner-personal-account-box-inner {
+    width: calc(100% - 50px)
+  }
+  .order-creat-list-box {
+    gap: 2px
+  }
+  .web-form-item input,
+  .web-form-item label {
+    padding-right: 15px
+  }
 }
 @media (max-width:575px) {
+  .order-creat-panel {
+    padding-bottom: 5px
+  }
+  .order-creat-panel-delivery .order-creat-panel-box {
+    max-width: none
+  }
   .slider-images {
     width: auto;
     max-width: 100%
@@ -7345,5 +7492,26 @@ li.personal-table-control-link-mod {
   }
   .product-card-control-piggy {
     grid-column: 1
+  }
+  .order-creat-panel-location .order-creat-panel-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start
+  }
+  .order-creat-panel-location .order-creat-list-btn {
+    display: block;
+    width: 100%;
+    text-align: center
+  }
+  .personal-sertificate .personal-sertificate-btn {
+    max-width: none;
+    width: calc(100% - 50px)
+  }
+  .personal-sertificate-wrapper {
+    padding-bottom: 72px
   }
 }

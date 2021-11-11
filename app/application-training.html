@@ -256,7 +256,7 @@
 						<section class="application-training">
 							<form >
 								<div class="application-training-inner">
-									<div class="partner-registration-item">
+									<div class="web-form-item">
 										<select class="select-check">
 											<option selected="" disabled="" hidden value="">Выберите программу обучения *</option>
 											<option>2</option>
@@ -266,17 +266,16 @@
 											<span> *</span>
 										</label>
 									</div>
-									<div class="partner-registration-item-box">
-										<div class="application-training-item">
-											<input type="text">
-											<div class="application-training-item-date">
-												<div class="application-training-item-date-text">Выберите дату обучения <span> *</span></div>
-	
-											</div>
+									<div class="web-form-item-box">
+										<div class="web-form-item web-form-item-date">
+											<input type="text" required="" placeholder=" ">
+											<label class="web-form-label-desk" for="input">Выберите дату обучения<span> *</span></label>
+											<label class="web-form-label-mob" for="input">Выберите дату обучения<span> *</span></label>
+
 										</div>
-										<div class="partner-registration-item">
+										<div class="web-form-item">
 											<select class="select-check">
-												<option selected="" disabled="" hidden value="">Выберите программу обучения *
+												<option selected="" disabled="" hidden value="">Выберите тип обучения *
 												</option>
 												<option>2</option>
 											</select>
@@ -285,47 +284,56 @@
 												<span> *</span>
 											</label>
 										</div>
-										<div class="partner-registration-item">
+										<div class="web-form-item">
 											<input type="text" id="input" required="required" placeholder=" ">			
-    <label for="input">Фамилия, имя, отчество<span> *</span></label>
+  
+		<label class="web-form-label-desk" for="input">Фамилия, имя, отчество<span> *</span></label>
+		<label class="web-form-label-mob" for="input">Фамилия, имя, отчество<span> *</span></label>
 										</div>
-										<div class="partner-registration-item">
-											<input class="masked-phone" type="tel" required="" placeholder=" ">
-												<label for="input">Контактный телефон<span> *</span></label>
-										</div>
-										<div class="partner-registration-item">
+										<div class="web-form-item">
 											<input type="text" required="" placeholder=" ">
-											<label for="input">Город<span> *</span></label>
+				
+											<label class="web-form-label-desk" for="input">Город<span> *</span></label>
+											<label class="web-form-label-mob" for="input">Город<span> *</span></label>
 										</div>
-										<div class="partner-registration-item">
-											<input type="text" required="" placeholder=" "> 
-											<label for="input">E-mail<span> *</span></label>
+										<div class="web-form-item">
+											<input class="masked-phone" type="tel" required="" placeholder=" ">
+			
+												<label class="web-form-label-desk" for="input">Контактный телефон<span> *</span></label>
+												<label class="web-form-label-mob" for="input">Контактный телефон<span> *</span></label>
+										</div>
+
+										<div class="web-form-item">
+											<input type="email" required="" placeholder=" "> 
+									
+											<label class="web-form-label-desk" for="input">E-mail<span> *</span></label>
+											<label class="web-form-label-mob" for="input">E-mail<span> *</span></label>
 										</div>
 	
 									</div>
 								</div>
 								<div class="application-training-inner">
-									<div class="partner-registration-item">
-										<select class="select-check">
-											<option selected  disabled hidden value="">Выберите программу обучения</option>
-											<option>Калуга</option>
-											<option>Москва</option>
-										</select>
-										<label for="select" class="select-placeholder">
-											Выберите программу обучения
-											<span> *</span>
-										</label>
+									<div class="web-form-item">
+										<input type="text" required="" placeholder=" ">
+										<label class="web-form-label-desk" for="input">Полное наименование организации, от имени которой Вы регистрируетесь<span> *</span></label>
+										<label class="web-form-label-mob" for="input">Полное наименование организации<span> *</span></label>
 									</div>
-									<div class="partner-registration-item-box">
-										<div class="partner-registration-item partner-registration-item-mod">
-											<input type="text"  placeholder="Сайт компании">
-											<label >Сайт компании</label>
+									<div class="web-form-item-box">
+										
+										<div class="web-form-item">
+											<input type="text"  placeholder=" ">
+											<label class="web-form-label-desk" for="input">Сайт компании</label>
+											<label class="web-form-label-mob" for="input">Сайт компании</label>
+			
+
 										</div>
-										<div class="partner-registration-item">
+										<div class="web-form-item">
 											<input type="text" required="" placeholder=" ">
+											<label class="web-form-label-desk" for="input">Ожидаемая дата принятия решения</label>
+											<label class="web-form-label-mob" for="input">Ожидаемая дата принятия решения</label>
 											<label for="input">Ваша должность<span> *</span></label>
 										</div>
-										<div class="partner-registration-item">
+										<div class="web-form-item">
 											<select class="select-check">
 												<option selected="" disabled="" hidden value="">Менеджер в группе компаний «АРТКОМ»*
 												</option>
@@ -336,7 +344,7 @@
 												<span> *</span>
 											</label>
 										</div>
-										<div class="partner-registration-item">
+										<div class="web-form-item">
 											<select class="select-check">
 												<option selected="" disabled="" hidden value="">
 													Как Вы узнали об обучении
@@ -351,7 +359,15 @@
 	
 									</div>
 								</div>
-								<div class="application-training-inner"><textarea placeholder="Пожелания и комментарии" class="partner-registration-textarea"></textarea></div>
+								
+								<div class="application-training-inner">
+									<div class="web-form-item ">
+										<textarea class="web-form-item-textarea" placeholder=" "></textarea>
+										<label class="web-form-label-desk">Пожелания и комментарии</label>
+										<label class="web-form-label-mob" >Пожелания и комментарии</label>
+						
+									</div>
+								</div>
 								<button class="btn partner-registration-btn">Сохранить настройки профиля</button>
 								<div class="application-training-info">Нажимая кнопку "Отправить заявку", я принимаю политику обработки персональных данных
 								</div>
