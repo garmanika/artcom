@@ -5079,6 +5079,9 @@ a.contacts-item-info-link:hover {
 .orders-panel-table-cell:first-child {
   width: 275px
 }
+.orders-panel-table-cell:nth-child(2) {
+  width: 600px
+}
 .orders-panel-table-cell:last-child {
   width: 110px
 }
@@ -5843,7 +5846,7 @@ a.contacts-item-info-link:hover {
     text-align: left
   }
 }
-.select-placeholder {
+.web-form-item label.select-placeholder {
   position: absolute;
   display: block;
   font-size: 14px;
@@ -5854,13 +5857,13 @@ a.contacts-item-info-link:hover {
   height: 100%;
   background-position: calc(100% - 14px)
 }
-.select-placeholder span {
+.web-form-item label.select-placeholder span {
   font-weight: 600;
   font-size: 18px;
   color: #fe000c;
   pointer-events: none
 }
-.select-change ~ .select-placeholder {
+.web-form-item .select-change ~ label.select-placeholder {
   display: none
 }
 .web-form-item-mod label {
@@ -5989,7 +5992,7 @@ a.contacts-item-info-link:hover {
 @media (max-width:991px) {
   .price-control-inner {
     grid-template-columns: 1fr;
-    gap: 40px 0
+    gap: 30px 0
   }
   .price-box {
     overflow: hidden
@@ -7352,6 +7355,18 @@ li.personal-table-control-link-mod {
   }
 }
 @media (max-width:991px) {
+  .orders-panel-table-cell:first-child {
+    width: 210px
+  }
+  .orders-panel-table-cell:nth-child(2) {
+    width: 290px
+  }
+  .price-table-wrapper .orders-panel-table-cell {
+    padding: 15px 10px
+  }
+  .orders-panel-table-cell:last-child {
+    width: 100px
+  }
   .project .info-text ol li,
   .project .info-text ul li {
     padding-left: 24px
@@ -7384,6 +7399,15 @@ li.personal-table-control-link-mod {
   }
 }
 @media (max-width:767px) {
+  .price-table-wrapper .orders-panel-table-cell,
+  .price-table-wrapper .orders-panel-table-cell:first-child {
+    padding: 0
+  }
+  .orders-panel-table-cell:first-child,
+  .orders-panel-table-cell:last-child,
+  .orders-panel-table-cell:nth-child(2) {
+    width: auto
+  }
   .catalog-product .product {
     min-height: 180px
   }

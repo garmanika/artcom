@@ -5279,6 +5279,9 @@ a.contacts-item-info-link:hover {
 	&:first-child{
 		width: 275px;
 	}
+	&:nth-child(2){
+		width: 600px;
+	}
 	&:last-child{
 		width: 110px;
 
@@ -6053,27 +6056,26 @@ a.contacts-item-info-link:hover {
     text-align: left;
   }
 }
-.select-placeholder {
+.web-form-item label.select-placeholder {
   position: absolute;
   display: block;
   font-size: 14px;
   line-height: 20px;
   color: #8e8484;
-  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat
-    #fff;
+  background: url(../img/svg/angle-down-select.svg) center/24px 24px no-repeat #fff;
   width: 100%;
   height: 100%;
-  background-position: calc(100% - 14px);
-}
-.select-placeholder span {
+  background-position: calc(100% - 14px)
+ }
+.web-form-item label.select-placeholder span {
   font-weight: 600;
   font-size: 18px;
   color: #fe000c;
-  pointer-events: none;
-}
-.select-change ~ .select-placeholder {
-  display: none;
-}
+  pointer-events: none
+ }
+.web-form-item .select-change ~ label.select-placeholder {
+  display: none
+ }
 .web-form-item-mod label {
   background: #fff;
   width: 100%;
@@ -6212,7 +6214,7 @@ a.contacts-item-info-link:hover {
 @media (max-width: 991px) {
   .price-control-inner {
     grid-template-columns: 1fr;
-    gap: 40px 0;
+    gap: 30px 0;
   }
   .price-box {
     overflow: hidden;

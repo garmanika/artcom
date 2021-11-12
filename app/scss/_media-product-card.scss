@@ -56,6 +56,18 @@
 }
 
 @media (max-width: 991px) {
+    .orders-panel-table-cell:first-child{
+        width: 210px;
+    }
+    .orders-panel-table-cell:nth-child(2){
+        width: 290px;
+    }
+    .price-table-wrapper .orders-panel-table-cell{
+        padding: 15px 10px;
+    }
+    .orders-panel-table-cell:last-child{
+        width: 100px;
+    }
 	.project{
 		.info-text ol li, .info-text ul li{
 			padding-left: 24px;
@@ -95,6 +107,22 @@
 }
 
 @media (max-width: 767px) {
+    .price-table-wrapper .orders-panel-table-cell{
+        padding: 0;
+    }
+    .price-table-wrapper .orders-panel-table-cell:first-child{
+        padding: 0;
+    }
+    .orders-panel-table-cell:first-child{
+        width: auto
+    }
+    .orders-panel-table-cell:nth-child(2){
+        width: auto
+    }
+
+    .orders-panel-table-cell:last-child{
+        width: auto
+    }
 	.catalog-product{
 		.product{
 			min-height: 180px;

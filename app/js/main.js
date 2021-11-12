@@ -1,10 +1,10 @@
 
 $(function () {
   $('.select-check').each(function() {
-    if ($(this).val() !== "") {
-        $(this).addClass('select-change');
-    }
-  });
+    if ($(this).val()) {
+       $(this).addClass('select-change');
+   }
+ });
   $('.product-card-tabs > .tabs-link-item').click(function() {
     let id = $(this).attr('data-tab'),
         content = $('.tab-content[data-tab="' + id + '"]');
