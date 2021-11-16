@@ -405,5 +405,11 @@ $(function () {
   //     slider.noUiSlider.setHandle(indexInput, input.value);
   //   });
   // });
-
+  $(".creat-for-project input[type='checkbox']").on("change", function () {
+    if ($(this).is(':checked')) {
+        $(".order-creat-project").addClass("active");
+    } else {
+        $(".order-creat-project").removeClass("active");
+    }
+ });
 });

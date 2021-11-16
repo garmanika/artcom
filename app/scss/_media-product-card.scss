@@ -56,6 +56,9 @@
 }
 
 @media (max-width: 991px) {
+    .direction-catalog-content-aside{
+        display: none;
+    }
     .orders-panel-table-cell:first-child{
         width: 210px;
     }
@@ -107,6 +110,11 @@
 }
 
 @media (max-width: 767px) {
+
+
+    .order-creat-list{
+        padding: 20px 15px 25px;
+    }
     .price-table-wrapper .orders-panel-table-cell{
         padding: 0;
     }
@@ -205,9 +213,28 @@
 		.web-form-item label{
 			padding-right: 15px;
 		}
+        .price-table{
+            .orders-panel-table-row{
+                display: block;
+           
+            }
+        }
+        .direction-catalog-content-item-img img{
+            width: 156px;
+            height: 156px;
+        }
 }
 
 @media (max-width: 575px) {
+    .order-creat-panel-location{
+        .order-creat-list-btn,
+        .order-creat-panel-btns{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+      }
+
 	.personal-sertificate .personal-sertificate-btn{
 		max-width: none;
 	}
@@ -250,6 +277,9 @@
 		.personal-sertificate-wrapper{
 			padding-bottom: 72px;
 		}
+        .order-creat .order-creat-panel{
+            padding-bottom: 22px;
+        }
 }
 
 @media (min-width: 1200px) {
