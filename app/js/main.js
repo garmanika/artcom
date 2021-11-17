@@ -5,7 +5,7 @@ $(function () {
        $(this).addClass('select-change');
    }
  });
-  $('.product-card-tabs > .tabs-link-item').click(function() {
+  $('.product-card-tabs .tabs-link-item').click(function() {
     let id = $(this).attr('data-tab'),
         content = $('.tab-content[data-tab="' + id + '"]');
     $('.tabs-link-item.active').removeClass('active');
@@ -365,7 +365,6 @@ $(function () {
       el: ".slider-images-pagination",
       clickable: true,
   },
-    grabCursor: true, // менять иконку курсора
     thumbs: { // указываем на превью слайдер
       swiper: sliderThumbs // указываем имя превью слайдера
     },

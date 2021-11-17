@@ -1,4 +1,13 @@
 @media (max-width: 1199px) {
+    .telephone-exchanges .direction-catalog-content-item-box .status, .telephone-exchanges .direction-catalog-content-item-info .status{
+        margin-bottom: 32px;
+    }
+    .telephone-exchanges{
+        .direction-catalog-content-item-inner{
+          padding-bottom: 120px;
+        }
+        
+      }
 	.catalog-product{
 		.product{
 			min-height: 248px;
@@ -107,10 +116,23 @@
 		.order-creat-panel{
 			
 		}
+        .my-order .orders-panel-table-cell:nth-child(2){
+            width: 210px;
+        }
 }
 
 @media (max-width: 767px) {
-
+    .my-order .orders-panel-table-cell{
+        padding: 0;
+    }
+    .my-order .orders-panel-table-cell:nth-child(2){
+        width: auto;
+    }
+    .my-order{
+        .orders-panel-table-cell{
+            flex-basis: 100%;
+        }
+    }
 
     .order-creat-list{
         padding: 20px 15px 25px;
@@ -219,13 +241,24 @@
            
             }
         }
+        .telephone-exchanges .direction-catalog-content-item-img{
+            height: 156px;
+        }
         .direction-catalog-content-item-img img{
             width: 156px;
             height: 156px;
         }
+        .orders-panel-table.price-table{
+.price-table-status{
+    margin-top: 8px;
+}
+        }
 }
 
 @media (max-width: 575px) {
+    .telephone-exchanges .direction-catalog-content-items {
+        grid-template-columns: 1fr;
+      }
     .order-creat-panel-location{
         .order-creat-list-btn,
         .order-creat-panel-btns{
