@@ -1,10 +1,20 @@
 @media (max-width: 1199px) {
+    .product-card-inner{
+        align-items: start;
+        grid-template-columns: 1fr auto;
+        gap: 50px;
+    }
+    .direction-catalog-marked{
+        top: 15px;
+        left: 15px;
+    }
+
     .telephone-exchanges .direction-catalog-content-item-box .status, .telephone-exchanges .direction-catalog-content-item-info .status{
-        margin-bottom: 32px;
+        margin-bottom: 42px;
     }
     .telephone-exchanges{
         .direction-catalog-content-item-inner{
-          padding-bottom: 120px;
+          padding-bottom: 116px;
         }
         
       }
@@ -13,38 +23,62 @@
 			min-height: 248px;
 		}
 	}
+    .product-card-slider .slider-thumbs .swiper-wrapper{
+        height: 351px;
+    }
     .slider-images{
-        width: 330px;
+        width: 351px;
+        height: auto;
       }
-    .product-card-inner{
-        grid-template-columns: minmax(auto, 330px) 1fr;
-        gap: 30px;
-    }
-    .product-card-slider .slider-flex{
-        grid-template-columns: minmax(auto, 330px);
-    }
+
+    // .product-card-slider .slider-flex{
+    //     grid-template-columns: minmax(auto, 330px);
+    // }
     .product-card-slider .slider-images .slider-image{
-        width: 330px;
-        height: 330px;
+        width: 351px;
+        height: 351px;
         img{
-            width: 330px;
-            height: 330px;
+            width: 100%;
+            height: 100%;
         }
     }
-    .slider-col{
-        display: none;
+
+    // .product-card-slider .slider-flex{
+    //     grid-template-columns: minmax(auto, 472px);
+    // }
+
+
+    // .product-card-slider .slider-flex{
+    //     grid-template-columns: minmax(auto, 330px);
+    // }
+    .product-card-control-panel-mod span{
+        align-items: center;
     }
-    .product-card-slider .slider-flex{
-        grid-template-columns: minmax(auto, 472px);
+    .slider-images .swiper{
+       height: 100%;
     }
-    .product-card-slider .slider-images-pagination{
-        display: block;
+}
+
+@media (max-width: 991px) {
+    .product-card-tabs .tabs-link{
+        margin: 45px 0 22px;
+    }
+    .product-card-slider .slider-images .slider-image{
         width: 100%;
-        bottom: 0;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .direction-catalog-marked{
+        top: 15px;
+        left: 15px;
     }
     .slider-images .swiper{
         padding-bottom: 34px;
     }
+
     .product-card-control-box-mod{
         margin: 30px 0 45px;
         grid-template-rows: 1fr 1fr;
@@ -59,12 +93,19 @@
         flex-direction: column;
         gap: 6px;
     }
-    .product-card-slider .slider-flex{
-        grid-template-columns: minmax(auto, 330px);
+    .product-card-inner{
+        grid-template-columns: minmax(auto, 330px) 1fr;
+        gap: 30px;
+        align-items: start;
     }
-}
-
-@media (max-width: 991px) {
+    .slider-col{
+        display: none;
+    }
+    .product-card-slider .slider-images-pagination{
+        display: block;
+        width: 100%;
+        bottom: 0;
+    }
     .direction-catalog-content-aside{
         display: none;
     }
@@ -119,9 +160,62 @@
         .my-order .orders-panel-table-cell:nth-child(2){
             width: 210px;
         }
-}
+        .web-form-item label.select-placeholder.select-placeholder-mob{
+            display: block;
+          }
+        .web-form-item label.select-placeholder.select-placeholder-desk{
+            display: none;
+          }
+          .product-cards-slider-box,
+          .product-card-watched-cards-box{
+      
+              .swiper-pagination{
+                display: block;
+                width: 100%;
+              }
+            }
+    }
 
 @media (max-width: 767px) {
+    .product-cards-slider-box,
+    .product-card-watched-cards-box{
+
+        .swiper-pagination{
+          display: block;
+          width: 100%;
+        }
+      }
+    .product-cards-slider-box,
+    .product-card-watched-cards-box{
+        .project-slider-next, .project-slider-prev {
+            display: none;
+        }
+      }
+    .direction-catalog-list .direction-catalog-marked{
+        width: 40px;
+        height: 40px;
+        top: -5px;
+        right: auto;
+        left: -8px;
+    }
+    .product-card-tabs .tabs-link{
+        margin: 40px 0 22px;
+    }
+    .direction-catalog-list .direction-catalog-content-item-buy.mod{
+        justify-content: end;
+    }
+    .direction-catalog-list .direction-catalog-content-item-info {
+        margin: 4px 0;
+    }
+    .direction-catalog-content-item-buy-box{
+        width: auto;
+    }
+    .direction-catalog-content-item-buy{
+        gap: 0 8px;
+    }
+    .direction-catalog-content-aside-item-content .filter-inner{
+        grid-template-columns: 1fr 1fr;
+    }
     .my-order .orders-panel-table-cell{
         padding: 0;
     }
@@ -195,16 +289,15 @@
         grid-template-columns: 1fr;
     }
     .product-card-tabs-slider .swiper-wrapper{
-        display: flex;
-        gap: 0;
+grid-template-columns: 1fr 1fr;
     }
-    .product-card-tabs-slider > .swiper-pagination{
-        display: block;
-    }
+
     .tab-container .goods-calc.product-one-calc{
        margin-left: 5px;
        margin-right: 15px;
        width: auto;
+       width: 120px;
+       margin-left: auto;
     }
     .direction-catalog-list .direction-catalog-content-item{
         padding: 12px 15px;
@@ -253,9 +346,24 @@
     margin-top: 8px;
 }
         }
+        .product-card-watched{
+            .product-card-promotion-title{
+                margin-top: 88px;
+            }
+        }
+        .product-card.page-inner{
+            padding-bottom: 80px;
+        }
 }
 
 @media (max-width: 575px) {
+    .product-card-tabs-slider .swiper-wrapper{
+        display: flex;
+        gap: 0;
+    }
+    .product-card-tabs-slider > .swiper-pagination{
+        display: block;
+    }
     .telephone-exchanges .direction-catalog-content-items {
         grid-template-columns: 1fr;
       }
@@ -283,6 +391,7 @@
       }
     .product-card-slider .slider-flex{
         grid-template-columns: minmax(auto,285px);
+        justify-content: center;
     }
      .product-card-control-piggy{
         grid-column: 1;

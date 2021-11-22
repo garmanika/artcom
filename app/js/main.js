@@ -5,13 +5,22 @@ $(function () {
        $(this).addClass('select-change');
    }
  });
-  $('.product-card-tabs .tabs-link-item').click(function() {
+  $('.product-card-tabs .tabs-link-item').click(function(e) {
+    e.preventDefault()
     let id = $(this).attr('data-tab'),
         content = $('.tab-content[data-tab="' + id + '"]');
     $('.tabs-link-item.active').removeClass('active');
     $(this).addClass('active');
     $('.tab-content.active').removeClass('active');
     content.addClass('active');
+});
+  $('.direction-catalog-box .btn').click(function(e) {
+    e.preventDefault();
+    $('.direction-catalog-box').addClass('open')
+});
+  $('.direction-catalog-box .info-text .btn').click(function(e) {
+    e.preventDefault();
+    $('.direction-catalog-box').removeClass('open')
 });
 
 
@@ -85,62 +94,7 @@ $(function () {
 				// .closest(".direction-catalog-content-aside-item")
 				// .find(".direction-catalog-content-aside-item-content")
 		});
-    const breakpoint = window.matchMedia('(min-width: 767px)');
 
-    // keep track of swiper instances to destroy later
-    let mySwiper;
-
-    //////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////
-
-    const breakpointChecker = function() {
-
-        // if larger viewport and multi-row layout needed
-        if (breakpoint.matches === true) {
-
-            // clean up old instances and inline styles when available
-            if (mySwiper !== undefined) mySwiper.destroy(true, true);
-
-            // or/and do nothing
-            return;
-
-            // else if a small viewport and single column layout needed
-        } else if (breakpoint.matches === false) {
-
-            // fire small viewport version of swiper
-            return enableSwiper();
-        }
-    };
-
-    //////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////
-
-    const enableSwiper = function() {
-        mySwiper = new Swiper(".product-card-tabs-slider", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: ".product-card-tabs-slider > .swiper-pagination",
-                clickable: true,
-            },
-        });
-
-
-    };
-
-    //////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////
-
-    // keep an eye on viewport size changes
-    breakpoint.addListener(breakpointChecker);
-
-    // kickstart
-    breakpointChecker();
-
-    //
     $(".header-desktop-sub-menu-heading").on("click", function (e) {
       e.preventDefault();
       var subMenu = $(this).closest(".mobile-navigation-sub-position");
@@ -153,7 +107,64 @@ $(function () {
       }
     });
   }
+  const breakpoint = window.matchMedia('(min-width: 575px)');
 
+  // keep track of swiper instances to destroy later
+  let mySwiper;
+
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+
+  const breakpointChecker = function() {
+
+      // if larger viewport and multi-row layout needed
+      if (breakpoint.matches === true) {
+
+          // clean up old instances and inline styles when available
+          if (mySwiper !== undefined) mySwiper.destroy(true, true);
+
+          // or/and do nothing
+          return;
+
+          // else if a small viewport and single column layout needed
+      } else if (breakpoint.matches === false) {
+
+          // fire small viewport version of swiper
+          return enableSwiper();
+      }
+  };
+
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+
+  const enableSwiper = function() {
+      mySwiper = new Swiper(".product-card-tabs-slider", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          observer: true,
+observeParents: true,
+          pagination: {
+              el: ".product-card-tabs-slider > .swiper-pagination",
+              clickable: true,
+          },
+      });
+
+
+  };
+
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+
+  // keep an eye on viewport size changes
+  breakpoint.addListener(breakpointChecker);
+
+  // kickstart
+  breakpointChecker();
+
+  //
   $(".header-icons-search").on("click", function () {
     if (
       !$(".header-icons-search").hasClass("open-search") &&
@@ -175,7 +186,15 @@ $(function () {
 
   const swiper6 = new Swiper(".product-card-watched-cards", {
     slidesPerView: 3,
-
+    pagination: {
+      el: ".product-card-watched-cards-box .project-slider-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".product-card-watched-cards-box .project-slider-next",
+      prevEl: ".product-card-watched-cards-box .project-slider-prev",
+    },
 
 
 
@@ -200,10 +219,15 @@ $(function () {
   });
   const swiper5 = new Swiper(".product-cards-slider", {
     slidesPerView: 3,
-
-
-
-
+    pagination: {
+      el: ".product-cards-slider-box .project-slider-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".product-cards-slider-box .project-slider-next",
+      prevEl: ".product-cards-slider-box .project-slider-prev",
+    },
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -349,14 +373,31 @@ $(function () {
       prevEl: '.slider-prev' // кнопка Prev
     },
     freeMode: true, // при перетаскивании превью ведет себя как при скролле
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 4, // показывать по 3 превью
+        spaceBetween: 15,
+      },
+    },
   });
   // Инициализация слайдера изображений
   const sliderImages = new Swiper('.slider-images .swiper', { // ищем слайдер превью по селектору
     // задаем параметры
 
     slidesPerView: 1, // показывать по 1 изображению
-    spaceBetween: 32, // расстояние между слайдами
-    mousewheel: true, // можно прокручивать изображения колёсиком мыши
+    spaceBetween: 0, // расстояние между слайдами
     navigation: { // задаем кнопки навигации
       nextEl: '.slider-next', // кнопка Next
       prevEl: '.slider-prev' // кнопка Prev

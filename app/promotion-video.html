@@ -255,16 +255,36 @@
 					<div class="col-lg-12 col-xl-9">
 						<section class="promotion">
 							<div class="dealer-contol">
-								<select class="select-check">
-									<option selected disabled hidden value="">Выберите производителя</option>
-									<option>1</option>
-									<option>2</option>
-								</select>
-								<select class="select-check">
-									<option selected disabled hidden value="">Выберите продукт</option>
-									<option>1</option>
-									<option>2</option>
-								</select>
+								<div class="web-form-item">
+									<select class="select-check">
+										<option selected disabled hidden value="">Выберите производителя</option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+									<label for="select" class="select-placeholder select-placeholder-desk">
+										Выберите производителя
+										
+									</label>
+									<label for="select" class="select-placeholder select-placeholder-mob">
+										Выберите производителя
+										
+									</label>
+								</div>
+								<div class="web-form-item">
+									<select class="select-check">
+										<option selected disabled hidden value="">Выберите продукт</option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+									<label for="select" class="select-placeholder select-placeholder-desk">
+										Выберите продукт
+										
+									</label>
+									<label for="select" class="select-placeholder select-placeholder-mob">
+										Выберите продукт
+										
+									</label>
+								</div>
 							</div>
 							<div class="promotion-items">
 								<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="promotion-item">
@@ -353,7 +373,7 @@
 					<div class="col-lg-12 col-xl-3">
 						<div class="text-navigation">
 							<ul class="text-navigation-menu">
-								<li class="text-navigation-menu-item  active">
+								<li class="text-navigation-menu-item  ">
 									<a href="#">Новости</a>
 								</li>
 								<li class="text-navigation-menu-item ">
@@ -362,7 +382,7 @@
 								<li class="text-navigation-menu-item">
 									<a href="#">Рекламные материалы</a>
 								</li>
-								<li class="text-navigation-menu-item">
+								<li class="text-navigation-menu-item active">
 									<a href="#">Рекламные видеоролики</a>
 								</li>
 
@@ -387,7 +407,13 @@
 
 											<form >
 												<div class="subscription-box">
-													<input type="text" placeholder="Введите ваш e-mail">
+													<div class="web-form-item">
+														<input type="email" placeholder=" ">
+														<label class="web-form-label-desk" for="input">Введите ваш e-mail</label>
+														<label class="web-form-label-mob" for="input">Введите ваш e-mail</label>
+						
+			
+													</div>
 													<button class="subscription-btn" type="submit">
 														подписаться
 													</button>
